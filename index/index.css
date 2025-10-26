@@ -1,1 +1,84 @@
 /* Css Code For Home Page */
+:root{
+    --primary-color: gray;
+    --secondary-color: #21252985;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    --background-color: black;
+}
+body {
+    padding: 0;
+    margin: 0;
+    
+}
+#header {
+    display: flex;
+    background-color: var(--background-color);
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2%;
+    padding-block: 1%;
+}
+
+#logo img{
+    width: 100px;
+    height: 100px;
+}
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+#links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+}
+
+#links a:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+#links i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#language {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#language:hover {
+    transform: scale(1.2);
+}
+
+#links button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+#links button:hover {
+    background-color: var(--primary-color);
+}
+
+#links button i {
+    margin-inline: 5px;
+}
