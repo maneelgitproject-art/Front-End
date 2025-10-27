@@ -1,7 +1,5 @@
-// overview js code
 
-
-const mainImage = document.querySelector(".image-3d");
+  const mainImage = document.querySelector(".image-3d");
   const title = document.querySelector(".image-container h4");
   const shortDesc = document.querySelector(".image-container > p:first-of-type");
   const longDesc = document.querySelector(".image-container > p:last-of-type");
@@ -9,39 +7,40 @@ const mainImage = document.querySelector(".image-3d");
 
   const specialtiesData = [
     {
-      title: "الأمن السيبراني",
-      short: "حارس الأنظمة ومهندس الدفاعات الرقمية",
-      long: "يمتلك مهارة اكتشاف الثغرات قبل أن تُستغل وتحليل الهجمات قبل أن تتكرر. يعمل بدقة عالية بين الفوضى والنظام ليبقي العالم الرقمي آمناً ومتوازناً.",
+      title: "تطوير تطبيقات الموبايل",
+      short: "صانع التجربة اليومية في راحة اليد",
+      long: "يكتب الأكواد التي ترافق المستخدم في يومه، فيتعامل مع السرعة والدقة كأنهما إيقاع واحد. كل تطبيق يولد من يديه هو أداة تبسيط للحياة ونافذة على المستقبل.",
       img: "../assets/specialties/in_a_creative_inspiring_and_educational_way_scene.jpeg",
     },
     {
       title: "الذكاء الاصطناعي",
-      short: "العقل المفكر خلف الأنظمة الذكية",
-      long: "يبتكر خوارزميات تتعلم من البيانات لتجعل الآلات أكثر فهمًا للعالم وأكثر قدرة على اتخاذ القرار.",
+      short: "مُبرمج الوعي الرقمي",
+      long: "يعيد تعريف معنى الفهم من خلال البيانات. يخلق أنظمة تتأمل وتستنتج وتبدع، ويمزج بين منطق الرياضيات وحدس الإنسان في معادلة واحدة تفتح أبواب الثورة القادمة.",
       img: "../assets/specialties/a_thoughtful_ai_researcher_or_innovator_sits.jpeg",
     },
     {
-      title: "تطوير الألعاب",
-      short: "صانع العوالم التفاعلية",
-      long: "يجمع بين الفن والبرمجة ليبني تجارب ممتعة تأخذ اللاعب إلى عوالم جديدة من الإبداع.",
+      title: "تصميم الجرافيك",
+      short: "الفنان الرقمي الذي يترجم الفكرة إلى هوية",
+      long: "ينسج الألوان والخطوط ليجعل الفكرة تُرى وتُحسّ قبل أن تُفهم. كل تصميم يصنعه هو توقيعٌ بصريٌّ يُخلّد المعنى في الذاكرة، ويمنح المشروع وجهه الحقيقي.",
       img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (2).jpeg",
     },
     {
-      title: "تحليل البيانات",
-      short: "المستكشف الرقمي",
-      long: "يفك شيفرات الأرقام ليكتشف الأنماط ويحوّل البيانات إلى قرارات استراتيجية مؤثرة.",
+     title: "تطوير مواقع الويب",
+      short: "مهندس الواجهة والجوهر",
+      long: "يبني العوالم الرقمية التي يسكنها المستخدمون. يوازن بين الجمال والوظيفة، وبين الكود والتجربة. كل سطر يكتبه يربط بين الفكرة والواقع بلمسة من الإتقان.",
       img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_that.jpeg",
     },
+   
     {
-      title: "تصميم الواجهات",
-      short: "فنان التجربة الرقمية",
-      long: "يبني واجهات جذابة وسهلة الاستخدام توازن بين الجمال والوظيفة.",
+      title: "الأمن السيبراني",
+      short: "حارس الأنظمة ومهندس الدفاعات الرقمية",
+      long: "يمتلك مهارة اكتشاف الثغرات قبل أن تُستغل، وتحليل الهجمات قبل أن تتكرر. يعمل بدقة عالية بين الفوضى والنظام، ليبقي العالم الرقمي آمنًا ومتوازنًا.",
       img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing.jpeg",
     },
     {
-      title: "الروبوتات",
-      short: "مهندس المستقبل الذكي",
-      long: "يجمع بين الميكانيكا والبرمجة لصناعة آلات تفكر وتتعلم وتؤدي المهام المعقدة.",
+      title: "الباك إند",
+      short: "القلب النابض الذي لا يُرى",
+      long: "لكنه يحمل كل شيء. يبني منطق النظام ويصون استقراره، كمهندسٍ في أعماق آلة ضخمة لا تتوقف. كل سطر كود يكتبه هو صمام أمان، وكل بنية يصممها هي وعدٌ بالثبات في وجه الفوضى.",
       img: "../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (3).jpeg",
     },
   ];
@@ -49,19 +48,14 @@ const mainImage = document.querySelector(".image-3d");
   // عند الضغط على أي أيقونة
   icons.forEach((icon, index) => {
     icon.addEventListener("click", () => {
-      // تحديث الصورة والنصوص
       mainImage.src = specialtiesData[index].img;
       title.textContent = specialtiesData[index].title;
       shortDesc.textContent = specialtiesData[index].short;
       longDesc.textContent = specialtiesData[index].long;
 
-      // إزالة تفعيل كل الأيقونات
       icons.forEach((i) => i.classList.remove("active"));
-
-      // تفعيل الأيقونة اللي اتضغطت
       icon.classList.add("active");
 
-      // تأثير بسيط عند تغيير الصورة
       mainImage.style.opacity = "0";
       setTimeout(() => {
         mainImage.style.opacity = "1";
@@ -69,7 +63,8 @@ const mainImage = document.querySelector(".image-3d");
     });
   });
 
-  // افتراضيًا خليه يختار أول أيقونة عند تحميل الصفحة
+  // تحديد أول أيقونة افتراضيًا
   if (icons.length > 0) {
-    icons[0].classList.add("active");
+    icons[4].classList.add("active");
   }
+
