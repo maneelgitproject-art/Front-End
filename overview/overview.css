@@ -124,6 +124,7 @@ body {
       height:700px;
       background-image: url('../assets/overview/intro/ما هو مشروع نواة.jpeg'); 
       background-position: center;
+      
       opacity:1.5;
       color: white;
       display: flex;
@@ -132,6 +133,24 @@ body {
       padding: 40px;
       box-sizing: border-box;
     }
+
+
+    .banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* غمقان بنسبة 50% */
+  z-index: 1;
+}
+
+.banner h1,
+.banner p {
+  position: relative;
+  z-index: 2; /* عشان الكلام يكون فوق الطبقة الغامقة */
+}
 
     .banner h1 {
       font-size: 2.8rem;
@@ -153,7 +172,7 @@ body {
     /* Project Goals */
 
    .goal{
-        margin-top: 20px;
+        /* margin-top: 20px; */
         background-image:url(../assets/overview/pro_goals/frame.jpg);
         background-size: cover;
         /* background-attachment: fixed; */
@@ -175,6 +194,7 @@ body {
      font-weight:bold;
      font-size:90px;
      text-align: center;
+     line-height: 64px;
     }
 
    
@@ -201,29 +221,23 @@ body {
         transition: all 0.4s ease;
     }
 
-    .goals > div:hover {
+    /* .goals > div:hover {
         transform: translateY(-15px);
         box-shadow: none;
         background: transparent;
-    }
+    } */
 
     .goals .img {
-        width: 100%;
-        max-width:400px;
-        height:600px;
-        border-radius: 12px;
+        /* width: 100%; */
+       width: 468px;
+       height: 624px;
+        /* border-radius: 12px; */
         margin-bottom: 20px;
         object-fit: cover;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        transform-style: preserve-3d;
         perspective: 1000px;
     }
 
-    .goals > div:hover .img {
-        transform: perspective(1000px) rotateY(5deg) rotateX(5deg) scale(1.1) translateZ(20px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(0, 191, 255, 0.3);
-    }
-
+    
     .goals h3 {
         font-size: 1.5rem;
         margin-bottom: 15px;
@@ -268,8 +282,8 @@ body {
   }
 
   .goals .img {
-    max-width: 100%;
-    height: 350px;
+   width:258px;
+   height: 343px;
   }
 
   .goals h3 {
@@ -336,15 +350,16 @@ body {
   align-items: center;
   gap: 20px;
   order: 2;
+
 }
 
 .text {
   order: 1;
 }
 
-.image-container {
+/* .image-container {
   perspective: 1500px;
-}
+} */
 
 .image-3d {
   width: 400px;
@@ -353,25 +368,9 @@ body {
   border: 4px solid #5fc9f3;
   object-fit: cover;
   box-shadow: 0 0 20px rgba(95, 201, 243, 0.3);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-  transform: perspective(1500px) rotateY(15deg) rotateX(5deg) translateZ(0);
-  animation: float3d 4s ease-in-out infinite;
+  
 }
 
-.image-3d:hover {
-  transform: perspective(1500px) rotateY(0deg) rotateX(0deg) scale(1.1) translateZ(50px);
-  box-shadow: 0 30px 60px rgba(95, 201, 243, 0.5), 0 0 80px rgba(95, 201, 243, 0.3);
-}
-
-@keyframes float3d {
-  0%, 100% {
-    transform: perspective(1500px) rotateY(15deg) rotateX(5deg) translateZ(0) translateY(0);
-  }
-  50% {
-    transform: perspective(1500px) rotateY(15deg) rotateX(5deg) translateZ(0) translateY(-10px);
-  }
-}
 
 .image-container h4 {
   font-size: 2.5rem;
@@ -429,12 +428,6 @@ body {
   align-self: flex-start;
 }
 
-.btn:hover {
-  background-color: #2d2d44;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
 .icons {
   display: flex;
   gap: 15px;
@@ -450,12 +443,31 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+   filter: brightness(20%); /* ظل خفيف على الأيقونات غير المختارة */
+  opacity: 0.8;
+  transform: translateZ(0);
+}
+
+/* لما الأيقونة تتحدد */
+.icons img.active {
+  filter: brightness(100%); /* يرجع الصورة لحالتها الطبيعية */
+  opacity: 1;
+  border-color: #32C8FF; /* تحديد بلون أزرق فاتح */
+  box-shadow: 0 0 15px rgba(50, 200, 255, 0.6);
+  transform: translateZ(0);
 }
 
 .icons img:hover {
-  transform: scale(1.1);
-  border-color: #5fc9f3;
+  transform: translateY(-8px) scale(1.05);
+  filter: brightness(100%);
+  opacity: 1;
 }
+
+.btn:hover {
+  background-color:#32C8FF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Specialties Responsive */
 @media (max-width: 968px) {
