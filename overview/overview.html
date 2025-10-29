@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./overview.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
+    <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <title>Nawah Project</title>
 </head>
 
@@ -15,10 +19,21 @@
         <nav class="navbar">
     <div class="logo">
       <img src="../assets/index/logo.png" alt="Nawah Project Logo">
-      <span>Nawah Project</span>
+      <span>Nawah<br/> Project</span>
     </div>
 
-    <ul class="nav-links">
+
+    <div class="globe-mobile" id="globeMobile">🌍</div>
+   
+
+      <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+    <ul class="nav-links"  id="navLinks">
       <li><a href="../overview/overview.html">نظرة عامة على المكان</a></li>
       <li><a href="../news/news.html">الأخبار</a></li>
       <li><a href="../specialties/specialties.html">تخصصات</a></li>
@@ -41,12 +56,14 @@
       <li class="icon globe">🌍</li>
       <li class="dropdown account">
         <a href="#">حسابي ▾</a>
-        <ul class="dropdown-menu">
+        <!-- <ul class="dropdown-menu">
           <li><a href="#">تسجيل الدخول</a></li>
           <li><a href="#">إنشاء حساب</a></li>
-        </ul>
+        </ul> -->
       </li>
     </ul>
+
+    
   </nav>
     </header>
 
@@ -55,7 +72,7 @@
          <!-- Intro Section -->
         <section class="banner">
             
-            <h1>ما هو مشروع نواة؟</h1>
+            <h1>ما هو مشروع<br/> نواة؟</h1>
     <p>
         منصه تفاعليه تعيد تعريف التعلم والعمل الجماعى بأسلوب واقعى وذكى.تجمع بين المشاريع القصيره
         والرحلات التعليميه الموجهه لتناسب يومك واجهزتك.كل تجربه فيها سريعه الايقاع لكنها غنيه
@@ -96,6 +113,10 @@
             </div>
 
           </div>
+
+          <div class="goals-mobile-toggle">
+    <span class="toggle-arrow">↓</span>
+</div>
              
         </section>
 
@@ -200,16 +221,68 @@
 
 
 
-       
 
-        <section>
-            <!-- Footer Video -->
+
+
+        <!--last section-->
+
+        
+        <section class="imgs__box">
+          <div class="imgs__box-container">
+            <img src="../assets/overview/prompt_create_a_2d_hand_drawn_digital_illustration_icon_style.jpeg" alt="img">
+            <p>انجازات ومكافأت حقيقه</p>
+          </div>
+
+          <div class="imgs__box-container">
+            <img src="../assets/overview/prompt_create_a_2d_hand_drawn_digital_illustration_icon_style (1).jpeg" alt="img">
+            <p>تجارب تعلم فرديه وتعاونيه</p>
+          </div>
+
+          <div class="imgs__box-container">
+            <img src="../assets/overview/prompt_create_a_2d_hand_drawn_digital_illustration_3_4.jpeg" alt="img">
+            <p>بدأ مجانا وارتق بجهدك </p>
+          </div>
+
         </section>
-    </main>
 
-    <footer>
+       
+<!-- Footer Video -->
+<section class="footer-video">
+  <video autoplay muted loop playsinline>
+    <source src="../assets/overview/footer.gif.mp4" type="video/mp4">
+    المتصفح لا يدعم تشغيل الفيديو.
+  </video>
+</section>
+
         <!-- Footer Code -->
-    </footer>
+        
+          <footer class="site-footer">
+      <div class="footer-icons">
+      <a href="#" class="social-icon youtube"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="social-icon x"><i class="fa-brands fa-x-twitter"></i></i></a>
+      <a href="#" class="social-icon facebook"> <i class="fa-brands fa-facebook"></i></a>
+      </div>
+
+      <!-- Project Name -->
+      <div class="footer-project">
+          <strong>Nawah Project</strong>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copy">
+          © 2025 Nawah Project — جميع الحقوق والعلامات الخاصة بـ نواة محفوظة.
+      </div>
+
+    <!-- Footer Links -->
+  <div class="footer-links">
+    <a href="#">سياسة الخصوصية</a>
+    <a href="#">شروط الاستخدام</a>
+    <a href="#">تفضيلات ملفات تعريف الارتباط</a>
+  </div>
+</footer>
+         
+   
 
     <script src="./overview.js"></script>
 </body>
