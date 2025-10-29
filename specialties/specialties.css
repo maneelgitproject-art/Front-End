@@ -251,77 +251,90 @@
 
   .specialties-section {
     background-color: #ffffff;  
-    padding: 60px 20px; /*  space around the section */
+    padding: 60px 20px; 
     text-align: right;
     direction: rtl;
+ 
   }
 
   .container {
-    max-width: 1200px; /* wider container for full-section look */
+    max-width: 1270px;  
     margin: 0 auto;
+ 
   }
 
   .small-title {
-    font-size: 30px;
-    color: #555;
-    margin-bottom: 15px; /* space between small title and main title */
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700; 
+    color: #111111ff;
+    margin-bottom: 0px; /* space between small title and main title */
   }
 
   .main-title {
-    font-size: 90px;
-    margin-bottom: 1px; /* space between main title and paragraph */
-    margin-right: 50px; 
-    color: #3b3b3b;
-  }
+  font-size: 80px;
+  color: #3b3b3b;
+  font-style: italic;
+  font-weight: 700; 
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
 
   .description {
     font-size: 18px;
-    width: 45vw;
-    line-height: 1.8;
-    color: #333;
-    margin: 0 20px;  
-   }
+    color: #2e2d2dff;
+    width: 47vw;
+    line-height: 1.7;
+    margin: 0 4px;  
+    font-style: italic;
+    font-weight: 300; 
+    }
 
 
- 
-#AllSpecialties {
+
+   #AllSpecialties {
   background-color: #fff;
-  padding: 0px 75px;
+  padding: 0px 45px;
   direction: rtl;
   text-align: center;
   margin-top: -29px;
 }
+
+/* ------------------ LINKS ------------------ */
 .specialty-card a {
   text-decoration: none;
-  color: inherit;  
-  display: block; 
+  color: inherit;
+  display: block;
 }
 
-
+/* ------------------ GRID LAYOUT ------------------ */
 .specialties-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5px;  
+  gap: 18px;
   margin-bottom: 20px;
 }
 
+/* ------------------ CARD ------------------ */
 .specialty-card {
   position: relative;
-  width: 260px;            
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
   cursor: pointer;
   transition: transform 0.3s;
-  margin: 0 auto;          
-  overflow: hidden;       
+  margin: 0 auto;
+  overflow: hidden;
 }
 
- .specialty-card:hover {
+.specialty-card:hover {
   transform: none;
 }
 
+/* ------------------ IMAGE CONTAINER ------------------ */
 .image-container {
   width: 100%;
-  height: 430px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 0px;
   position: relative;
@@ -329,92 +342,252 @@
   align-items: center;
   justify-content: center;
   background-color: #f0f0f0;
+  transition: transform 0.3s ease;
 }
 
-/* image zoom on hover */
 .image-container img,
 .image-container .plus {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease; /* zoom */
+  transition: transform 0.4s ease;
 }
 
-/* zoom  image */
 .specialty-card:hover .image-container img {
   transform: scale(1.05);
 }
 
+/* ------------------ TITLE OVERLAY ------------------ */
 .title-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #23c2f3; 
+  background-color: #23c2f3;
   color: #fff;
   text-align: center;
-  padding: 16px 0;
+  padding: 8px 0;
   font-weight: bold;
   transition: background-color 0.3s;
-  border-radius: 0 0 0px 0px;  
+  border-radius: 0 0 0px 0px;
+    font-size: 18px;
+
 }
 
-/* keep title color change */
 .specialty-card:hover .title-overlay {
-  background-color: #07072c; 
+  background-color: #07072c;
 }
 
-/* Add Specialty (plus card) */
+/* ------------------ ADD SPECIALTY CARD ------------------ */
 .add-specialty .image-container {
   background-color: #07072c;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  text-align: left;
-  height: 430px; 
-  padding: 35px;
+  align-items: center; /* keeps plus, title, and description centered */
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 3 / 4;
+  padding: 40px;
   position: relative;
 }
 
-
 .add-specialty .plus {
-  font-size: 220px;
+  font-size:15rem;
   color: #ffffff;
-  line-height: 1;
   font-weight: bold;
-  margin-top: -80px;  
-  text-align: center;
-  margin-bottom: 55px; 
+  line-height: 1;
+  white-space: nowrap;
+  margin-bottom: -30px;
+
 }
 
 .add-specialty .plus-title {
-  font-size: 25px;
+  font-size: 30px;
   color: #ffffff;
   font-weight: bold;
-  align-self: flex-start;
-  margin-left: 40px;
-  margin-top: -199px; 
-  margin-bottom: 15px;
+  margin-bottom: 2px;
+  align-self: flex-start; 
 }
 
 .add-specialty .plus-description {
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
-  align-self: center;
-  margin-left: 10px;
-  margin-top: -6px;  
-  max-width: 300px;
-  line-height: 1.5;
+  max-width: 250px;
+  line-height: 1.6;
   text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+}
+
+
+/* ------------------ RESPONSIVE RULES ------------------ */
+
+/* Between 865px–1018px → smaller but still 4 per row */
+@media (max-width: 1300px) and (min-width: 1025px) {
+  #AllSpecialties {
+    padding: 0px 25px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(23% - 5px);
+    max-width: calc(23% - 5px);
+  }
+
+  .image-container {
+    transform: scale(1);
+  }
+
+  .add-specialty .plus-title {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .add-specialty .plus-description {
+    font-size: 18px;
+ 
+  
+  }
+    .add-specialty .plus {
+    font-size: 180px;
+ 
+  }
+   .description {
+    width: 80vw;  
+    font-size: 17px;
+    color: #333;
+    }
 
  
 }
 
-.add-specialty .description {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-  text-align: center;
+/*  2 per row (normal size) */
+@media (max-width: 1025px) and (min-width: 700px) {
+  #AllSpecialties {
+    padding: 0px 45px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .image-container {
+    transform: scale(1);
+  }
+
+    .add-specialty .plus {
+    font-size: 270px;
+
+    
+   
+  }
+
+  .add-specialty .plus-title {
+    font-size: 35px;
+    white-space: nowrap;
+   }
+
+  .add-specialty .plus-description {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 120px;
+
+
+   
+  }
+
+
+   .description {
+    width: 85vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+
+  .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+
+    .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+}
+
+/*   2 per row, bigger images */
+@media (max-width: 700px) {
+  #AllSpecialties {
+    padding: 0px 25px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .image-container {
+    width: 100%;
+    height: 340px;
+    transform: scale(1);
+  }
+
+  .add-specialty .plus {
+    font-size: 165px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+  }
+
+  .add-specialty .plus-title {
+    font-size: 30px;
+    margin-top: -40px;
+    white-space: nowrap;
+  }
+
+  .add-specialty .plus-description {
+    font-size: 20px;
+    max-width: 220px;
+    margin-top: 8px;
+  }
+
+
+   .description {
+    width: 95vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+    .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
 }
