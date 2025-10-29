@@ -1,1 +1,593 @@
 /* specialties css Code */
+:root {
+    --primary-color: #7c7c7c63;
+    --secondary-color: #21252985;
+    --background-color: #000;  
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+/* Reset spacing to remove white gap */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Section */
+#header {
+    direction: rtl; /* for Arabic alignment */
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 10px 3%;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Logo */
+#logo-container {
+  display: flex;
+  align-items: center;  
+ }
+
+.logo-image {
+  width: 70px;   
+  height: 70px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column; /* stack words vertically */
+}
+
+.logo-text span {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Noto Sans Arabic', sans-serif;
+  line-height: 1.2; /* spacing between words */
+}
+
+
+
+/* Links */
+#links {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 5px;
+    flex: 1;
+    text-align: left;
+}
+
+#links a {
+    position: relative; /* allows ::after underline positioning */
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 16px;
+    transition: 0.3s;
+}
+
+#links a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* turquoise underline effect */
+#links a::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background-color: #23c2f3;
+    border-radius: 15px;  
+    transition: width 0s ease;
+}
+
+#links a:hover::after {
+    width: 102%; 
+}
+
+/* active link styling */
+#links a.active {
+    background-color: #9c9a9a;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#links a.active::after {
+    width: 102%;
+}
+
+
+
+/* Tips (language + account button) */
+#tips {
+    display: flex;
+    justify-content: flex-start; /* puts it on the left side */
+    align-items: center;
+    gap:10px;
+    margin-right: 45px;  
+
+}
+
+#tips i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro";
+    font-weight: 900;
+}
+
+#tips i:hover {
+    transform: scale(1.2);
+}
+
+#tips button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tips button:hover {
+    background-color: var(--primary-color);
+}
+
+#user {
+  background-color: rgba(255, 252, 252, 0.72);  
+  font-size: 12px;
+  font-weight: 70;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  gap:8px;
+  margin-right: 10px;  
+  margin-bottom: 5px;  
+  width: 120px;   
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+#user .gray-icon {
+  color: #5a5a5aff ;
+}
+
+/* ===== end of header ===== */
+
+/* start footer */
+
+.site-footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+/* Social icons */
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;  
+  color: white;  
+  border-radius: 50%;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.footer-icons a:hover {
+  background-color: #d1dbda; 
+  color: #000;  
+  }
+
+/* Project Name */
+.footer-project {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b9b8b8;            
+  margin: 40px 0;         
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #b9b8b8;            
+}
+
+/* Footer Links */
+.footer-links {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin: 45px 0;         
+
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px; /* space between links */
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* specialties-section  */
+
+  .specialties-section {
+    background-color: #ffffff;  
+    padding: 60px 20px; 
+    text-align: right;
+    direction: rtl;
+ 
+  }
+
+  .container {
+    max-width: 1270px;  
+    margin: 0 auto;
+ 
+  }
+
+  .small-title {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700; 
+    color: #111111ff;
+    margin-bottom: 0px; /* space between small title and main title */
+  }
+
+  .main-title {
+  font-size: 80px;
+  color: #3b3b3b;
+  font-style: italic;
+  font-weight: 700; 
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+  .description {
+    font-size: 18px;
+    color: #2e2d2dff;
+    width: 47vw;
+    line-height: 1.7;
+    margin: 0 4px;  
+    font-style: italic;
+    font-weight: 300; 
+    }
+
+
+
+   #AllSpecialties {
+  background-color: #fff;
+  padding: 0px 45px;
+  direction: rtl;
+  text-align: center;
+  margin-top: -29px;
+}
+
+/* ------------------ LINKS ------------------ */
+.specialty-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ------------------ GRID LAYOUT ------------------ */
+.specialties-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+/* ------------------ CARD ------------------ */
+.specialty-card {
+  position: relative;
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.specialty-card:hover {
+  transform: none;
+}
+
+/* ------------------ IMAGE CONTAINER ------------------ */
+.image-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.image-container img,
+.image-container .plus {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.specialty-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+/* ------------------ TITLE OVERLAY ------------------ */
+.title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #23c2f3;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border-radius: 0 0 0px 0px;
+    font-size: 18px;
+
+}
+
+.specialty-card:hover .title-overlay {
+  background-color: #07072c;
+}
+
+/* ------------------ ADD SPECIALTY CARD ------------------ */
+.add-specialty .image-container {
+  background-color: #07072c;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* keeps plus, title, and description centered */
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 3 / 4;
+  padding: 40px;
+  position: relative;
+}
+
+.add-specialty .plus {
+  font-size:15rem;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  margin-bottom: -30px;
+
+}
+
+.add-specialty .plus-title {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 2px;
+  align-self: flex-start; 
+}
+
+.add-specialty .plus-description {
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 250px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+}
+
+
+/* ------------------ RESPONSIVE RULES ------------------ */
+
+/* Between 865px–1018px → smaller but still 4 per row */
+@media (max-width: 1300px) and (min-width: 1025px) {
+  #AllSpecialties {
+    padding: 0px 25px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(23% - 5px);
+    max-width: calc(23% - 5px);
+  }
+
+  .image-container {
+    transform: scale(1);
+  }
+
+  .add-specialty .plus-title {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .add-specialty .plus-description {
+    font-size: 18px;
+ 
+  
+  }
+    .add-specialty .plus {
+    font-size: 180px;
+ 
+  }
+   .description {
+    width: 80vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+ 
+}
+
+/*  2 per row (normal size) */
+@media (max-width: 1025px) and (min-width: 700px) {
+  #AllSpecialties {
+    padding: 0px 45px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .image-container {
+    transform: scale(1);
+  }
+
+    .add-specialty .plus {
+    font-size: 270px;
+
+    
+   
+  }
+
+  .add-specialty .plus-title {
+    font-size: 35px;
+    white-space: nowrap;
+   }
+
+  .add-specialty .plus-description {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 120px;
+
+
+   
+  }
+
+
+   .description {
+    width: 85vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+
+  .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+
+    .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+}
+
+/*   2 per row, bigger images */
+@media (max-width: 700px) {
+  #AllSpecialties {
+    padding: 0px 25px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .image-container {
+    width: 100%;
+    height: 340px;
+    transform: scale(1);
+  }
+
+  .add-specialty .plus {
+    font-size: 165px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+  }
+
+  .add-specialty .plus-title {
+    font-size: 30px;
+    margin-top: -40px;
+    white-space: nowrap;
+  }
+
+  .add-specialty .plus-description {
+    font-size: 20px;
+    max-width: 220px;
+    margin-top: 8px;
+  }
+
+
+   .description {
+    width: 95vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+    .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+}
