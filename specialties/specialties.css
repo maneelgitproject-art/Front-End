@@ -384,7 +384,7 @@
   background-color: #07072c;
   display: flex;
   flex-direction: column;
-  align-items: center; /* keeps plus, title, and description centered */
+  align-items: center;   
   justify-content: center;
   text-align: center;
   aspect-ratio: 3 / 4;
@@ -424,7 +424,7 @@
 
 /* ------------------ RESPONSIVE RULES ------------------ */
 
-/* Between 865px–1018px → smaller but still 4 per row */
+/*   4 per row smaller */
 @media (max-width: 1300px) and (min-width: 1025px) {
   #AllSpecialties {
     padding: 0px 25px;
@@ -479,11 +479,8 @@
     transform: scale(1);
   }
 
-    .add-specialty .plus {
+   .add-specialty .plus {
     font-size: 270px;
-
-    
-   
   }
 
   .add-specialty .plus-title {
@@ -495,8 +492,6 @@
     font-size: 22px;
     margin-top: 35px;
     margin-bottom: 120px;
-
-
    
   }
 
@@ -535,7 +530,7 @@
 }
 }
 
-/*   2 per row, bigger images */
+/*   2 per row images */
 @media (max-width: 700px) {
   #AllSpecialties {
     padding: 0px 25px;
@@ -588,6 +583,5 @@
   font-size: 60px;
   font-style: italic;
   font-weight: 700; 
- 
 }
 }
