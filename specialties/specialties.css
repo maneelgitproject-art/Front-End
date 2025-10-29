@@ -384,7 +384,7 @@
   background-color: #07072c;
   display: flex;
   flex-direction: column;
-  align-items: center;   
+  align-items: center;  
   justify-content: center;
   text-align: center;
   aspect-ratio: 3 / 4;
@@ -424,7 +424,7 @@
 
 /* ------------------ RESPONSIVE RULES ------------------ */
 
-/*   4 per row smaller */
+/*  smaller  img, 4 per row */
 @media (max-width: 1300px) and (min-width: 1025px) {
   #AllSpecialties {
     padding: 0px 25px;
@@ -479,19 +479,23 @@
     transform: scale(1);
   }
 
-   .add-specialty .plus {
+    .add-specialty .plus {
     font-size: 270px;
+ 
+   
   }
 
   .add-specialty .plus-title {
-    font-size: 35px;
+    font-size: 34px;
     white-space: nowrap;
    }
 
   .add-specialty .plus-description {
-    font-size: 22px;
-    margin-top: 35px;
-    margin-bottom: 120px;
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 110px;
+
+
    
   }
 
@@ -530,7 +534,7 @@
 }
 }
 
-/*   2 per row images */
+/*   2 per row, bigger images */
 @media (max-width: 700px) {
   #AllSpecialties {
     padding: 0px 25px;
@@ -550,7 +554,7 @@
 
   .add-specialty .plus {
     font-size: 165px;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-bottom: 30px;
   }
 
@@ -583,5 +587,6 @@
   font-size: 60px;
   font-style: italic;
   font-weight: 700; 
+ 
 }
 }
