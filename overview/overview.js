@@ -154,4 +154,181 @@
         
 
 
-        
+ document.addEventListener("DOMContentLoaded", function () {
+  // نتحقق إن الشاشة موبايل فقط
+  if (window.innerWidth > 768) return;
+
+  // 🔹 القسم الأول (goals)
+  const goalsContainer = document.querySelector(".goals"); 
+  const prevArrow = document.querySelector(".prev-arrow"); 
+  const nextArrow = document.querySelector(".next-arrow"); 
+  if (goalsContainer && prevArrow && nextArrow) {
+    const goalItems = goalsContainer.querySelectorAll("div"); 
+    let currentSlide = 0; 
+    const totalSlides = goalItems.length; 
+    let lastActiveArrow = prevArrow; // السهم الأبيض الافتراضي
+
+    function updateSlidesVisibility() {
+      goalItems.forEach((item, index) => {
+        item.style.display = index === currentSlide ? "block" : "none";
+      });
+
+      prevArrow.style.display = "flex";
+      nextArrow.style.display = "flex";
+
+      prevArrow.disabled = currentSlide === 0;
+      nextArrow.disabled = currentSlide === totalSlides - 1;
+
+      prevArrow.classList.remove("active");
+      nextArrow.classList.remove("active");
+
+      if (currentSlide === 0) {
+        prevArrow.classList.add("active");
+      } else if (currentSlide === totalSlides - 1) {
+        nextArrow.classList.add("active");
+      } else {
+        lastActiveArrow.classList.add("active");
+      }
+    }
+
+    function activateArrow(arrow) {
+      prevArrow.classList.remove("active");
+      nextArrow.classList.remove("active");
+      arrow.classList.add("active");
+      lastActiveArrow = arrow;
+    }
+
+    prevArrow.addEventListener("click", function () {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateSlidesVisibility();
+        activateArrow(prevArrow);
+      }
+    });
+
+    nextArrow.addEventListener("click", function () {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlidesVisibility();
+        activateArrow(nextArrow);
+      }
+    });
+
+    updateSlidesVisibility();
+  }
+
+  // 🔹 القسم الثاني (icons)
+   const iconsContainer = document.querySelector(".icons");
+  const prevArrow1 = document.querySelector(".prev-arrow1");
+  const nextArrow1 = document.querySelector(".next-arrow1");
+
+  if (iconsContainer && prevArrow1 && nextArrow1) {
+    const icons = Array.from(iconsContainer.querySelectorAll("img"));
+    const visibleCount = 4;
+    let currentStart = icons.length - visibleCount;
+    let activeArrow = prevArrow1;
+
+    function updateIcons() {
+      icons.forEach((icon, index) => {
+        icon.style.display =
+          index >= currentStart && index < currentStart + visibleCount
+            ? "inline-block"
+            : "none";
+      });
+
+      prevArrow1.classList.remove("active");
+      nextArrow1.classList.remove("active");
+      activeArrow.classList.add("active");
+    }
+
+    function activateArrow(arrow) {
+      activeArrow = arrow;
+      updateIcons();
+    }
+
+    prevArrow1.addEventListener("click", function () {
+      if (currentStart > 0) currentStart--;
+      activateArrow(prevArrow1);
+    });
+
+    nextArrow1.addEventListener("click", function () {
+      if (currentStart < icons.length - visibleCount) currentStart++;
+      activateArrow(nextArrow1);
+    });
+
+    updateIcons();
+  }
+
+  // 🔹 القسم الثالث (cap-icons)
+  const capIconsContainer = document.querySelector(".cap-icons");
+  const prevArrow2 = document.querySelector(".prev-arrow2");
+  const nextArrow2 = document.querySelector(".next-arrow2");
+
+  if (capIconsContainer && prevArrow2 && nextArrow2) {
+    const icons = Array.from(capIconsContainer.querySelectorAll(".cap-icon"));
+    const visibleCount = 4;
+    let currentStart = icons.length - visibleCount;
+    let activeArrow = prevArrow2;
+
+    function updateIcons() {
+      icons.forEach((icon, index) => {
+        icon.style.display =
+          index >= currentStart && index < currentStart + visibleCount
+            ? "inline-block"
+            : "none";
+      });
+
+      prevArrow2.classList.remove("active");
+      nextArrow2.classList.remove("active");
+      activeArrow.classList.add("active");
+    }
+
+    function activateArrow(arrow) {
+      activeArrow = arrow;
+      updateIcons();
+    }
+
+    prevArrow2.addEventListener("click", function () {
+      if (currentStart > 0) currentStart--;
+      activateArrow(prevArrow2);
+    });
+
+    nextArrow2.addEventListener("click", function () {
+      if (currentStart < icons.length - visibleCount) currentStart++;
+      activateArrow(nextArrow2);
+    });
+
+    updateIcons();
+  }
+
+  // 🔹 القسم الرابع (imgs__box)
+  
+  const imgContainers = document.querySelectorAll(".imgs__box-container");
+  const prevArrow3 = document.querySelector(".prev-arrow3");
+  const nextArrow3 = document.querySelector(".next-arrow3");
+
+  if (imgContainers.length && prevArrow3 && nextArrow3) {
+    let currentIndex = imgContainers.length - 1;
+
+    function updateImages() {
+      imgContainers.forEach((img, idx) => {
+        img.style.display = idx === currentIndex ? "block" : "none";
+      });
+
+      prevArrow3.style.display = "flex";
+      nextArrow3.style.display = "flex";
+    }
+
+    prevArrow3.addEventListener("click", () => {
+      if (currentIndex > 0) currentIndex--;
+      updateImages();
+    });
+
+    nextArrow3.addEventListener("click", () => {
+      if (currentIndex < imgContainers.length - 1) currentIndex++;
+      updateImages();
+    });
+
+    updateImages();
+  }
+});

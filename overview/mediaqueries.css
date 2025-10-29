@@ -279,37 +279,120 @@
 }
 
 @media screen and (max-width: 768px) {
-    .goal {
-        padding: 40px 20px;
-        padding-bottom: 70px;
+  .goal {
+    padding: 40px 20px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+
+  .goal h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .goals {
+    gap: 30px;
+    padding: 15px;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* إخفاء جميع الأهداف افتراضياً */
+  .goals > div {
+    /* display: none; */
+    padding: 25px 20px;
+    animation: fadeIn 0.4s ease;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* عرض الشريحة النشطة فقط */
+  .goals > div.active {
+    display: block;
+  }
+
+  .goals .img {
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .goals h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 15px 0 10px 0;
+  }
+
+  .goals p {
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* تصميم أزرار التنقل الجانبية */
+  .goals-navigation {
+    display: flex;
+    gap: 15px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top:-60px; /* ← رفع الأزرار لفوق */
+    margin-bottom: 40px;
+    direction: ltr;
+  }
+
+  .nav-arrow {
+    color:#426dda; 
+    border: none;
+    width: 55px;
+    height: 55px;
+    font-size:45px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-arrow:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* السهم النشط */
+  .nav-arrow.active {
+    color: white; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
     }
-    
-    .goal h2 {
-        font-size: 45px;
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
-    
-    .goals {
-        gap: 30px;
-        padding: 15px;
-    }
-    
-    .goals > div {
-        padding: 25px 20px;
-    }
-    
-    .goals .img {
-        width: 300px;
-        height: 380px;
-    }
-    
-    .goals h3 {
-        font-size: 1.3rem;
-    }
-    
-    .goals p {
-        font-size: 0.95rem;
-    }
+  }
 }
+
+      
 
 @media screen and (max-width: 480px) {
     .goal {
@@ -422,13 +505,72 @@
         width:600px;
         height:70px;
     }
+
+     .specialties-navigation {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top:-10px; /* ← رفع الأزرار لفوق */
+    margin-bottom: 40px;
+    direction: ltr;
+    margin-left:40px;
+  }
+
+  .nav-arrow1 {
+    color:#426dda; 
+    border: none;
+    width: 55px;
+    height: 55px;
+    font-size:35px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-arrow1:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow1:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow1:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow1.active {
+    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+    
 }
 
 @media screen and (max-width: 480px) {
     .specialties {
       text-align: center;
       align-items: center;
-      margin-right: 20px;
+      margin-right: -20px;
       
     }
     
@@ -455,7 +597,7 @@
     }
 
     .image-container > p:last-of-type{
-        font-size: 0.4rem;
+        font-size: 0.5rem;
     }
     
     .icons img {
@@ -464,10 +606,72 @@
     }
     
     .btn {
-       width:500px;
-       height: 70px;
-      }
+    width: 95%;
+    display: block;
+    margin: 20px auto;
+    height: 70px;
+    text-align: center;
+  
+  }
+
+       .specialties-navigation {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top:-10px; 
+    margin-bottom: 40px;
+    direction: ltr;
+    margin-left:80px;
+  }
+
+  .nav-arrow1 {
+    color:#426dda; 
+    border: none;
+    width: 55px;
+    height: 55px;
+    font-size:35px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-arrow1:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow1:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow1:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow1.active {
+    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
+
+
 
 /* ========== Media Queries للـ Capabilities ========== */
 @media screen and (max-width: 1200px) {
@@ -488,7 +692,12 @@
         width:70px;
         height:70px;
     }
-}
+
+     .capabilities-navigation{
+        display:none;
+     }
+
+    }
 
 @media screen and (max-width: 992px) {
     .capabilities {
@@ -517,12 +726,20 @@
     .cap-icons {
         justify-content: center;
     }
+
+    .capabilities-navigation{
+        display:none;
+     }
 }
 
 @media screen and (max-width: 768px) {
     .capabilities {
         padding: 60px 20px;
-    }
+       }
+
+       .capabilities-container{
+       margin-top:20px;
+       }
 
     .cap-image-wrapper{
         align-items: center;
@@ -556,11 +773,71 @@
         width: 70px;
         height: 70px;
     }
+
+     .capabilities-navigation {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+   margin-bottom:-1500px; /* ← رفع الأزرار لفوق */
+    /* margin-bottom: 40px; */
+    direction: ltr;
+     margin-left:40px;
+    
+  }
+
+  .nav-arrow2 {
+    color:#426dda; 
+    border: none;
+    width:20px;
+    height:20px;
+    font-size:18px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+   }
+
+  .nav-arrow2:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow2:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow2:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow2.active {
+    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
     .capabilities {
         padding: 50px 15px;
+    }
+    .capabilities-container{
+        margin-top:150px;
     }
     
     .cap-content h2 {
@@ -590,7 +867,64 @@
         width: 60px;
         height: 60px;
     }
+
+    .capabilities-navigation {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+   margin-bottom:-1550px; 
+    /* margin-bottom: 40px; */
+    direction: ltr;
+    /* margin-right:50px; */
+  }
+
+  .nav-arrow2 {
+    color:#426dda; 
+    border: none;
+    width:20px;
+    height:20px;
+    font-size:18px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+   }
+
+  .nav-arrow2:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow2:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow2:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow2.active {
+    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
+
 
 
 @media screen and (max-width: 380px) {
@@ -707,6 +1041,7 @@
     .experience {
         padding: 50px 30px;
         gap: 50px;
+        margin-top:-50px;        
     }
     
     .experience__text-continer h2 {
@@ -733,7 +1068,7 @@
         gap: 25px;
         flex-wrap: wrap;
         justify-content: center;
-        /* margin-bottom: 200px; */
+        margin-top: -30px;
     }
     
     .icon-tab img {
@@ -826,6 +1161,7 @@
         gap: 30px;
         padding: 50px 20px;
         align-items: center;
+        margin-top: -50px;
     }
     
     .imgs__box-container img {
@@ -837,6 +1173,61 @@
     .imgs__box-container p {
         font-size: 1.5rem;
     }
+
+
+     .last-navigation {
+    display: flex;
+    margin-left:160px;
+   align-self: flex-start;
+ margin-top:-60px;
+
+  }
+
+  .nav-arrow3 {
+    color:#426dda; 
+    border: none;
+    width:20px;
+    height:20px;
+    font-size:18px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transition: all 0.3s ease;
+   }
+
+  .nav-arrow3:hover:not(:disabled) {
+    transform: scale(1.1);
+    display: flex;
+  }
+
+  .nav-arrow3:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow3:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow3.active {
+    color: #af2a2a85; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -853,22 +1244,15 @@
     .imgs__box-container p {
         font-size: 0.9rem;
     }
+
+     .last-navigation {
+    display: flex;
+    margin-left:160px;
+   align-self: flex-start;
+ margin-top:-60px;
 }
-@media screen and (max-width: 480px) {
-    .imgs__box {
-        padding: 40px 15px;
-        gap: 25px;
-        align-items: center;
-    }
-    
-    .imgs__box-container img {
-        height: 350px;
-    }
-    
-    .imgs__box-container p {
-        font-size: 0.9rem;
-    }
 }
+
 
 /* ========== Media Queries للـ Footer ========== */
 @media screen and (max-width: 768px) {
