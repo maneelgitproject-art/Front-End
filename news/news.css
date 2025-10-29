@@ -127,7 +127,7 @@
     font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro";
+    font-family: 'Noto Sans Arabic', sans-serif;
     font-weight: 900;
 }
 
@@ -193,8 +193,12 @@
   font-size: 5.2rem;
   font-weight: bold;
   margin-right: 45px;  
-  margin-top: 40px;    
+  margin-top: 40px;  
+  font-style: italic;
+  
 }
+
+
 
 
 
@@ -245,16 +249,17 @@
 
 /* Text below image */
 .news-card h3 {
-  color: #001f3f;
+  color: #001830ff;
   font-size: 1.3rem;
   margin: 10px 0 5px;
 }
 
 .news-card p {
-  color: #333;
+  color: #0f0b1aff;
   font-size: 1rem;
   margin: 3px 0;
   line-height: 1.5;
+ 
 }
 
 /* Top row: category + date */
@@ -269,6 +274,7 @@
   color: #40E0D0;
   font-weight: 700;
   font-size: 1rem;
+ 
 }
 
 .news-divider {
