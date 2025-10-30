@@ -390,6 +390,17 @@
       transform: translateX(0);
     }
   }
+
+   hr {
+            border: none;
+            height:2px;
+            background:white;
+            border-radius: 5px;
+            margin: 30px 0;
+            width: 100%;
+            /* box-shadow: 0 0 10px rgba(253, 187, 45, 0.5); */
+        }
+        
 }
 
       
@@ -562,7 +573,16 @@
     }
   }
 
-
+ .hrspecialties{
+            border: none;
+            height:2px;
+            background:#050505;
+            border-radius: 5px;
+            margin: 30px 0;
+            width:70%;
+            /* margin-left:-20px; */
+      }
+        
     
 }
 
@@ -601,8 +621,8 @@
     }
     
     .icons img {
-        width:40px;
-        height:40px;
+        width:70px;
+        height:70px;
     }
     
     .btn {
@@ -622,7 +642,7 @@
     margin-top:-10px; 
     margin-bottom: 40px;
     direction: ltr;
-    margin-left:80px;
+    margin-left:20px;
   }
 
   .nav-arrow1 {
@@ -830,6 +850,16 @@
       transform: translateX(0);
     }
   }
+
+   .hrcapabilities{
+            border: none;
+            height:2px;
+            background:#bcbcbc;
+            border-radius: 5px;
+            margin: 30px 0;
+            width:70%;
+            /* margin-left:-20px; */
+      }
 }
 
 @media screen and (max-width: 480px) {
@@ -1180,6 +1210,8 @@
     margin-left:160px;
    align-self: flex-start;
  margin-top:-60px;
+ direction: ltr;
+
 
   }
 
@@ -1195,6 +1227,7 @@
     /* align-items: center; */
     /* justify-content: center; */
     transition: all 0.3s ease;
+    
    }
 
   .nav-arrow3:hover:not(:disabled) {
@@ -1215,7 +1248,7 @@
 
   /* السهم النشط */
   .nav-arrow3.active {
-    color: #af2a2a85; /* السهم اللي دايس عليه لونه أبيض */
+    color: #bcbcbc; 
   }
 
   @keyframes fadeIn {
@@ -1228,6 +1261,17 @@
       transform: translateX(0);
     }
   }
+
+  /* .hrlast{
+            border: none;
+            height:2px;
+            background:#050505;
+            border-radius: 5px;
+            margin: 30px 0;
+            width:70%;
+            margin-left:-20px;
+      
+  } */
 }
 
 @media screen and (max-width: 480px) {
