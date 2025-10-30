@@ -1,0 +1,161 @@
+/* Last Updates Section */
+
+#last_updates {
+    padding: 0% 4% 0% 4%;
+    height: 70vh;
+    margin-block: 2%;
+}
+
+#section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10% 1% 6%;
+}
+
+#section-header h2 {
+    color: black;
+    font-size: 7rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-block: 0;
+}
+
+#section-header a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#section-header i {
+    margin-inline: 5px;
+    color: rgb(78, 164, 218);
+}
+
+#updates {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-inline: 4%;
+}
+
+#update {
+    width: 30%;
+    overflow: hidden;
+}
+
+#image-container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5%;
+}
+
+#image-container img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#updates img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+#update h3 {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-inline: 5px;
+    margin-bottom: 0;
+}
+
+#update p {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-inline: 5px;
+    max-height: 60px;
+    line-clamp: 2;
+    overflow: auto;
+}
+
+#update small strong {
+    font-size: 1.5rem;
+    color: rgb(110, 175, 228);
+}
+
+@media screen and (max-width: 768px) {
+    #last_updates {
+        height: 45vh;
+    }
+
+    #section-header {
+        padding: 1% 4% 1% 4%;
+    }
+
+    #section-header h2 {
+        max-width: 10%;
+        font-size: 1.5rem;
+    }
+
+    #section-header a {
+        max-width: 30%;
+        font-size: 1rem;
+    }
+
+    #section-header i {
+        margin-inline: 16%;
+        color: rgb(78, 164, 218);
+    }
+
+    #updates {
+        display: block;
+        padding-inline: 1%;
+
+    }
+
+    #update {
+        width: 100%;
+    }
+
+    #update small strong {
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-inline: 3px;
+    }
+
+    #update h3 {
+        font-size: 1.5rem;
+        margin-top: 1%;
+    }
+
+    #update p {
+        font-size: 1rem;
+        height: 40px;
+        max-height: 40px;
+        line-clamp: 2;
+        margin-top: 1%;
+        margin-bottom: 4%;
+    }
+
+    #carousel-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #carousel-buttons hr {
+        width: 100%;
+        height: 1%;
+        margin-inline: 20px;
+        color: #000;
+    }
+
+    #carousel-buttons i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-inline: 1.5%;
+    }
+}

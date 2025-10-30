@@ -1,1 +1,114 @@
-/* index css code */
+/* Css Code For Home Page */
+:root {
+    --primary-color: gray;
+    --secondary-color: #21252985;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    --background-color: black;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Footer Section */
+
+#footer-gif {
+    width: 100%;
+    height: 80vh;
+    background-image: url("../assets/index/footer/footer.gif");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+/* Social icons */
+.footer-icons {
+    margin-bottom: 15px;
+}
+
+.footer-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    /* dark grey circle */
+    color: white;
+    /* icon color */
+    border-radius: 50%;
+    margin: 0 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.footer-icons a:hover {
+    background-color: #40E0D0;
+    /* turquoise hover */
+    color: #000;
+    /* optional: icon turns black on hover */
+}
+
+/* Project Name */
+.footer-project {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b9b8b8;
+    margin: 40px 0;
+}
+
+/* Copyright */
+.footer-copy {
+    font-size: 0.9rem;
+    color: #b9b8b8;
+}
+
+/* Footer Links */
+.footer-links {
+    font-size: 0.9rem;
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    /* space between links */
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    #footer-gif {
+        height: 40vh;
+    }
+    .footer-project {
+        font-size: 1rem;
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+    }
+
+    .footer-links {
+        font-size: 0.8rem;
+    } 
+}
