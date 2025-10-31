@@ -178,8 +178,7 @@
       color: white;
     }
 
-    /* Responsive layout */
-    @media (max-width: 1020px) {
+   @media (max-width: 1020px) {
       #menu-toggle {
         display: block;
       }
