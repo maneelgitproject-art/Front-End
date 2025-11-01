@@ -187,11 +187,12 @@
     }
 
    @media (max-width: 1020px) {
-      #menu-toggle {
-   display: block;
-   margin-left: 5px;
-          
-       }
+            
+    #menu-toggle {
+          display: block;
+          margin-left: 5px;
+                  
+              }
 
       #links  {
         display: none;
@@ -219,7 +220,7 @@
         
       }
      #links a::after {
-  display: none;             
+        display: none;             
        }
      
       #links a.active::after {
@@ -244,8 +245,6 @@
  display: none;
  
 }
-
-
 
     }
  
@@ -368,7 +367,7 @@
 
 
 
-   #AllSpecialties {
+#AllSpecialties {
   background-color: #fff;
   padding: 0px 45px;
   direction: rtl;
@@ -471,12 +470,13 @@
   position: relative;
 }
 
-.add-specialty .title-overlay {
-  
+.add-specialty   {
   background-color: #07072c;
-  padding: 20px 0;
-  border-radius: 0px;
-
+  position: relative;
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+  cursor: pointer;
+  margin: 0 auto;
 }
 .add-specialty .plus {
   font-size:15rem;
@@ -493,6 +493,7 @@
   color: #ffffff;
   font-weight: bold;
   margin-bottom: 2px;
+ 
  }
 
 .add-specialty .plus-description {
@@ -710,12 +711,7 @@
  
 }
 
-.add-specialty .title-overlay {
-  
-   margin-top: -9.9px;
-   border-radius: 0px;
-
-}
+ 
 }
 
 
@@ -725,62 +721,88 @@
 
 @media (max-width: 500px) {
   #AllSpecialties {
-  padding: 0px 14px;
+  padding: 0px 30px;
   }
 
   .specialty-card,
   .add-specialty {
-    flex: 1 1 calc(50% - 10px);
-    max-width: calc(50% - 10px);
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
     border-radius: 0%;
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;     
     justify-content: center; 
     text-align: center;
-  }
+     
+   }
 
   .image-container {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    height: auto;
-    transform: scale(1.1);
+    transform: scale(1);
   }
-   .add-specialty {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    height: auto;
-   }
+  
+ 
+
+.add-specialty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  width: 100%;
+  height: auto;  
+  box-sizing: border-box;
+}
+
+.add-specialty .image-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: flex;              
+  flex-direction: column;      
+  align-items: center;         
+  justify-content: center;     
+  text-align: center;
+  padding: 10px;               
+  box-sizing: border-box;
+}
+   
+
+.add-specialty .plus,
+.add-specialty .plus-title,
+.add-specialty .plus-description {
+  position: static;        
+  margin: 1px 0;           
+}
 
 
   .add-specialty .plus {
-  font-size: clamp(70px, 2.4vw, 110px);  
-  margin-bottom: -12px;
- 
-
-    }
+font-size: clamp(50px, 20vw, 100px);    
+   margin-top: 50px;     }
 
   .add-specialty .plus-title {
-    font-size: clamp(11px, 2.4vw, 17px);  
-     white-space: nowrap;
  
+    font-size: clamp(12px, 1vw, 18px);  
+    white-space: nowrap;
+    text-align: center;  
+     
   }
 
  .add-specialty .plus-description {
-  font-size: clamp(7px, 1vw, 12px);
+  font-size: clamp(7px, 2vw, 11px);
   white-space: wrap;
   word-break: break-word;
-  text-align: center;
   margin: 0 auto 50px auto;
-  min-width:75px;
+  min-width:65px;
+
  
   }
 
   .description {
-    width: 70vw;  
+    width: 75vw;  
     font-size: 12px;
     color: #333;
-  white-space: wrap;
+    white-space: wrap;
 
   }
 
@@ -804,22 +826,20 @@
   background-color: #32C8ff;
   color: #fff;
   text-align: right;
-  padding: 6px 8px;
+  padding: 7px 20px;
   font-weight: bold;
-  font-size: clamp(10px, 3vw, 15px);  
-  white-space: normal;
+   white-space: normal;
   word-break: break-word;
-  margin-top: 3px;
-  transform: none;       
-  border-radius: 0;
-  transition: background-color 0.3s;
+  margin-top: -2px;
+  font-size: clamp(7px, 3vw, 14px);
+  transform: scale(1);
 }
-
-.add-specialty .title-overlay {
-  padding: 16px ;
-  border-radius: 0;
- }
+ 
+ 
  .specialties-row {
-  gap: 3px;
- }
+  row-gap: 15px;     
+  column-gap: 10px;
+  align-items: stretch;
+
+  }
 }
