@@ -1,6 +1,6 @@
 // Render Helper Function
 function render_helper () {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 850) {
         render_mobile(
             last_updates_data,
             updates,

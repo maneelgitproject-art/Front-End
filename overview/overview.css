@@ -4,17 +4,18 @@
 body {
   margin: 0;
   font-family: "Cairo", sans-serif;
- 
+
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 .navbar {
   position: fixed;
   z-index: 1000;
-   top: 0;
+  top: 0;
   width: 100%;
   background-color: #000;
   color: #fff;
@@ -31,16 +32,16 @@ html, body {
   align-items: center;
   gap: 8px;
   direction: ltr;
- 
+
 }
 
 .logo img {
-  width:70px;
-  height:70px;
+  width: 70px;
+  height: 70px;
 }
 
 .logo span {
-  font-size:25px;
+  font-size: 25px;
   font-weight: bold;
   color: #fff;
 }
@@ -52,14 +53,15 @@ html, body {
   align-items: center;
   gap: 25px;
   margin: 0;
-  padding:10px 50px;
+  padding: 10px 50px;
 }
 
 .nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 15px;
-  padding: 6px 12px; /* علشان الخلفية تظهر حوالين النص */
+  padding: 6px 12px;
+  /* علشان الخلفية تظهر حوالين النص */
   border-radius: 4px;
   position: relative;
   transition: all 0.3s ease;
@@ -68,17 +70,17 @@ html, body {
 .nav-links a::after {
   content: "";
   position: absolute;
-  bottom: -10px; 
+  bottom: -10px;
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #32C8FF; 
+  background-color: #32C8FF;
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color:  #f9f9f919;
- color:white; 
+  background-color: #f9f9f919;
+  color: white;
 }
 
 .nav-links a:hover::after {
@@ -140,176 +142,178 @@ html, body {
 }
 
 /* زر القائمة المنسدلة للجوال */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px;
-        }
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
 
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: #fff;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+}
 
 
 
 /* أيقونة الكرة الأرضية للشاشات الصغيرة */
 .globe-mobile {
-    display: none;
-    cursor: pointer;
-    font-size:22px;
-    padding: 8px;
-    margin-left: 15px;
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 8px;
+  margin-left: 15px;
 }
 
 
 /*intro section*/
 
 
- .banner {
-      position: relative;
-      width: 100%;
-      height:700px;
-      background-image: url('../assets/overview/intro/ما هو مشروع نواة.jpeg'); 
-      background-position: center;
-      
-      opacity:1.5;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 40px;
-      box-sizing: border-box;
-    }
+.banner {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-image: url('../assets/overview/intro/ما هو مشروع نواة.jpeg');
+  background-position: center;
+
+  opacity: 1.5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
 
 
-    .banner::before {
+.banner::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* غمقان بنسبة 50% */
+  background: rgba(0, 0, 0, 0.5);
+  /* غمقان بنسبة 50% */
   z-index: 1;
 }
 
 .banner h1,
 .banner p {
   position: relative;
-  z-index: 2; /* عشان الكلام يكون فوق الطبقة الغامقة */
+  z-index: 2;
+  /* عشان الكلام يكون فوق الطبقة الغامقة */
 }
 
-    .banner h1 {
-      font-size:7rem;
-      margin: 0 0 10px 0;
-      /* font-weight: bold; */
-      Font-style: "italic";
-    }
+.banner h1 {
+  font-size: 7rem;
+  margin: 0 0 10px 0;
+  /* font-weight: bold; */
+  Font-style: "italic";
+}
 
-    .banner p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      line-height: 1.5;
-     margin-top: 50px;
-      color:white;
-    font-weight: 900;
-    }
+.banner p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-top: 50px;
+  color: white;
+  font-weight: 900;
+}
 
 
 
-    /* Project Goals */
+/* Project Goals */
 
-   .goal{
-        /* margin-top: 20px; */
-        background-image:url(../assets/overview/pro_goals/frame.jpg);
-        background-size: cover;
-        /* background-attachment: fixed; */
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: auto;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 60px 40px;
-        padding-bottom: 100px;
-        box-sizing: border-box;
-        position: relative;
-    }
+.goal {
+  /* margin-top: 20px; */
+  background-image: url(../assets/overview/pro_goals/frame.jpg);
+  background-size: cover;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  position: relative;
+}
 
-    .goal h2{
-     font-weight:bold;
-     font-size:90px;
-     text-align: center;
-     line-height: 64px;
-     margin:0px;
-    }
+.goal h2 {
+  font-weight: bold;
+  font-size: 90px;
+  text-align: center;
+  line-height: 64px;
+  margin: 0px;
+}
 
-   
-    .goals {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap:50px;
-        max-width: 1400px;
-        margin:30px auto;
-        padding: 20px;
-    }
 
-    .goals > div {
-        background: transparent;
-        border-radius: 16px;
-        padding: 30px 25px;
-        box-shadow: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        transition: all 0.4s ease;
-    }
+.goals {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 20px;
+}
 
-    /* .goals > div:hover {
+.goals>div {
+  background: transparent;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+/* .goals > div:hover {
         transform: translateY(-15px);
         box-shadow: none;
         background: transparent;
     } */
 
-    .goals .img {
-        /* width: 100%; */
-       width: 468px;
-       height: 624px;
-        /* border-radius: 12px; */
-        margin-bottom:10px;
-        object-fit: cover;
-        perspective: 1000px;
-    }
+.goals .img {
+  /* width: 100%; */
+  width: 468px;
+  height: 624px;
+  /* border-radius: 12px; */
+  margin-bottom: 10px;
+  object-fit: cover;
+  perspective: 1000px;
+}
 
-    
-    .goals h3 {
-        font-size: 1.5rem;
-        /* margin-bottom:10px; */
-        color: white;
-        font-weight: 700;
-        /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
-    }
 
-    .goals p {
-        font-size: 1rem;
-        line-height: 1.8;
-        color: white;
-        font-weight: 400;
-        /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
-        margin-top: 0px;
-    }
+.goals h3 {
+  font-size: 1.5rem;
+  /* margin-bottom:10px; */
+  color: white;
+  font-weight: 700;
+  /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
+}
 
-   
+.goals p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: white;
+  font-weight: 400;
+  /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
+  margin-top: 0px;
+}
+
+
 
 
 /* Specialties */
@@ -327,7 +331,7 @@ html, body {
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  direction:rtl;
+  direction: rtl;
 }
 
 .image-container {
@@ -350,12 +354,14 @@ html, body {
 } */
 
 .image-3d {
-  width:400px;
-  height:400px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   /* border: 4px solid #5fc9f3; */
-  object-fit: cover; /* تملى الإطار تمامًا */
-  object-position: center; /* تركّز الصورة في المنتصف */
+  object-fit: cover;
+  /* تملى الإطار تمامًا */
+  object-position: center;
+  /* تركّز الصورة في المنتصف */
   box-shadow: 0 0 20px rgba(95, 201, 243, 0.3);
   display: block;
 }
@@ -370,14 +376,14 @@ html, body {
   margin: 20px 0 10px;
 }
 
-.image-container > p:first-of-type {
+.image-container>p:first-of-type {
   font-size: 1.4rem;
   font-weight: 600;
   color: #1a1a1a;
   margin: 0;
 }
 
-.image-container > p:last-of-type {
+.image-container>p:last-of-type {
   font-size: 1rem;
   color: #4a4a4a;
   line-height: 1.8;
@@ -416,7 +422,7 @@ html, body {
   cursor: pointer;
   /* border-radius: 8px; */
   transition: all 0.3s ease;
- align-items: center;
+  align-items: center;
 }
 
 .icons {
@@ -435,15 +441,17 @@ html, body {
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
-   filter: brightness(40%); /* ظل خفيف على الأيقونات غير المختارة */
+  filter: brightness(40%);
+  /* ظل خفيف على الأيقونات غير المختارة */
   opacity: 0.8;
   transform: translateZ(0);
-  
+
 }
 
 /* لما الأيقونة تتحدد */
 .icons img.active {
-  filter: brightness(100%); /* يرجع الصورة لحالتها الطبيعية */
+  filter: brightness(100%);
+  /* يرجع الصورة لحالتها الطبيعية */
   opacity: 1;
   /* box-shadow: 0 0 15px rgba(50, 200, 255, 0.6); */
   transform: translateZ(0);
@@ -456,7 +464,7 @@ html, body {
 }
 
 .btn:hover {
-  background-color:#32C8FF;
+  background-color: #32C8FF;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -470,13 +478,13 @@ html, body {
   /* background-size: cover;
   background-position: center; */
   background-repeat: no-repeat;
-  padding:100px 40px;
-  min-height:2000px;
+  padding: 100px 40px;
+  min-height: 2000px;
 }
 
 .capabilities-container {
   max-width: 1200px;
-  margin:90px auto;
+  margin: 90px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
@@ -489,14 +497,14 @@ html, body {
   flex-direction: column;
   gap: 25px;
   order: 2;
- }
+}
 
 .cap-main-image {
   width: 100%;
- width:514px;
- height:289px;
+  width: 514px;
+  height: 289px;
   object-fit: cover;
-  
+
 }
 
 
@@ -529,7 +537,7 @@ html, body {
   line-height: 1.2;
 }
 
-.cap-content > p {
+.cap-content>p {
   font-size: 1.2rem;
   color: #4a4a4a;
   line-height: 1.8;
@@ -567,9 +575,9 @@ html, body {
   object-fit: cover;
 }
 
-.capabilities-navigation{
-        display:none;
-     }
+.capabilities-navigation {
+  display: none;
+}
 
 
 /* قسم عزز خبرة */
@@ -577,9 +585,9 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:200px;
+  gap: 200px;
   /* padding: 80px 100px; */
-  direction:ltr;
+  direction: ltr;
   color: #111;
   flex-wrap: wrap;
 }
@@ -592,12 +600,12 @@ html, body {
   text-align: center;
   max-width: 450px;
   position: relative;
- 
+
 }
 
 .experience__img-continer img {
-  width:600px;
-  height:600px ;
+  width: 600px;
+  height: 600px;
   z-index: 2;
   position: relative;
   /* background-color: #ff8f1d; */
@@ -606,13 +614,13 @@ html, body {
 .experience__img-continer::before {
   content: "";
   position: absolute;
-  width:350px;
-  height:350px;
-  border:20px solid rgba(255, 255, 255, 0.3);
+  width: 350px;
+  height: 350px;
+  border: 20px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   z-index: 1;
-  top:51%;
-  left:53%;
+  top: 51%;
+  left: 53%;
   transform: translate(-50%, -50%);
 }
 
@@ -622,7 +630,7 @@ html, body {
   color: #001d3d;
   margin-top: 20px;
   display: block;
- 
+
 }
 
 .experience__img-continer p {
@@ -695,9 +703,10 @@ html, body {
   align-items: flex-start;
   gap: 40px;
   /* padding: 80px 40px; */
-  background-color: #fff; /* خلفية بيضاء */
+  background-color: #fff;
+  /* خلفية بيضاء */
   flex-wrap: wrap;
-  direction:ltr;
+  direction: ltr;
   margin-top: 0px;
 }
 
@@ -714,7 +723,7 @@ html, body {
   width: 332px;
   height: 450px;
   object-fit: cover;
-  
+
 }
 
 .imgs__box-container p {
@@ -764,8 +773,8 @@ section {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: #333;  
-  color: white;  
+  background-color: #333;
+  color: white;
   border-radius: 50%;
   margin: 0 8px;
   text-decoration: none;
@@ -774,23 +783,23 @@ section {
 }
 
 .footer-icons a:hover {
-  background-color: #40E0D0; 
-  color: #000;  
+  background-color: #40E0D0;
+  color: #000;
 }
 
 /* Project Name */
 .footer-project {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #b9b8b8;          
-  margin: 40px 0;         
+  color: #b9b8b8;
+  margin: 40px 0;
 }
 
 /* Copyright */
 .footer-copy {
   font-size: 0.9rem;
   margin-bottom: 12px;
-  color: #b9b8b8;         
+  color: #b9b8b8;
 
 }
 
@@ -798,7 +807,7 @@ section {
 .footer-links {
   font-size: 0.9rem;
   margin-top: 10px;
-  margin: 45px 0;         
+  margin: 45px 0;
 
 }
 
@@ -806,11 +815,11 @@ section {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  margin: 0 15px; /* space between links */
+  margin: 0 15px;
+  /* space between links */
   transition: 0.3s;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
 }
-

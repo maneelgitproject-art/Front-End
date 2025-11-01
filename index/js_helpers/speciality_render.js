@@ -1,7 +1,7 @@
 // Change Speciality Section
 function change_speciality_section() {
     const speciality = document.getElementById("speciality");
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 850) {
         speciality.innerHTML = `
             <div class="center-content">
                 <h1>اختر تخصصك</h1>

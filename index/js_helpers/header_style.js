@@ -26,6 +26,59 @@ const social_link_underline = document.querySelector(
     ".social-link-item-underline"
 );
 
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenuLinks = document.getElementById("mobile-menu-links");
+
+mobileMenu.addEventListener("click", function (event) {
+    console.log("mobile menu clicked");
+    mobileMenuLinks.classList.toggle("active");
+    if (mobileMenuLinks.classList.contains("active")) {
+        mobileMenuLinks.style.display = "flex";
+        mobileMenuLinks.animate(
+            [
+                { top: "-100px" },
+                { top: "5%" },
+            ],
+            {
+                duration: 500,
+                easing: "ease",
+            }
+        );
+    } else {
+        mobileMenuLinks.style.display = "none";
+        mobileMenuLinks.animate(
+            [
+                { top: "5%" },
+                { top: "-100px" },
+            ],
+            {
+                duration: 500,
+                easing: "ease",
+            }
+        );
+    }
+
+    event.stopPropagation(); 
+})
+
+document.addEventListener("click" , function() {
+    console.log("document clicked");
+    if (mobileMenuLinks.classList.contains("active")) {
+        mobileMenuLinks.classList.remove("active");
+        mobileMenuLinks.style.display = "none";
+        mobileMenuLinks.animate(
+            [
+                { top: "5%" },
+                { top: "-100px" },
+            ],
+            {
+                duration: 500,
+                easing: "ease",
+            }
+        );
+    }
+})
+
 // Change Header Links Style Function
 function change_link_style(element, elementUnderLine) {
     element.addEventListener("mouseover", function () {

@@ -2,7 +2,7 @@
 :root {
     --primary-color: gray;
     --secondary-color: #21252985;
-    font-family: 'Noto Sans Arabic', sans-serif;
+    font-family: "Cairo", sans-serif;
     --background-color: black;
 }
 
@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .site-footer {
@@ -31,7 +32,6 @@ body {
     color: white;
     text-align: center;
     padding: 40px 20px;
-    font-family: 'Noto Sans Arabic', sans-serif;
 }
 
 /* Social icons */
@@ -96,9 +96,9 @@ body {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
     #footer-gif {
-        height: 40vh;
+        height: 45vh;
     }
     .footer-project {
         font-size: 1rem;

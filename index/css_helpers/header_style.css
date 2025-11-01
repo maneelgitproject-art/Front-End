@@ -21,7 +21,7 @@
 }
 
 #left-side {
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,7 +81,8 @@
 #language {
     cursor: pointer;
     transition: 0.5s;
-    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
 }
 
 #language:hover {
@@ -108,9 +109,10 @@
     margin-inline: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     #header {
         padding-inline: 4%;
+        overflow-x: hidden;
     }
 
     #left-side {
@@ -126,9 +128,51 @@
         font-size: 1rem;
     }
 
+    #mobile-menu-links {
+        display: none;
+        background-color: black;
+        color: white;
+        position: absolute;
+        width: 92%;
+        top: 5%;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        z-index: 10;
+        padding: 4%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #mobile-menu-links a{
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 700;
+        padding: 2px 15px;
+        transition: all 0.1s ease-in-out;
+    }
+
+    #mobile-menu-links button{
+        background-color: var(--secondary-color);
+        border: 1px solid gray;
+        border-radius: 5px;
+        color: #32c7ff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 5px 15px;
+        transition: all 0.1s ease-in-out;
+    }
+
+    #user i {
+        margin-inline: 5px;
+    }
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 850px) {
     #mobile-menu {
         display: none;
     }

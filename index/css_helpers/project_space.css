@@ -46,7 +46,7 @@
     color: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
     #pro-space {
         height: 82vh;
         padding-block: 25%;
@@ -77,6 +77,65 @@
     #pro-space-img p {
         width: 100%;
         font-size: 1.2rem;
+        font-weight: 500;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    #pro-space-buttons {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #pro-space-buttons hr {
+        width: 100%;
+        height: 1%;
+        color: #ffffff;
+    }
+
+    #pro-space-buttons i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-inline: 1.5%;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+    #pro-space {
+        height: 80vh;
+        padding-block: 15%;
+    }
+
+    #pro-space-header h1 {
+        font-size: 6rem;
+        margin-bottom: 2%;
+    }
+
+    #pro-space-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #pro-space-img {
+        width: 60%;
+    }
+
+    #pro-space-img img {
+        width: 100%;
+        border-radius: 0.5%;
+    }
+
+    #pro-space-img p {
+        width: 100%;
+        font-size: 1.3rem;
         font-weight: 500;
         overflow-wrap: break-word;
         line-height: 1.5;

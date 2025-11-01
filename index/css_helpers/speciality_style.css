@@ -90,7 +90,7 @@
     border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     #speciality {
         flex-direction: column;
         background-size: cover;

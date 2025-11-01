@@ -54,7 +54,7 @@
     border: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 450px) {
     #welcome {
         flex-direction: column;
         justify-content: center;
@@ -99,6 +99,59 @@
         text-align: center;
         width: 95%;
         height: 30vh;
+        border-radius: 10px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+    #welcome {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        overflow: hidden;
+        padding-block: 2%;
+    }
+
+    #welcome-header h1 {
+        font-size: 3rem;
+        line-height: 0.5;
+    }
+
+    #welcome-header p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    #show-more {
+        width: 40%;
+        display: block;
+        margin-inline: auto;
+        margin-block: 1.5%;
+    }
+
+    #show-more button {
+        width: 100%;
+        padding: 4% 2%;
+        background-color: #141e37;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        border: none;
+    }
+
+    .video {
+        margin-block: 0%;
+    }
+
+    .video iframe {
+        text-align: center;
+        width: 80%;
+        height: 40vh;
         border-radius: 10px;
         padding: 0;
     }
