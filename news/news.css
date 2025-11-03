@@ -612,7 +612,8 @@
     font-size: 14px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1200px)and (min-width: 755px) {
+  
   .news-gallery {
     display: flex;               
     flex-direction: column;         
