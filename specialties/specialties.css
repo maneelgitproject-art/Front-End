@@ -446,13 +446,13 @@
     font-size: 25px;
     font-style: italic;
     font-weight: 700; 
-    color: #111111ff;
+    color: #141e37;
     margin-bottom: 0px; /* space between small title and main title */
   }
 
   .main-title {
   font-size: 80px;
-  color: #3b3b3b;
+  color: #141e37;
   font-style: italic;
   font-weight: 700; 
   margin-top: 10px;
@@ -461,7 +461,7 @@
 
   .description {
     font-size: 18px;
-    color: #2e2d2dff;
+    color: #141e37;
     width: 47vw;
     line-height: 1.7;
     margin: 0 4px;  
