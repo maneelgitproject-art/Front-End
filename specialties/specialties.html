@@ -19,18 +19,27 @@
           <img src="../assets/index/logo.png" alt="Logo" class="logo-image">
         </div>
 
-          <!-- Header menu smaller -->
+          <!-- Header menu (mobile view) -->
         <div id="menu-toggle">
           <i class="fas fa-bars"></i>
         </div>
 
           <div id="links">
+           <!--   menu logo + close (mobile view) -->
+            <div class="menu-header-logo">
+               <img src="../assets/index/logo.png" alt="Logo" class="logo-image-menu">
+                <button id="menu-close">&times;</button>
+            </div>
+
               <a href="./overview/overview.html">نظرة عامه</a>
               <a href="../news/news.html">الأخبار</a>
               <a href="../specialties/specialties.html"  class="active" >تخصصات</a>
               <a href="./find_specialize/find_specialize.html">اعثر على تخصصك</a>
               <a href="./support/support.html">الدعم</a>
               <a href="./social/social.html">اجتماعى</a>
+             <!--   menu  button (mobile view) -->
+               <button id="menu-user">حسابى</button>
+
           </div>
 
           <div id="tips">
@@ -173,15 +182,7 @@
       </div>
       </footer>
 
-    <script src="./specialties/specialties.js"></script>
-           
-    <!-- menu js -->
-        <script>
-          const toggle = document.getElementById('menu-toggle');
-          const links = document.getElementById('links');
-          toggle.addEventListener('click', () => {
-            links.classList.toggle('show');
-          });
-    </script>
+    <script src="./specialties.js"></script>
+  
 </body>
 </html>

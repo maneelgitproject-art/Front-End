@@ -1,6 +1,4 @@
-/* specialties css Code */
- 
-    :root {
+  :root {
       --primary-color: #7c7c7c63;
       --secondary-color: #21252985;
       --background-color: #111;  
@@ -44,6 +42,8 @@
       height: 70px;
     }
 
+ 
+
     .logo-text {
       display: flex;
       flex-direction: column;
@@ -62,7 +62,7 @@
       display: flex;
       justify-content: left;
       align-items: left;
-      gap: 5px;
+      gap: 9px;
       flex: 1;
       text-align: left;
       transition: max-height 0.4s ease, opacity 0.4s ease;
@@ -97,7 +97,7 @@
     }
 
     #links a:hover::after {
-      width: 102%; 
+      width: 100%; 
     }
 
     #links a.active {
@@ -175,7 +175,7 @@
   display: none;
   cursor: pointer;
   font-size: 17px; 
-  color: rgb(240, 252, 198);
+  color: rgb(244, 245, 243);
   background-color: rgba(49, 49, 49, 0.76);
   padding:16px;  
   border-radius: 20px;
@@ -186,6 +186,58 @@
 
     }
 
+
+  .menu-header {
+  display: flex;               
+  align-items: center;          
+  justify-content: space-between;  
+  padding: 10px 20px;
+}
+#menu-close {
+  display: none;           
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  background-color: #616060c4;
+  color: white;
+   position: relative;
+  top: 3%;
+  right: 100%;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 25px; 
+  
+ }
+   
+
+ .logo-image-menu
+    { 
+      display: none;
+      width: 50px;   
+      height: 50px;
+      position: relative;
+      align-items: flex-start;
+    }
+
+ 
+
+/* New USER button  */
+#menu-user {
+    display: none;         
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
    @media (max-width: 1020px) {
             
     #menu-toggle {
@@ -194,41 +246,92 @@
                   
               }
 
-      #links  {
-        display: none;
-        flex-direction: column;
-        background-color: var(--background-color);
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        padding: 15px 0;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        text-align: right;
-        opacity: 0;
-      }
 
-      #links.show {
-        display: flex;
-        opacity: 1;
-      }
+              
+#links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;  
+    padding: 20px;
+    text-align: right;
+    z-index: 1000;
 
-      #links a {
+    /* Gradient: right opaque, left transparent */
+    background: linear-gradient(to left, 
+                rgba(0,0,0,1) 50%,      /* right half opaque */
+                rgba(0,0,0,0.3) 50%);   /* left half transparent */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+
+#links.show {
+        display: flex !important;
+       }
+ #links.show #menu-close  {
+         display: flex; 
+         top: -40%;
+         right: 43%;
+ 
+}
+     
+
+.logo-image-menu,
+  #menu-close {
+    display: block;
+  }
+
+ #links.show #menu-user {
+    display: flex;
+    width: 48%;  
+    background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+    border-radius: 10px;
+}
+      
+ #links a {
         padding: 15px;
         font-size: 20px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+         
       }
-     #links a::after {
+
+ #links a::after {
         display: none;             
        }
-     
-      #links a.active::after {
-       display: none;             }
+#links a.active {
+          padding: 15px;
+          font-size: 20px;
+          overflow: hidden;
+          width: 48%;
 
-         #links a:hover {
-      background-color: var(--primary-color);
-     }
+        background: linear-gradient(to left, 
+                  rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                  rgba(0, 0, 0, 0) 0%);
+        border-radius: 10px;
+         
+}
+ 
+#links a.active::after {
+           display: none
+                       }
+
+ #links a:hover {
+          width: 48%;
+          background-color: var(--primary-color);
+           background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+           border-radius: 10px;
+}
     
   #tips {
   display: block;
@@ -237,6 +340,7 @@
   top: 50%;
   transform: translateY(-50%); 
 }
+
 #language {
    transform: scale(1.7);
 }
@@ -246,7 +350,7 @@
  
 }
 
-    }
+}
  
 
 /* ===== end of header ===== */
@@ -843,3 +947,395 @@ font-size: clamp(50px, 20vw, 100px);
 
   }
 }
+
+
+
+
+
+ /*    MENU   */
+ #menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 17px; 
+  color: rgb(244, 245, 243);
+  background-color: rgba(49, 49, 49, 0.76);
+  padding:16px;  
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 48px;        
+  height: 48px; 
+
+    }
+
+
+  .menu-header {
+  display: flex;               
+  align-items: center;          
+  justify-content: space-between;  
+  padding: 10px 20px;
+}
+#menu-close {
+  display: none;           
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 30px;
+  background-color: #616060c4;
+  color: white;
+   position: relative;
+  top: 3%;
+  right: 100%;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 25px; 
+  
+ }
+   
+
+ .logo-image-menu
+    { 
+      display: none;
+      width: 50px;   
+      height: 50px;
+      position: relative;
+      align-items: flex-start;
+    }
+
+ 
+
+/* New USER button  */
+#menu-user {
+    display: none;         
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1020px) {
+            
+    #menu-toggle {
+          display: block;
+          margin-left: 5px;
+                  
+              }
+
+
+              
+#links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;  
+    padding: 20px;
+    text-align: right;
+    z-index: 1000;
+
+    /* Gradient: right opaque, left transparent */
+    background: linear-gradient(to left, 
+                rgba(0,0,0,1) 50%,      /* right half opaque */
+                rgba(0,0,0,0.3) 50%);   /* left half transparent */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+
+#links.show {
+        display: flex !important;
+       }
+ #links.show #menu-close  {
+         display: flex; 
+         top: -40%;
+         right: 43%;
+ 
+}
+     
+
+.logo-image-menu,
+  #menu-close {
+    display: block;
+  }
+
+ #links.show #menu-user {
+    display: flex;
+    width: 48%;  
+    background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+    border-radius: 10px;
+}
+      
+ #links a {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+         
+      }
+
+ #links a::after {
+        display: none;             
+       }
+#links a.active {
+          padding: 15px;
+          font-size: 20px;
+          overflow: hidden;
+          width: 48%;
+
+        background: linear-gradient(to left, 
+                  rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                  rgba(0, 0, 0, 0) 0%);
+        border-radius: 10px;
+
+         
+}
+ 
+ #links a.active::after {
+           display: none
+                       }
+
+ #links a:hover {
+          width: 48%;
+          background-color: var(--primary-color);
+           background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+           border-radius: 10px;
+
+       }
+    
+  #tips {
+  display: block;
+  position: absolute;
+  left: calc(8% + 50px);
+  top: 50%;
+  transform: translateY(-50%); 
+}
+#language {
+   transform: scale(1.7);
+}
+
+#user {
+ display: none;
+ 
+}
+ 
+
+    }
+
+/* ===== end of menu ===== */
+
+
+
+
+
+
+
+
+/* Responsive behavior menu */
+ 
+
+@media (max-width: 800px) {
+ 
+    #links {
+        width: 100%;
+        background: linear-gradient(to left, rgba(0,0,0,1) 60%, rgba(0,0,0,0.3) 40%);
+    }
+     #links a {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+         
+      }
+
+     #links a::after {
+        display: none;             
+       }
+       #links a.active {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        width: 58%;
+
+        background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+        border-radius: 10px;
+
+         
+}
+ 
+     
+  #links a.active::after {
+           display: none
+                       }
+
+         #links a:hover {
+          width: 58%;
+          background-color: var(--primary-color);
+           background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+           border-radius: 10px;
+
+       }
+
+
+              #links.show #menu-user {
+             display: flex;
+             width: 58%;
+            background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+          border-radius: 10px;
+
+       }
+              #links.show #menu-close  {
+         display: flex; 
+         top: -40%;
+         right: 50%;
+ 
+}
+}
+
+
+@media (max-width: 600px) {
+ 
+    #links {
+        width: 100%;
+        background: linear-gradient(to left, rgba(0,0,0,1) 80%, rgba(0,0,0,0.3) 20%);
+    }
+       #links a {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+         
+      }
+
+     #links a::after {
+        display: none;             
+       }
+       #links a.active {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        width: 78%;
+
+      background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+      border-radius: 10px;
+
+       
+}
+ 
+     
+  #links a.active::after {
+           display: none
+                       }
+
+         #links a:hover {
+          width: 78%;
+          background-color: var(--primary-color);
+           background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+          border-radius: 10px;
+
+       }
+
+       #links.show #menu-user {
+             display: flex;
+             width: 78%;
+              background: linear-gradient(to left, 
+                    rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                    rgba(0, 0, 0, 0) 0%);
+              border-radius: 10px;
+}
+
+#links.show #menu-close  {
+         display: flex; 
+         top: -40%;
+         right: 70%;
+ 
+}
+}
+
+@media (max-width: 500px) {
+ 
+    #links {
+        width: 100%;
+        background: rgba(0,0,0,1); /* fully opaque for very small screens */
+    }
+       #links a {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 10px;
+         
+      }
+
+     #links a::after {
+        display: none;             
+       }
+       #links a.active {
+        padding: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        width: 98%;
+        background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+        border-radius: 10px;
+
+         
+}
+ 
+     
+  #links a.active::after {
+           display: none
+                       }
+
+         #links a:hover {
+          width: 98%;
+          background-color: var(--primary-color);
+           background: linear-gradient(to left, 
+                rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                rgba(0, 0, 0, 0) 0%);
+          border-radius: 10px;
+       }
+
+
+ #links.show #menu-user {
+        display: flex;
+        width: 97%;  
+        background: linear-gradient(to left, 
+                    rgba(102, 100, 100, 0.534)100%,      /* right half opaque */
+                    rgba(0, 0, 0, 0) 0%);
+        border-radius: 10px;
+    }
+      
+#links.show #menu-close  {
+         display: flex; 
+         top: -40%;
+         right: 90%;}
+}
+
