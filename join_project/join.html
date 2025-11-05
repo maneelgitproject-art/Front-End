@@ -6,25 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./join.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
- 
   <title>طلب تقديم للانضمام مشروع نواة</title>
   </head>
 
 <body>
-      <!-- Background image + transparent layer -->
-  <div class="background">
-    <img src="../assets/join/bg.jpeg" alt="Background Image">
-    <div class="overlay"></div>
-  </div>
-    <header id="logo-container">
+    <header >
           <!-- Header Code -->
-        <div id="logo-container">
-          <img src="../assets/index/logo.png" alt="Logo" class="logo-image">
-           <div class="logo-text">
-                  <span>Nawah</span>
-                  <span>Project</span>
-              </div>
-        </div>
         <!-- Header Code -->
         <!-- index Link ( ../index.html ) -->
         <!-- overview Link ( ../overview/overview.html ) -->
@@ -34,106 +21,155 @@
         <!-- social Link ( ../social/social.html ) -->
         <!-- support Link ( ../support/support.html ) -->
     </header>
+       <!-- logo  -->
+        <div id="logo-container">
+         <div class="logo-text">
+                  <span>Nawah</span>
+                  <span>Project</span>
+              </div>
+          <img src="../assets/index/logo.png" alt="Logo" class="logo-image">
+        </div>
 
     <main>
-       
-   
-
   <div class="content">
-
-            <!-- Form Page 1 -->
-        <div class="form-container page active" id="page1">
-              <h1 class="b-title">طلب تقديم للانضمام مشروع نواة</h1>
-              <hr class="black-line">
-
-              <h2>المعلومات الشخصية</h2>
-
-              <!-- الاسم الكامل -->
-              <div class="input-box">
-                  <label class="form-label">الاسم الكامل</label>
-                  <input type="text" placeholder="إجابتك">
-                  <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#a0a0a0ad;stroke-width:17" />
-                  </svg>
-              </div>
-
-              <!-- البريد الإلكتروني -->
-              <div class="input-box red">
-                  <label class="form-label-error">عنوان بريد إلكتروني</label>
-                  <input type="email" placeholder="إجابتك" required>
-                  <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#f10d0dad;stroke-width:17" />
-                </svg>
-
-                    <div class="error-wrapper">
-                      <span class="error-icon"><svg xmlns="http://www.w3.org/2000/svg"    width="18" height="18" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
-                          </svg>
-                      </span>
-                      <p class="error-message">يجب أن يكون البريد الإلكتروني صالحًا</p>
-                    </div>
-              </div>
-
-              <!-- رقم الهاتف -->
-              <div class="input-box">
-                <label class="form-label">رقم الهاتف (بما في ذلك رمز الدولة)</label>
-                <input type="number" placeholder="إجابتك">
-                <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#a0a0a0ad;stroke-width:17" />
-              </svg>
-              </div>
-
-              <!-- الجنس -->
-              <div class="input-box">
-                <label class="form-label">الجنس</label>
-                <div class="radio-group">
-                    <label class="form-label-gender"><input type="radio" name="gender"> أنثى</label>
-                    <label class="form-label-gender"><input type="radio" name="gender"> ذكر</label>
-                </div>
-              </div>
-
-              <!-- العمر -->
-              <div class="input-box">
-                <label class="form-label">العمر</label>
-                  <input type="number" placeholder="إجابتك">
-                  <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#a0a0a0ad;stroke-width:17" />
-                </svg>
-              </div>
-
-              <hr class="black-line">
-
-              <!-- Form Footer  -->
-              <div class="form-footer">
-                <button class="next-btn" id="nextBtn">التالي</button>
-                <div class="progress">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-                <span class="page-number">صفحة 1 من 2</span>
-              </div>
-
-         </div>
-      
  
+<!-- Form Page 1 -->
+  <div class="form-container page active" id="page1">
+    <div class="card">
+        <h1 class="b-title">طلب تقديم للانضمام مشروع نواة</h1>
+        <hr class="black-line">
+        <h2>المعلومات الشخصية</h2>
 
-   <!-- Form Page 2 -->
-     <div class="form-container page" id="page2">
-          <h1 class="b-title">طلب تقديم للانضمام مشروع نواة</h1>
-        <div class="input-box">
-          <label class="form-label">  التعليم والتوظيف</label>
-          <input type="text" placeholder="إجابتك">
+         <div class="input-box">
+            <label class="form-label">الاسم الكامل</label>
+            <input type="text" placeholder="إجابتك">
+            <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#a0a0a0ad;stroke-width:17" />
+            </svg>
         </div>
 
+         <div class="input-box red">
+            <label class="form-label-error">عنوان بريد إلكتروني</label>
+            <input type="email" placeholder="إجابتك" required>
+            <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#f10d0dad;stroke-width:17" />
+            </svg>
+            <div class="error-wrapper">
+                <span class="error-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+                  </svg>
+                </span>
+                <p class="error-message">يجب أن يكون البريد الإلكتروني صالحًا</p>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label class="form-label">رقم الهاتف (بما في ذلك رمز الدولة)</label>
+            <input type="number" placeholder="إجابتك">
+            <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#a0a0a0ad;stroke-width:17" />
+            </svg>
+        </div>
+
+         <div class="input-box">
+            <label class="form-label">الجنس</label>
+            <div class="radio-group">
+                <label class="form-label-gender"><input type="radio" name="gender"> أنثى</label>
+                <label class="form-label-gender"><input type="radio" name="gender"> ذكر</label>
+            </div>
+        </div>
+
+         <div class="input-box">
+            <label class="form-label">العمر</label>
+            <input type="number" placeholder="إجابتك">
+            <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" style="stroke:#a0a0a0ad;stroke-width:17" />
+            </svg>
+        </div>
+        <hr class="black-line">
+
+        <!-- Form Footer  -->
         <div class="form-footer">
-          <button class="next-btn" id="prevBtn">السابق</button>
-          <div class="progress">
-              <div class="progress-bar" id="progressBar2"></div>
+          <button class="next-btn" id="nextBtn">التالي</button>
+          <div class="progress" >
+                            <div class="progress-b" id="progressB"></div> 
+
+              <div class="progress-bar" id="progressBar"></div>
           </div>
-          <span class="page-number" id="pageNumber2">صفحة 2 من 2</span>
+          <span class="page-number">صفحة 1 من 2</span>
         </div>
     </div>
-   
+  </div>
+
+<!-- Form Page 2 -->
+<div class="form-container page" id="page2">
+  <div class="card">
+      <h1 class="b-title">طلب تقديم للانضمام مشروع نواة</h1>
+        <hr class="black-line">
+        <h2>  التعليم والتوظيف</h2>
+   <div class="select-box">
+  <label class="select-label">ما هو أعلى مستوى دراسي أكملته أو أعلى درجة حصلت عليها؟</label>
+  <button class="select-btn">
+    <span class="selectedText">اختيار</span>
+    <span class="arrow"></span>
+  </button>
+</div>
+      <ul class="dropdown">
+         <li role="option" class="disabled" data-disabled="true">اختيار</li>
+         <li role="option">ثانوية عامة</li>
+         <li role="option"> خريج</li>
+         <li role="option">طالب جامعي</li>
+      </ul>
+
+    <!-- SECOND SELECT -->
+<div class="select-box">
+    <label class="select-label">التخصص  </label>
+  <button class="select-btn">
+    <span class="selectedText">اختيار</span>
+      <span class="arrow"></span>
+  </button>
+</div>
+<ul class="dropdown">
+         <li role="option" class="disabled" data-disabled="true">اختيار</li>
+         <li role="option">User Experience (UX)</li>
+         <li role="option"> Web Development (Full Stack or Front-End)</li>
+         <li role="option">Back-End </li>
+         <li role="option">Mobile Apps Development (Native or Flutter) </li>
+         <li role="option">Cyber Security </li>
+         <li role="option">  Artificial Intelligence (AI) </li>
+</ul>
+
+    <!-- third SELECT -->
+<div class="select-box">
+    <label class="select-label">الوضع المهني/الوظيفي  </label>
+  <button class="select-btn">
+    <span class="selectedText">اختيار</span>
+      <span class="arrow"></span>
+  </button>
+</div>
+<ul class="dropdown">
+         <li role="option" class="disabled" data-disabled="true">اختيار</li>
+         <li role="option"> طالب</li>
+          <li role="option">خريج </li>
+         <li role="option">موظف</li>
+         <li role="option">فري لانس  </li>
+         
+</ul>
+       
+ <hr class="bl-line"> 
+      <div class="form-footer">
+         
+        <button class="next-btn" id="prevBtn">السابق</button>
+        <div class="progress">
+             <div class="progress-bar" id="progressBar2"></div>
+        </div>
+        <span class="page-number" id="pageNumber2">صفحة 2 من 2</span>
+      </div>
+  </div>
+</div>
+
 </div>
   
     </main>
@@ -165,6 +201,9 @@
     </footer>
 
     <script src="./join.js"></script>
+ 
+
+
 </body>
 
 </html>
