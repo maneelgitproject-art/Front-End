@@ -1,0 +1,84 @@
+.goal {
+    /* margin-top: 20px; */
+    background-image: url('../../assets/overview/pro_goals/frame.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 40px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.goal h2 {
+    font-weight: bold;
+    font-size: 90px;
+    text-align: center;
+    line-height: 64px;
+    margin: 0px;
+}
+
+
+.goals {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.goals>div {
+    background: transparent;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+/* .goals > div:hover {
+        transform: translateY(-15px);
+        box-shadow: none;
+        background: transparent;
+    } */
+
+.goals .img {
+    /* width: 100%; */
+    width: 468px;
+    height: 624px;
+    /* border-radius: 12px; */
+    margin-bottom: 10px;
+    object-fit: cover;
+    perspective: 1000px;
+}
+
+
+.goals h3 {
+    font-size: 1.5rem;
+    /* margin-bottom:10px; */
+    color: white;
+    font-weight: 700;
+    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); */
+}
+
+.goals p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: white;
+    font-weight: 400;
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); */
+    margin-top: 0px;
+}

@@ -1,0 +1,1356 @@
+/* ========== Media Queries للـ Navbar ========== */
+@media screen and (max-width: 1200px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+    
+    .nav-links {
+        padding: 10px 30px;
+        gap: 20px;
+    }
+    
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .logo span {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    .nav-links {
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .logo img {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .logo span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        margin-left:100px;
+    }
+
+    .menu-toggle:hover {
+        background-color: #f9f9f923;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #000;
+        padding: 20px 0;
+        gap: 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links a {
+        padding: 10px 15px;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: #111;
+        width: 90%;
+        margin: 10px auto 0px;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo span {
+        font-size: 18px;
+    }
+    
+    /* إخفاء أيقونة الكرة الأرضية الأصلية في القائمة */
+    .nav-links .icon.globe {
+        display: none;
+    }
+    
+    /* إظهار أيقونة الكرة الأرضية المنفصلة للجوال */
+    .globe-mobile {
+        display: flex;
+        /* align-items: center; */
+        margin-right:400px;
+    }
+}
+
+
+
+@media screen and (max-width:380px){
+    .globe-mobile {
+        font-size: 20px;
+        margin-right:130px;
+    }
+    
+}
+
+@media screen and (max-width: 320px) {
+    .globe-mobile {
+        font-size: 20px;
+        margin-right:70px;
+    }
+}
+
+/* ========== Media Queries للـ Intro Section ========== */
+@media screen and (max-width: 1200px) {
+    .banner h1 {
+        font-size: 6rem;
+    }
+    
+    .banner p {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .banner {
+        height: 600px;
+        padding: 30px;
+    }
+    
+    .banner h1 {
+        font-size: 5rem;
+    }
+    
+    .banner p {
+        font-size: 1rem;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: 500px;
+        padding: 25px;
+        /* text-align: center; */
+    }
+    
+    .banner h1 {
+        font-size: 3.5rem;
+    }
+    
+    .banner p {
+        font-size: 0.95rem;
+        max-width: 400px;
+        margin: 30px  0;
+    }
+}
+
+/* ========== Media Queries للـ Project Goals ========== */
+@media screen and (max-width: 1200px) {
+    .goal h2 {
+        font-size: 70px;
+    }
+    
+    .goals {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+    
+    .goals .img {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .goal {
+        padding: 50px 30px;
+        padding-bottom: 80px;
+    }
+    
+    .goal h2 {
+        font-size: 60px;
+        line-height: 1.1;
+    }
+    
+    .goals {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 25px auto;
+    }
+    
+    .goals .img {
+        width: 350px;
+        height: 450px;
+    }
+    
+    .goals h3 {
+        font-size: 1.4rem;
+    }
+    
+    .goals p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .goal {
+    padding: 40px 20px;
+    padding-bottom: 70px;
+    position: relative;
+  }
+
+  .goal h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .goals {
+    gap: 30px;
+    padding: 15px;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* إخفاء جميع الأهداف افتراضياً */
+  .goals > div {
+    /* display: none; */
+    padding: 25px 20px;
+    animation: fadeIn 0.4s ease;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* عرض الشريحة النشطة فقط */
+  .goals > div.active {
+    display: block;
+  }
+
+  .goals .img {
+    width: 100%;
+    max-width: 300px;
+    height: 380px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .goals h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 15px 0 10px 0;
+  }
+
+  .goals p {
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* تصميم أزرار التنقل الجانبية */
+  .goals-navigation {
+    display: flex;
+    gap: 15px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top:-60px; /* ← رفع الأزرار لفوق */
+    margin-bottom: 40px;
+    direction: ltr;
+  }
+
+  .nav-arrow {
+    color:#426dda; 
+    border: none;
+    width: 55px;
+    height: 55px;
+    font-size:45px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-arrow:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* السهم النشط */
+  .nav-arrow.active {
+    color: white; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+   hr {
+            border: none;
+            height:2px;
+            background:white;
+            border-radius: 5px;
+            margin: 30px 0;
+            width: 100%;
+            /* box-shadow: 0 0 10px rgba(253, 187, 45, 0.5); */
+        }
+        
+}
+
+/* ========== Media Queries للـ Specialties ========== */
+@media screen and (max-width: 1200px) {
+    .specialties {
+        padding: 70px 30px;
+    }
+    
+    .text h2 {
+        font-size: 4rem;
+    }
+    
+    .image-3d {
+        width: 350px;
+        height: 350px;
+    }
+
+    .icons img{
+        width:50px;
+        height:50px;
+      margin-left: 10px;
+      
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .specialties {
+        padding: 60px 25px;
+    }
+    
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+    
+    .image-container {
+        order: 1;
+    }
+    
+    .text {
+        order: 2;
+        text-align: center;
+    }
+    
+    .text h2 {
+        font-size: 3.5rem;
+    }
+    
+    .btn {
+        align-self: center;
+    }
+    
+    .icons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .specialties {
+        padding: 50px 20px;
+    }
+    
+    .text h2 {
+        font-size: 3rem;
+    }
+    
+    .text p {
+        font-size:0.9rem;
+    }
+    
+    .image-3d {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .image-container h4 {
+        font-size: 2rem;
+    }
+    
+    .icons img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn{
+        width:600px;
+        height:70px;
+    }
+
+     .specialties-navigation {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top:-10px; /* ← رفع الأزرار لفوق */
+    margin-bottom: 40px;
+    direction: ltr;
+    margin-left:40px;
+  }
+
+  .nav-arrow1 {
+    color:#426dda; 
+    border: none;
+    width: 55px;
+    height: 55px;
+    font-size:35px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-arrow1:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow1:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow1:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow1.active {
+    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+ .hrspecialties{
+            border: none;
+            height:2px;
+            background:#050505;
+            border-radius: 5px;
+            margin: 30px 0;
+            width:70%;
+            /* margin-left:-20px; */
+      }
+        
+    
+}
+
+/* ========== Media Queries للـ Capabilities ========== */
+@media screen and (max-width: 1200px) {
+    .capabilities {
+        padding: 80px 30px;
+    }
+    
+    .cap-content h2 {
+        font-size: 4rem;
+    }
+    
+    .cap-main-image {
+        width: 450px;
+        height: 250px;
+    }
+
+    .cap-icon{
+        width:70px;
+        height:70px;
+    }
+
+     .capabilities-navigation{
+        display:none;
+     }
+
+    }
+
+@media screen and (max-width: 992px) {
+    .capabilities {
+        padding: 70px 25px;
+    }
+    
+    .capabilities-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+    }
+    
+    .cap-image-wrapper {
+        order: 1;
+    }
+    
+    .cap-content {
+        order: 2;
+        text-align: center;
+    }
+    
+    .cap-content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .cap-icons {
+        justify-content: center;
+    }
+
+    .capabilities-navigation{
+        display:none;
+     }
+}
+
+@media screen and (max-width: 768px) {
+    .capabilities {
+        padding: 60px 20px;
+       }
+
+       .capabilities-container{
+       margin-top:20px;
+       }
+
+    .cap-image-wrapper{
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cap-content h2 {
+        font-size: 3rem;
+    }
+    
+    .cap-content > p {
+        font-size: 1.1rem;
+       margin-left: 20px;
+    }
+    
+    .cap-main-image {
+        width: 100%;
+        max-width: 400px;
+        height: 220px;
+    }
+    
+    .cap-sub-title h3  {
+        font-size: 1.8rem;
+    }
+
+    .cap-sub-title p{
+        margin-right: 20px;
+    }
+    
+    .cap-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+     .capabilities-navigation {
+    display: flex;
+    /* gap: 15px; */
+    /* justify-content: center; */
+    /* align-items: center; */
+   margin-bottom:-1500px; /* ← رفع الأزرار لفوق */
+    /* margin-bottom: 40px; */
+    direction: ltr;
+     margin-left:40px;
+    
+  }
+
+  .nav-arrow2 {
+    color:#426dda; 
+    border: none;
+    width:20px;
+    height:20px;
+    font-size:18px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+   }
+
+  .nav-arrow2:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  .nav-arrow2:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow2:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow2.active {
+    color: #c2b8b885; /* السهم اللي دايس عليه لونه أبيض */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+   .hrcapabilities{
+            border: none;
+            height:2px;
+            background:#bcbcbc;
+            border-radius: 5px;
+            margin: 30px 0;
+            width:70%;
+            /* margin-left:-20px; */
+      }
+}
+
+@media screen and (max-width: 380px) {
+    .capabilities {
+        padding: 50px 15px;
+    }
+    
+    .cap-content h2 {
+        font-size: 2.5rem;
+    }
+
+         
+    .cap-content > p {
+        font-size: 1rem;
+    }
+    
+    .cap-main-image {
+        height: 200px;
+        width:350px;
+    }
+    
+    .cap-sub-title h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cap-sub-title p {
+        font-size: 0.9rem;
+        margin-left:30px;
+    }
+    
+    .cap-icon {
+        width:40px;
+        height:40px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+
+       
+    .cap-main-image {
+        height:200px;
+        width:300px;
+    }
+            
+    .cap-icon {
+        width:30px;
+        height:30px;
+        margin-left:10px;
+    }
+}
+
+/* ========== Media Queries للـ Experience ========== */
+@media screen and (max-width: 1200px) {
+    .experience {
+        gap: 150px;
+        padding: 70px 80px;
+        
+    }
+    
+    .experience__img-continer img {
+        width:600px;
+        height:600px;
+    }
+    
+    .experience__img-continer::before {
+        width:350px;
+        height:350px;
+    }
+    
+    .experience__text-continer h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .experience {
+        flex-direction: column;
+        gap: 60px;
+        padding: 60px 40px;
+        text-align: center;
+    }
+    
+    .experience__text-continer {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .experience__text-continer h2 {
+        font-size: 3rem;
+    }
+    
+    .experience__img-continer img {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .experience__img-continer::before {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .icons-tab {
+        gap: 30px;
+    }
+    
+    .icon-tab img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experience {
+        padding: 50px 30px;
+        gap: 50px;
+        margin-top:-50px;        
+    }
+    
+    .experience__text-continer h2 {
+        font-size: 2.5rem;
+    }
+    
+    .experience__img-continer img {
+        width:500px;
+        height:500px;
+    }
+    
+    .experience__img-continer::before {
+        width:300px;
+        height:300px;
+        border-width: 15px;
+        top:48%;
+    }    
+    
+    .experience__img-continer span {
+        font-size: 1.6rem;
+    }
+    
+    .icons-tab {
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: -30px;
+    }
+    
+    .icon-tab img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-tab p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== Media Queries للـ Last Section ========== */
+@media screen and (max-width: 1200px) {
+    .imgs__box {
+        gap: 30px;
+        padding: 70px 30px;
+        }
+    
+    .imgs__box-container img {
+        width: 300px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .imgs__box {
+        gap: 25px;
+        padding: 60px 25px;
+    }
+    
+    .imgs__box-container img {
+        width: 280px;
+        height: 380px;
+    }
+    
+    .imgs__box-container p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imgs__box {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
+        align-items: center;
+        margin-top: -50px;
+    }
+    
+    .imgs__box-container img {
+        width: 100%;
+        max-width:450px;
+        height: 550px;
+    }
+    
+    .imgs__box-container p {
+        font-size: 1.5rem;
+    }
+
+
+     .last-navigation {
+    display: flex;
+    margin-left:160px;
+   align-self: flex-start;
+ margin-top:-60px;
+ direction: ltr;
+
+
+  }
+
+  .nav-arrow3 {
+    color:#426dda; 
+    border: none;
+    width:20px;
+    height:20px;
+    font-size:18px; 
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    transition: all 0.3s ease;
+    
+   }
+
+  .nav-arrow3:hover:not(:disabled) {
+    transform: scale(1.1);
+    display: flex;
+  }
+
+  .nav-arrow3:active {
+    transform: scale(0.95);
+  }
+
+  .nav-arrow3:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+    display: flex;
+  }
+
+  /* السهم النشط */
+  .nav-arrow3.active {
+    color: #bcbcbc; 
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* .hrlast{
+            border: none;
+            height:2px;
+            background:#050505;
+            border-radius: 5px;
+            margin: 30px 0;
+            width:70%;
+            margin-left:-20px;
+      
+  } */
+}
+
+/* ========== Media Queries للـ Footer ========== */
+@media screen and (max-width: 768px) {
+    .site-footer {
+        padding: 30px 15px;
+    }
+    
+    .footer-project {
+        font-size: 1.1rem;
+        margin: 30px 0;
+    }
+    
+    .footer-links {
+        margin: 35px 0;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        font-size: 0.85rem;
+    }
+    
+    .footer-copy {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    /* Header */
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .logo {
+        gap: 5px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo span {
+        font-size: 16px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: 50px;
+    }
+
+    .globe-mobile {
+        font-size: 20px;
+        margin-right: 180px;
+    }
+
+    /* Intro */
+    .banner {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    .banner h1 {
+        margin-top: 15%;
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 0.9rem;
+        max-width: 90%;
+        margin-top: 5%;
+    }
+
+    /* Gooal */
+
+    .goal {
+        padding: 30px 15px;
+        padding-bottom: 60px;
+    }
+
+    .goal h2 {
+        font-size: 35px;
+    }
+
+    .goals .img {
+        width: 250px;
+        height: 320px;
+    }
+
+    .goals h3 {
+        font-size: 1.2rem;
+    }
+
+    .goals p {
+        font-size: 0.9rem;
+    }
+
+    /* Specialties */
+
+    .specialties {
+        text-align: center;
+        align-items: center;
+        margin-right: -20px;
+
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 0.5rem;
+        margin-right: 10px;
+    }
+
+    .image-3d {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image-container h4 {
+        font-size: 1.5rem;
+    }
+
+    .image-container>p:first-of-type {
+        font-size: 1rem;
+    }
+
+    .image-container>p:last-of-type {
+        font-size: 0.5rem;
+    }
+
+    .icons img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .btn {
+        width: 95%;
+        display: block;
+        margin: 20px auto;
+        height: 70px;
+        text-align: center;
+    }
+
+    .specialties-navigation {
+        display: flex;
+        /* gap: 15px; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin-top: -10px;
+        margin-bottom: 40px;
+        direction: ltr;
+        margin-left: 20px;
+    }
+
+    .nav-arrow1 {
+        color: #426dda;
+        border: none;
+        width: 55px;
+        height: 55px;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .nav-arrow1:hover:not(:disabled) {
+        transform: scale(1.1);
+    }
+
+    .nav-arrow1:active {
+        transform: scale(0.95);
+    }
+
+    .nav-arrow1:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+        display: flex;
+    }
+
+    /* السهم النشط */
+    .nav-arrow1.active {
+        color: #c2b8b885;
+        /* السهم اللي دايس عليه لونه أبيض */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Capabilities */
+
+    .capabilities {
+        padding: 50px 15px;
+    }
+
+    .capabilities-container {
+        margin-top: 150px;
+    }
+
+    .cap-content h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .cap-content>p {
+        font-size: 1rem;
+    }
+
+    .cap-main-image {
+        height: 200px;
+        margin-left: 25px;
+    }
+
+    .cap-sub-title h3 {
+        font-size: 1.5rem;
+    }
+
+    .cap-sub-title p {
+        font-size: 0.9rem;
+        margin-left: 30px;
+    }
+
+    .cap-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .capabilities-navigation {
+        display: flex;
+        /* gap: 15px; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin-bottom: -1550px;
+        /* margin-bottom: 40px; */
+        direction: ltr;
+        /* margin-right:50px; */
+    }
+
+    .nav-arrow2 {
+        color: #426dda;
+        border: none;
+        width: 20px;
+        height: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .nav-arrow2:hover:not(:disabled) {
+        transform: scale(1.1);
+    }
+
+    .nav-arrow2:active {
+        transform: scale(0.95);
+    }
+
+    .nav-arrow2:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+        display: flex;
+    }
+
+    /* السهم النشط */
+    .nav-arrow2.active {
+        color: #c2b8b885;
+        /* السهم اللي دايس عليه لونه أبيض */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Experience */
+
+    .experience {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .experience__text-continer h2 {
+        font-size: 2rem;
+    }
+
+    .experience__img-continer img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .experience__img-continer::before {
+        width: 210px;
+        height: 210px;
+        border-width: 12px;
+        top: 45%;
+        left: 52%;
+    }
+
+    .experience__img-continer span {
+        font-size: 1.4rem;
+    }
+
+    .experience__img-continer p {
+        font-size: 0.9rem;
+    }
+
+    .icons-tab {
+        gap: 20px;
+    }
+
+    .icon-tab img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-tab p {
+        font-size: 0.8rem;
+    }
+
+    /* Image Box */
+
+    .imgs__box {
+        padding: 40px 15px;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .imgs__box-container img {
+        height: 350px;
+    }
+
+    .imgs__box-container p {
+        font-size: 0.9rem;
+    }
+
+    .last-navigation {
+        display: flex;
+        margin-left: 160px;
+        align-self: flex-start;
+        margin-top: -60px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+        padding: 25px 10px;
+    }
+
+    .footer-icons a {
+        width: 35px;
+        height: 35px;
+        margin: 0 5px;
+        font-size: 16px;
+    }
+
+    .footer-project {
+        font-size: 1rem;
+        margin: 25px 0;
+    }
+
+    .footer-links {
+        margin: 30px 0;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+    }
+}
