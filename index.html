@@ -2,60 +2,209 @@
 <html lang="en" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./index/css_helpers/header_style.css" />
+    <link rel="stylesheet" href="./index/css_helpers/landing_style.css" />
+    <link rel="stylesheet" href="./index/css_helpers/last_updates_style.css" />
+    <link rel="stylesheet" href="./index/css_helpers/welcome_style.css" />
+    <link rel="stylesheet" href="./index/css_helpers/speciality_style.css" />
+    <link rel="stylesheet" href="./index/css_helpers/collaborate_style.css" />
+    <link rel="stylesheet" href="./index/css_helpers/project_space.css" />
+    <link rel="stylesheet" href="./index/index.css" />
     <title>Nawah Project</title>
 </head>
 
 <body>
-    <!-- Html Code For Home Page -->
-    <header>
-        <!-- Header Code -->
+    <!-- Header Code -->
+    <header id="header">
+        <div id="logo">
+            <h1>
+                Nawah <br />
+                Project
+            </h1>
+            <img src="./assets/index/logo.png" alt="" />
+        </div>
 
-        <!-- (overview) ./overview/overview.html  -->
-        <!-- (news) ./news/news.html -->
-        <!-- (specialties) ./specialties/specialties.html -->
-        <!-- (find_specialize) ./find_specialize/find_specialize.html (Empty Page)-->
-        <!-- (support) ./support/support.html (Empty Page)-->
-        <!-- (social) ./social/social.html (Empty Page)-->
+        <div id="left-side">
+            <div id="links">
+                <a id="overview-link" href="./overview/overview.html">نظرة عامه
+                    <div class="overview-link-item-underline"></div>
+                </a>
+                <a id="news-link" href="./news/news.html">الأخبار
+                    <div class="news-link-item-underline"></div>
+                </a>
+                <a id="specialties-link" href="./specialties/specialties.html">تخصصات
+                    <div class="specialties-link-item-underline"></div>
+                </a>
+                <a id="find_specialize-link" href="./find_specialize/find_specialize.html">اعثر على تخصصك
+                    <div class="find_specialize-link-item-underline"></div>
+                </a>
+                <a id="support-link" href="./support/support.html">الدعم ▾
+                    <div class="support-link-item-underline"></div>
+                </a>
+                <a id="social-link" href="./social/social.html">اجتماعى ▾
+                    <div class="social-link-item-underline"></div>
+                </a>
+            </div>
+            <div id="tips">
+                <a id="language" href="">🌍</a>
+                <button id="user"> حسابي ▾</button>
+            </div>
+        </div>
+
+        <div id="mobile-menu">
+            <a id="language" href="">🌍</a>
+            <i id="mobile-menu-icon" class="fa fa-bars fa-lg"></i>
+        </div>
+        <div id="mobile-menu-links">
+            <a id="overview-link" href="./overview/overview.html">نظرة عامه
+                <div class="overview-link-item-underline"></div>
+            </a>
+            <a id="news-link" href="./news/news.html">الأخبار
+                <div class="news-link-item-underline"></div>
+            </a>
+            <a id="specialties-link" href="./specialties/specialties.html">تخصصات
+                <div class="specialties-link-item-underline"></div>
+            </a>
+            <a id="find_specialize-link" href="./find_specialize/find_specialize.html">اعثر على تخصصك
+                <div class="find_specialize-link-item-underline"></div>
+            </a>
+            <a id="support-link" href="./support/support.html">الدعم ▾
+                <div class="support-link-item-underline"></div>
+            </a>
+            <a id="social-link" href="./social/social.html">اجتماعى ▾
+                <div class="social-link-item-underline"></div>
+            </a>
+
+            <button id="user">حسابي ▾</button>
+        </div>
     </header>
 
     <!-- Main Content Code -->
     <main>
-
-        <!-- <h1>Main Page</h1> -->
-
-        <section>
-            <!-- Landing Section -->
+        <!-- Landing Section -->
+        <section id="landing">
+            <div id="cover-color"></div>
+            <h1>
+                Nawah <br />
+                Project
+            </h1>
+            <button>انضم الان</button>
         </section>
 
-        <section>
-            <!-- Last Updates -->
+        <!-- Last Updates Section -->
+        <section id="last_updates">
+            <div id="section-header">
+                <h2>آخر المستجدات</h2>
+                <a href="">انتقل الى صفحة المستجدات<i class="fa-solid fa-location-arrow fa-rotate-270 fa-lg"></i></a>
+            </div>
+
+            <div id="updates">
+                <!-- Automated Fill By JavaScript -->
+            </div>
         </section>
 
-        <section>
-            <!-- Welcome To Project -->
+        <!-- Welcome To Project Section -->
+        <section id="welcome">
+            <div id="welcome-header">
+                <h1>أهلًا بك في</h1>
+                <h1>مشروع نواة</h1>
+                <p>
+                    كوّن رحلتك مع فريق من المطورين والمبدعين وروّاد الأعمال، وكل من يؤمن
+                    بأن الشغف والمعرفة والعمل يمكن أن يصنعوا نهضة حقيقية — تعلّموا،
+                    طوّروا، وابتكروا معًا لبناء أثر يتجاوز حدود التخصص
+                </p>
+            </div>
+            <div id="show-more">
+                <button>اطلع على المزيد</button>
+            </div>
+            <div class="video">
+                <iframe src="../assets/index/welcome_to_project/welcome_video.mp4" title="Welcome To Nawah Project"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Youtube Video -->
+                <!-- <iframe width="1262" height="710" src="https://www.youtube.com/embed/efdvrunG5GY"
+                    title="Your Dream - Motivational Motion Graphic Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen autofocus=""></iframe> -->
+            </div>
         </section>
 
-        <section>
-            <!-- Choose Your Speciality -->
+        <!-- Choose Your Speciality -->
+        <section id="speciality">
+
         </section>
 
-        <section>
-            <!-- Collaborate With Our Team -->
+        <!-- Collaborate With Our Team -->
+        <section id="collaborate">
+            <div id="collaborate-header">
+                <h1>تعاون مع <br />فريقك</h1>
+                <p>
+                    انضم إلى مشروع جديد مع كامل عناصر فريقك، أو اختبر حدود قدراتك
+                    منفردًا في تحدٍ مصمم ليكشف إمكاناتك الحقيقية.كل تجربة في نواة فرصة
+                    لتطبيق مهارتك بذكاء، أو قلب موازين الفكرة بفريقك، أو تحقيق إنجاز
+                    يليق بروحكم المشتركة.
+                </p>
+            </div>
+            <div class="collaborate-video">
+                <iframe src="../assets/index/collaporate/collaporate_video.mp4" title="Welcome To Nawah Project"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
-        <section>
-            <!-- Over View -->
+        <!-- Project Space -->
+        <section id="pro-space">
+            <div id="pro-space-header">
+                <h1>مساحة مشروع نواة</h1>
+            </div>
+            <div id="pro-space-content">
+                <!-- Automated Fill By JavaScript -->
+            </div>
         </section>
-
     </main>
 
+    <!-- Footer Code -->
     <footer>
-        <!-- Footer Code -->
+        <div id="footer-gif">
+            <img src="../assets/index/footer/footer.gif" alt="" />
+        </div>
+
+        <div class="site-footer">
+            <div class="footer-icons">
+                <a href="#" class="social-icon youtube"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                <a href="#" class="social-icon x"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                <a href="#" class="social-icon facebook">
+                    <i class="fa-brands fa-facebook fa-lg"></i></a>
+            </div>
+
+            <div class="footer-project">
+                <strong>Nawah Project</strong>
+            </div>
+
+            <div class="footer-copy">
+                © 2025 Nawah Project — جميع الحقوق والعلامات الخاصة بـ نواة محفوظة.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">شروط الاستخدام</a>
+                <a href="#">تفضيلات ملفات تعريف الارتباط</a>
+            </div>
+        </div>
     </footer>
 
-
+    <script src="./index/js_helpers/header_style.js"></script>
+    <script src="./index/js_helpers/last_update_render.js"></script>
+    <script src="./index/js_helpers/platform_rendering.js"></script>
+    <script src="./index/js_helpers/pro_space_render.js"></script>
+    <script src="./index/js_helpers/speciality_render.js"></script>
+    <script src="./index/js_helpers/render_helper.js"></script>
     <script src="./index/index.js"></script>
 </body>
 

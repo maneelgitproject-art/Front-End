@@ -1,0 +1,93 @@
+/* Landing Section */
+
+#landing {
+    background-image: url("../../assets/index/landing/landing.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#cover-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.402);
+}
+
+#landing h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.928);
+    overflow-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+#landing button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1% 3%;
+    background-color: rgba(0, 0, 0, 0.797);
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+#landing button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width: 450px) {
+
+    #landing {
+        height: 50vh;
+    }
+
+    #landing h1 {
+        font-size: 3rem;
+    }
+
+    #landing button {
+        padding: 2.6% 5%;
+        border: 2px solid white;
+        border-radius: 12px;
+        background-color: rgb(39, 39, 39);
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+
+    #landing {
+        height: 40vh;
+    }
+
+    #landing h1 {
+        font-size: 3rem;
+    }
+
+    #landing button {
+        padding: 2% 4%;
+        border: 2px solid white;
+        border-radius: 12px;
+        background-color: rgb(39, 39, 39);
+        font-size: 1.2rem;
+    }
+
+}

@@ -1,0 +1,51 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url('../../assets/overview/intro/ما هو مشروع نواة.jpeg');
+    background-position: center;
+
+    opacity: 1.5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* غمقان بنسبة 50% */
+    z-index: 1;
+}
+
+.banner h1,
+.banner p {
+    position: relative;
+    z-index: 2;
+    /* عشان الكلام يكون فوق الطبقة الغامقة */
+}
+
+.banner h1 {
+    font-size: 7rem;
+    margin: 0 0 10px 0;
+    /* font-weight: bold; */
+    Font-style: "italic";
+}
+
+.banner p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 50px;
+    color: white;
+    font-weight: 900;
+}
