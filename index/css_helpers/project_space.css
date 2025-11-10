@@ -1,39 +1,39 @@
 /* Project Space Section */
 #pro-space {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     background-image: url("../../assets/index/pro-space/pro-space-frame.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
     overflow: hidden;
-    padding-block: 15%;
+    padding-block: 10%;
+    background-color: white;
 }
 
 #pro-space-header h1 {
-    font-size: 10rem;
+    font-size: 7rem;
     font-weight: bold;
     overflow-wrap: break-word;
-    margin: 3% 0 1.5% 0;
+    margin: 0 0 2% 0;
     color: white;
     font-style: italic;
 }
 
 #pro-space-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 5%;
 }
 
 #pro-space-img {
-    width: 30%;
+    width: 28%;
+    scale: 0.95;
 }
 
 #pro-space-img img {
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 #pro-space-img p {
@@ -71,7 +71,6 @@
 
     #pro-space-img img {
         width: 100%;
-        border-radius: 0.5%;
     }
 
     #pro-space-img p {
@@ -130,7 +129,6 @@
 
     #pro-space-img img {
         width: 100%;
-        border-radius: 0.5%;
     }
 
     #pro-space-img p {

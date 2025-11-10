@@ -8,6 +8,8 @@ window.addEventListener("resize", function () {
     render_helper();
 });
 
+// console.log(window.innerWidth);
+
 // Change Header Links Style
 change_link_style(overview_link, overview_link_underline);
 change_link_style(news_link, news_link_underline);

@@ -10,6 +10,11 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    /* max-width: 1920px;
+    max-height: 1080px; */
+    background-color: rgb(4, 4, 90);
+    /* overflow-x: hidden;
+    align-items: center; */
 }
 
 /* Footer Section */
@@ -57,7 +62,7 @@ body {
 }
 
 .footer-icons a:hover {
-    background-color: #40E0D0;
+    background-color: #32c7ff;
     /* turquoise hover */
     color: #000;
     /* optional: icon turns black on hover */
@@ -111,4 +116,10 @@ body {
     .footer-links {
         font-size: 0.8rem;
     } 
+}
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+    #footer-gif {
+        height: 45vh;
+    }
 }

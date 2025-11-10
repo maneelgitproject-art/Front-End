@@ -26,7 +26,7 @@ const social_link_underline = document.querySelector(
     ".social-link-item-underline"
 );
 
-const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenu = document.getElementById("mobile-menu-icon");
 const mobileMenuLinks = document.getElementById("mobile-menu-links");
 
 mobileMenu.addEventListener("click", function (event) {
@@ -36,8 +36,8 @@ mobileMenu.addEventListener("click", function (event) {
         mobileMenuLinks.style.display = "flex";
         mobileMenuLinks.animate(
             [
-                { top: "-100px" },
-                { top: "5%" },
+                { right: "-100px" },
+                { right: "0" },
             ],
             {
                 duration: 500,
@@ -48,8 +48,8 @@ mobileMenu.addEventListener("click", function (event) {
         mobileMenuLinks.style.display = "none";
         mobileMenuLinks.animate(
             [
-                { top: "5%" },
-                { top: "-100px" },
+                { right: "0" },
+                { right: "-100px" },
             ],
             {
                 duration: 500,
@@ -68,8 +68,8 @@ document.addEventListener("click" , function() {
         mobileMenuLinks.style.display = "none";
         mobileMenuLinks.animate(
             [
-                { top: "5%" },
-                { top: "-100px" },
+                { right: "0" },
+                { right: "-100px" },
             ],
             {
                 duration: 500,
