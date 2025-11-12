@@ -54,31 +54,31 @@ function moveProgress() {
   selects.forEach((box) => {
     const btn = box.querySelector('.select-btn');
     const selectedText = box.querySelector('.selectedText');
-    const dropdown = box.nextElementSibling; // dropdown right after select box
+    const dropselctdown = box.nextElementSibling; // dropdown right after select box
 
     // Toggle dropdown
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
 
       // Close other dropdowns
-      document.querySelectorAll('.dropdown').forEach(d => {
-        if (d !== dropdown) d.classList.remove('open');
+      document.querySelectorAll('.dropselctdown').forEach(d => {
+        if (d !== dropselctdown) d.classList.remove('open');
       });
       document.querySelectorAll('.select-btn').forEach(b => {
         if (b !== btn) b.classList.remove('open');
       });
 
-      dropdown.classList.toggle('open');
+      dropselctdown.classList.toggle('open');
       btn.classList.toggle('open');
     });
 
     // Handle option click
-    dropdown.querySelectorAll('li').forEach(item => {
+    dropselctdown.querySelectorAll('li').forEach(item => {
       item.addEventListener('click', () => {
         if (item.classList.contains('disabled')) return;
 
         // remove selected class from others
-        dropdown.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
+        dropselctdown.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
 
         // add selected to clicked item
         item.classList.add('selected');
@@ -86,32 +86,106 @@ function moveProgress() {
         // show selected text
         selectedText.textContent = item.textContent;
 
-        // close dropdown
-        dropdown.classList.remove('open');
+        // close dropselctdown
+        dropselctdown.classList.remove('open');
         btn.classList.remove('open');
       });
     });
   });
 
-  // Close all dropdowns on outside click
+  // Close all dropselctdowns on outside click
   document.addEventListener('click', () => {
-    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.dropselctdown').forEach(d => d.classList.remove('open'));
     document.querySelectorAll('.select-btn').forEach(b => b.classList.remove('open'));
   });
 
   
 
-   document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('menu-toggle');
-    const closeBtn = document.getElementById('menu-close');
-    const links = document.getElementById('links');
 
-    toggle.addEventListener('click', () => {
-        links.classList.add('show'); // show menu
-     });
+  
 
-    closeBtn.addEventListener('click', () => {
-        links.classList.remove('show'); // hide menu
+  // News js Code
+function initNavbar() {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  const dropdowns = document.querySelectorAll(".dropdown");
+  const globeMobile = document.getElementById("globeMobile");
+
+  // التحقق من وجود العناصر الأساسية
+  if (!menuToggle || !navLinks) {
+    console.warn("عناصر القائمة غير موجودة في الصفحة");
+    return;
+  }
+
+  // تفعيل القائمة المنسدلة للجوال
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+     menuToggle.classList.toggle("active");
+  });
+
+  // تفعيل القوائم المنسدلة في وضع الجوال
+  if (dropdowns.length > 0) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.classList.toggle("active");
+
+          // إغلاق القوائم المنسدلة الأخرى
+          dropdowns.forEach((otherDropdown) => {
+            if (otherDropdown !== this && otherDropdown.classList) {
+              otherDropdown.classList.remove("active");
+            }
+          });
+        }
+      });
     });
-});
+  }
+
+  // إغلاق القائمة عند النقر خارجها (للجوال)
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth <= 768 &&
+      navLinks &&
+      menuToggle &&
+      !navLinks.contains(e.target) &&
+      !menuToggle.contains(e.target) &&
+      (!globeMobile || !globeMobile.contains(e.target))
+    ) {
+      navLinks.classList.remove("active");
+
+      // إغلاق جميع القوائم المنسدلة
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
+
+  // إغلاق القائمة عند تغيير حجم النافذة
+  window.addEventListener("resize", function () {
+    if (navLinks && window.innerWidth > 768) {
+      navLinks.classList.remove("active");
+
+      // إغلاق جميع القوائم المنسدلة
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
+}
+
+// تشغيل التهيئة عندما تكون الصفحة جاهزة
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNavbar);
+} else {
+  initNavbar();
+}
+
+
+
+
  

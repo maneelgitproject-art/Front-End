@@ -1,106 +1,80 @@
-const overview_link = document.getElementById("overview-link");
-const overview_link_underline = document.querySelector(
-    ".overview-link-item-underline"
-);
+ // News js Code
+function initNavbar() {
+  const menuToggle = document.getElementById("menuToggle");
+   const navLinks = document.getElementById("navLinks");
+  const dropdowns = document.querySelectorAll(".dropdown");
+  const globeMobile = document.getElementById("globeMobile");
 
-const news_link = document.getElementById("news-link");
-const news_link_underline = document.querySelector(".news-link-item-underline");
+  // التحقق من وجود العناصر الأساسية
+  if (!menuToggle || !navLinks) {
+    console.warn("عناصر القائمة غير موجودة في الصفحة");
+    return;
+  }
 
-const specialties_link = document.getElementById("specialties-link");
-const specialties_link_underline = document.querySelector(
-    ".specialties-link-item-underline"
-);
+  // تفعيل القائمة المنسدلة للجوال
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+     menuToggle.classList.toggle("active");
+  });
 
-const find_specialize_link = document.getElementById("find_specialize-link");
-const find_specialize_link_underline = document.querySelector(
-    ".find_specialize-link-item-underline"
-);
+  // تفعيل القوائم المنسدلة في وضع الجوال
+  if (dropdowns.length > 0) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener("click", function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.classList.toggle("active");
 
-const support_link = document.getElementById("support-link");
-const support_link_underline = document.querySelector(
-    ".support-link-item-underline"
-);
-
-const social_link = document.getElementById("social-link");
-const social_link_underline = document.querySelector(
-    ".social-link-item-underline"
-);
-
-const mobileMenu = document.getElementById("mobile-menu");
-const mobileMenuLinks = document.getElementById("mobile-menu-links");
-
-mobileMenu.addEventListener("click", function (event) {
-    console.log("mobile menu clicked");
-    mobileMenuLinks.classList.toggle("active");
-    if (mobileMenuLinks.classList.contains("active")) {
-        mobileMenuLinks.style.display = "flex";
-        mobileMenuLinks.animate(
-            [
-                { top: "-100px" },
-                { top: "5%" },
-            ],
-            {
-                duration: 500,
-                easing: "ease",
+          // إغلاق القوائم المنسدلة الأخرى
+          dropdowns.forEach((otherDropdown) => {
+            if (otherDropdown !== this && otherDropdown.classList) {
+              otherDropdown.classList.remove("active");
             }
-        );
-    } else {
-        mobileMenuLinks.style.display = "none";
-        mobileMenuLinks.animate(
-            [
-                { top: "5%" },
-                { top: "-100px" },
-            ],
-            {
-                duration: 500,
-                easing: "ease",
-            }
-        );
-    }
-
-    event.stopPropagation(); 
-})
-
-document.addEventListener("click" , function() {
-    console.log("document clicked");
-    if (mobileMenuLinks.classList.contains("active")) {
-        mobileMenuLinks.classList.remove("active");
-        mobileMenuLinks.style.display = "none";
-        mobileMenuLinks.animate(
-            [
-                { top: "5%" },
-                { top: "-100px" },
-            ],
-            {
-                duration: 500,
-                easing: "ease",
-            }
-        );
-    }
-})
-
-// Change Header Links Style Function
-function change_link_style(element, elementUnderLine) {
-    element.addEventListener("mouseover", function () {
-        element.style.backgroundColor = "rgba(160, 159, 159, 0.55)";
-        element.style.borderRadius = "4px";
-        element.style.cursor = "pointer";
-        element.style.color = "white";
-        elementUnderLine.style.backgroundColor = "#32c7ff";
-        elementUnderLine.style.position = "absolute";
-        elementUnderLine.style.bottom = "-20px";
-        elementUnderLine.style.left = "0";
-        elementUnderLine.style.height = "5px";
-        elementUnderLine.style.width = "100%";
-        elementUnderLine.style.borderRadius = "2px";
-        elementUnderLine.style.transition = "0.1s ease-in-out";
+          });
+        }
+      });
     });
+  }
+
+  // إغلاق القائمة عند النقر خارجها (للجوال)
+  document.addEventListener("click", function (e) {
+    if (
+      window.innerWidth <= 768 &&
+      navLinks &&
+      menuToggle &&
+      !navLinks.contains(e.target) &&
+      !menuToggle.contains(e.target) &&
+      (!globeMobile || !globeMobile.contains(e.target))
+    ) {
+      navLinks.classList.remove("active");
+
+      // إغلاق جميع القوائم المنسدلة
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
+
+  // إغلاق القائمة عند تغيير حجم النافذة
+  window.addEventListener("resize", function () {
+    if (navLinks && window.innerWidth > 768) {
+      navLinks.classList.remove("active");
+
+      // إغلاق جميع القوائم المنسدلة
+      dropdowns.forEach((dropdown) => {
+        if (dropdown.classList) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
+  });
 }
 
-// Reset Header Links Style Function
-function reset_link_style(element, elementUnderLine) {
-    element.addEventListener("mouseout", function () {
-        element.style.backgroundColor = "";
-        elementUnderLine.style = "";
-    });
+// تشغيل التهيئة عندما تكون الصفحة جاهزة
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNavbar);
+} else {
+  initNavbar();
 }

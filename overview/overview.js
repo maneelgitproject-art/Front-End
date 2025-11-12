@@ -70,7 +70,7 @@ if (icons.length > 0) {
 // دالة تهيئة آمنة
 function initNavbar() {
   const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+   const navLinks = document.getElementById("navLinks");
   const dropdowns = document.querySelectorAll(".dropdown");
   const globeMobile = document.getElementById("globeMobile");
 
@@ -83,6 +83,7 @@ function initNavbar() {
   // تفعيل القائمة المنسدلة للجوال
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
+     menuToggle.classList.toggle("active");
   });
 
   // تفعيل القوائم المنسدلة في وضع الجوال
