@@ -114,7 +114,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please contact:
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 40px;">
   <div>
     <h4>NAWAH CEO</h4>
     <img src="image-2.png" alt="NAWAH CEO" width="150" style="margin: 15px auto;" />
