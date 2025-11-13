@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="./index/css_helpers/header_style.css" />
-    <link rel="stylesheet" href="./index/css_helpers/landing_style.css" />
+     <link rel="stylesheet" href="./index/css_helpers/landing_style.css" />
     <link rel="stylesheet" href="./index/css_helpers/last_updates_style.css" />
     <link rel="stylesheet" href="./index/css_helpers/welcome_style.css" />
     <link rel="stylesheet" href="./index/css_helpers/speciality_style.css" />
     <link rel="stylesheet" href="./index/css_helpers/collaborate_style.css" />
     <link rel="stylesheet" href="./index/css_helpers/project_space.css" />
+    <link rel="stylesheet" href="./index/css_helpers/header.css" />
+    <link rel="stylesheet" href="./index/mediaqueries.css" />
+
     <link rel="stylesheet" href="./index/index.css" />
     <title>Nawah Project</title>
 </head>
@@ -19,84 +21,74 @@
 <body>
     <!-- Html Code For Home Page -->
     <!-- Header Code -->
-    <header id="header">
-        <a href="./index.html">
-            <div id="logo">
-                <h1>
-                    Nawah <br />
-                    Project
-                </h1>
-                <img src="./assets/index/logo.png" alt="" />
-            </div>
-        </a>
+  <header>
+    <!-- Header Code -->
 
-        <div id="left-side">
-            <div id="links">
-                <a id="overview-link" href="./overview/overview.html">نظرة عامه
-                    <div class="overview-link-item-underline"></div>
-                </a>
-                <a id="news-link" href="./news/news.html">الأخبار
-                    <div class="news-link-item-underline"></div>
-                </a>
-                <a id="specialties-link" href="./specialties/specialties.html">تخصصات
-                    <div class="specialties-link-item-underline"></div>
-                </a>
-                <a id="find_specialize-link" href="./find_specialize/find_specialize.html">اعثر على تخصصك
-                    <div class="find_specialize-link-item-underline"></div>
-                </a>
-                <a id="support-link" href="./support/support.html">الدعم ▾
-                    <div class="support-link-item-underline"></div>
-                </a>
-                <a id="social-link" href="./social/social.html">اجتماعى ▾
-                    <div class="social-link-item-underline"></div>
-                </a>
-            </div>
-            <div id="tips">
-                <!-- <a id="language" href="">🌍</a> -->
-                <svg id="language" width="20" height="20" viewBox="0 0 16 16">
-                    <title>globeIcon</title>
-                    <path
-                        d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
-                        fill="#E8E8E8"></path>
-                </svg>
-                <button id="user"> حسابي ▾</button>
-            </div>
-        </div>
+    <nav class="navbar">
+     <div class="logo"> <a href="index.html"> 
+        <img src="./assets/index/logo.png" alt="Nawah Project Logo"></a>
+        <span>Nawah<br /> Project</span>
+      </div>
 
-        <div id="mobile-menu">
-            <!-- <a id="language" href="">🌍</a> -->
-            <svg id="language" width="20" height="20" viewBox="0 0 16 16">
-                <title>globeIcon</title>
-                <path
-                    d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
-                    fill="#E8E8E8"></path>
+   <div class="mobile-icons">
+  <div class="globe-mobile" id="globeMobile">
+    <svg id="language" width="25" height="25" viewBox="0 0 16 16">
+      <title>globeIcon</title>
+      <path
+        d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
+        fill="#E8E8E8"></path>
+    </svg>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle" >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./overview/overview.html">نظرة عامة على المكان</a></li>
+        <li><a href="./news/news.html">الأخبار</a></li>
+        <li><a href="./specialties/specialties.html">تخصصات</a></li>
+        <li><a href="./find_specialize/find_specialize.html">اعثر على تخصصك</a></li>
+        <li class="dropdown">
+          <a href="#">الدعم ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">الأسئلة الشائعة</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">اجتماعي ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">فيسبوك</a></li>
+            <li><a href="#">تويتر</a></li>
+            <li><a href="#">إنستجرام</a></li>
+          </ul>
+        </li>
+        <li class="icon globe" >   
+          <svg id="language" width="14" height="14" viewBox="0 0 16 16">
+            <title>globeIcon</title>
+            <path
+              d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
+              fill="#E8E8E8">
+            </path>
             </svg>
-            <i id="mobile-menu-icon" class="fa fa-bars fa-lg"></i>
-        </div>
-        <div id="mobile-menu-links">
-            <a id="overview-link" href="./overview/overview.html">نظرة عامه
-                <div class="overview-link-item-underline"></div>
-            </a>
-            <a id="news-link" href="./news/news.html">الأخبار
-                <div class="news-link-item-underline"></div>
-            </a>
-            <a id="specialties-link" href="./specialties/specialties.html">تخصصات
-                <div class="specialties-link-item-underline"></div>
-            </a>
-            <a id="find_specialize-link" href="./find_specialize/find_specialize.html">اعثر على تخصصك
-                <div class="find_specialize-link-item-underline"></div>
-            </a>
-            <a id="support-link" href="./support/support.html">الدعم ▾
-                <div class="support-link-item-underline"></div>
-            </a>
-            <a id="social-link" href="./social/social.html">اجتماعى ▾
-                <div class="social-link-item-underline"></div>
-            </a>
+      </li>
+        <li class="dropdown account">
+          <a href="#">حسابي ▾</a>
+          <!-- <ul class="dropdown-menu">
+          <li><a href="#">تسجيل الدخول</a></li>
+          <li><a href="#">إنشاء حساب</a></li>
+        </ul> -->
+        </li>
+      </ul>
 
-            <button id="user">حسابي ▾</button>
-        </div>
-
-    </header>
+    </nav>
+  </header>
 
     <!-- Main Content Code -->
     <main>
