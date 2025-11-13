@@ -1,50 +1,345 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./overview/overview.css">
-    <title>Overview</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css_helpers/header.css">
+  <link rel="stylesheet" href="./css_helpers/intro.css">
+  <link rel="stylesheet" href="./css_helpers/goals.css">
+  <link rel="stylesheet" href="./css_helpers/specialties.css">
+  <link rel="stylesheet" href="./css_helpers/capabilities.css">
+  <link rel="stylesheet" href="./css_helpers/image_box.css">
+  <link rel="stylesheet" href="./overview.css">
+  <link rel="stylesheet" href="./mediaqueries.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Nawah Project</title>
 </head>
 
 <body>
-    <header>
-        <!-- Header Code -->
-        <!-- index Link ( ../index.html ) -->
-        <!-- overview Link ( ../overview/overview.html ) -->
-        <!-- specialties Link ( ../specialties/specialties.html ) -->
-        <!-- find_specialize Link ( ../find_specialize/find_specialize.html ) -->
-        <!-- news Link ( ../news/news.html ) -->
-        <!-- social Link ( ../social/social.html ) -->
-        <!-- support Link ( ../support/support.html ) -->
-    </header>
+  <header>
+    <!-- Header Code -->
 
-    <main>
-        <h1>Overview Page</h1>
-        <!-- Main Content Code -->
-        <section>
-            <!-- Intro Section -->
-        </section>
+    <nav class="navbar">
+      <div class="logo"> <a href="../index.html">
+          <img src="../assets/index/logo.png" alt="Nawah Project Logo"></a>
+        <span>Nawah<br /> Project</span>
+      </div>
 
-        <section>
-            <!-- Project Goals -->
-        </section>
+      <div class="mobile-icons">
+        <div class="globe-mobile" id="globeMobile">
+          <svg id="language" width="25" height="25" viewBox="0 0 16 16">
+            <title>globeIcon</title>
+            <path
+              d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
+              fill="#E8E8E8"></path>
+          </svg>
+        </div>
 
-        <section>
-            <!-- Project Space -->
-        </section>
+        <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-        <section>
-            <!-- Footer Video -->
-        </section>
-    </main>
 
-    <footer>
-        <!-- Footer Code -->
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../overview/overview.html">نظرة عامة على المكان</a></li>
+        <li><a href="../news/news.html">الأخبار</a></li>
+        <li><a href="../specialties/specialties.html">تخصصات</a></li>
+        <li><a href="#" onclick="toggleComingSoonAlert()">اعثر على تخصصك</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleComingSoonAlert()">الدعم ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="toggleComingSoonAlert()">الأسئلة الشائعة</a></li>
+            <li><a href="#" onclick="toggleComingSoonAlert()">تواصل معنا</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleComingSoonAlert()">اجتماعي ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" onclick="toggleComingSoonAlert()">فيسبوك</a></li>
+            <li><a href="#" onclick="toggleComingSoonAlert()">تويتر</a></li>
+            <li><a href="#" onclick="toggleComingSoonAlert()">إنستجرام</a></li>
+          </ul>
+        </li>
+        <li class="icon globe">
+          <svg id="language" width="14" height="14" viewBox="0 0 16 16">
+            <title>globeIcon</title>
+            <path
+              d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
+              fill="#E8E8E8">
+            </path>
+          </svg>
+        </li>
+        <li class="dropdown account">
+          <a href="#" onclick="toggleComingSoonAlert()">حسابي ▾</a>
+          <!-- <ul class="dropdown-menu">
+          <li><a href="#">تسجيل الدخول</a></li>
+          <li><a href="#">إنشاء حساب</a></li>
+        </ul> -->
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Intro Section -->
+    <section class="banner">
+
+      <h1>ما هو مشروع<br /> نواة؟</h1>
+      <p>
+        منصه تفاعليه تعيد تعريف التعلم والعمل الجماعى بأسلوب واقعى وذكى.تجمع بين المشاريع القصيره
+        والرحلات التعليميه الموجهه لتناسب يومك واجهزتك.كل تجربه فيها سريعه الايقاع لكنها غنيه
+        بالمعنى"يمكنك الانضمام لفريق'تطبيق فكره او اطلاق مهاره جديده نحو العالم.
+      </p>
+
+    </section>
+
+
+    <!-- Project Goals -->
+    <section class="goal">
+      <h2>هدف المشروع</h2>
+      <div class="goals">
+        <div class="goal1">
+          <img class="img" src="../assets/overview/pro_goals/a_2d_hand_drawn_digital_illustration_with_a.jpeg"
+            alt="img">
+          <h3>1.كون طريقك</h3>
+          <p>
+            لا احد يفرض عليك الاتجاه --انت من يكون طريقه بالتجربه
+            ةالممارسه. اختر تخصصك انضم الى مجتمع يشبهك وابدأ ببناء
+            اثر يمتد من تعلمك الى الاخرين.
+          </p>
+        </div>
+        <div class="goal2">
+          <img class="img" src="../assets/overview/pro_goals/a_2d_hand_drawn_digital_illustration_with_a (2).jpeg"
+            alt="img">
+          <h3>2.كسر القاعده</h3>
+          <p>
+            فى نواه لست مضطرا لاختيار طريق واحد.امزج بين
+            التخصصات.واخلق لنفسك اسلوبا يوازن بين الابداع والمعرفه.
+          </p>
+        </div>
+        <div class="goal3">
+          <img class="img"
+            src="../assets/overview/pro_goals/create_a_2d_hand_drawn_digital_illustration_slightly (1).jpeg" alt="img">
+          <h3>3.اكسر حواجز التعلم لبلوغ اهدافك</h3>
+          <p>
+            فى كل مرحله ستواجه تحديات معرفيه واختيارات فكريه تعيق
+            تقدمك.تغلب عليها خطوه بخطوه لفتح الطريق نحو اتقانك الحقيقى.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="goals-navigation">
+        <span class="nav-arrow prev-arrow">←</span>
+        <span class="nav-arrow next-arrow">→</span>
+        <hr />
+      </div>
+
+    </section>
+
+
+
+
+    <!-- Specialties -->
+    <section class="specialties">
+      <div class="container">
+        <div class="image-container">
+          <img src="../assets/overview/all_specialists/create_a_2d_hand_drawn_digital_illustration_representing.jpeg"
+            alt="img" class="image-3d">
+          <h4>الامن السيبرانى</h4>
+          <p>حارس الانظمه ومهندس الدفاعات الرقميه</p>
+          <p>يمتلك مهاره اكتشاف الثغرات قبل ان تستغل وتحليل الهجمات قبل ان تتكرر يعمل بدقه عاليه بين الفوضى والنظام
+            ليبقى العالم الرقمى امنا ومتوازنا.</p>
+        </div>
+        <div class="text">
+          <h2>التخصصات</h2>
+          <p>لديك7تخصصات متاحه حاليا وكل منها يمثل طريقا فريدا للنمو. اكتشف المسار الذى يلهمك وابن مهاراتك من الصفر</p>
+          <button class="btn">اطلع على المزيد</button>
+          <div class="icons">
+            <img src="../assets/specialties/in_a_creative_inspiring_and_educational_way_scene.jpeg" alt="img">
+            <img src="../assets/specialties/a_thoughtful_ai_researcher_or_innovator_sits.jpeg" alt="img">
+            <img src="../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (2).jpeg"
+              alt="img">
+            <img src="../assets/specialties/create_a_2d_hand_drawn_digital_illustration_that.jpeg" alt="img">
+            <img src="../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing.jpeg" alt="img">
+            <img src="../assets/specialties/create_a_2d_hand_drawn_digital_illustration_representing (3).jpeg"
+              alt="img">
+          </div>
+        </div>
+      </div>
+
+      <div class="specialties-navigation">
+        <span class="nav-arrow1 prev-arrow1">←</span>
+        <span class="nav-arrow1 next-arrow1">→</span>
+        <hr class="hrspecialties" />
+      </div>
+    </section>
+
+
+
+    <!--Specialization capabilities -->
+
+    <section class="capabilities">
+      <div class="capabilities-container">
+        <div class="cap-image-wrapper">
+          <img src="../assets/overview/create_a_2d_hand_drawn_digital_illustration_with.jpeg" alt="Capabilities"
+            class="cap-main-image">
+          <div class="cap-sub-title">
+            <h3>نبض التفاعل - JavaScript</h3>
+            <p>اسطره الكود المتقدمة فى هذا التخصص الجدوى جعلك تتفاعل بين الالمطورين او المستخدمين مروراً عبر تسلسل من
+              المتغيرات المؤثرة فى اجزاء البرمجة.</p>
+          </div>
+        </div>
+        <div class="cap-content">
+          <h2>قدرات التخصصات</h2>
+          <p>كل تخصص فى نواه يتجاوز التعلم التقليدى ليقدم مجموعه فريده من القدرات المعمقه التى تقودك من الفهم النظري الى
+            التطبيق المباشر. نحن لا ندرس مهارات منفصلة بل نبنى اكولوجيه متكامله من المعرفه والتطبيق والابتكار.</p>
+          <div class="cap-icons">
+            <div class="cap-icon">
+              <img src="../assets/overview/image.png" alt="Tech">
+            </div>
+            <div class="cap-icon">
+              <img src="../assets/overview/image copy.png" alt="Tech">
+            </div>
+            <div class="cap-icon">
+              <img src="../assets/overview/a_2d_hand_drawn_digital_illustration_in_an.jpeg" alt="Tech">
+            </div>
+            <div class="cap-icon">
+              <img src="../assets/overview/image copy 2.png" alt="Tech">
+            </div>
+            <div class="cap-icon">
+              <img src="../assets/overview/image copy 3.png" alt="Tech">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="capabilities-navigation">
+          <span class="nav-arrow prev-arrow2">←</span>
+          <span class="nav-arrow next-arrow2">→</span>
+          <hr class="hrcapabilities" />
+        </div>
+
+      </div>
+
+
+
+      <div class="experience">
+        <div class="experience__img-continer">
+          <img class="img-copy" src="../assets/overview/image copy 4.png" alt="img">
+          <span>تخصصك</span>
+          <p>اجعل تخصصك ساحه بطولتك.واجه التحديات ووسع قدراتك بلممارسه والتجربه فكل مشروع
+            تنجزه هو خطوه نحو مستوى اعلى من الاتقان كلما تعمقت اكثر ازدادت مهاراتك وضوحا ورؤيتك نضجا وأثرك اتساعا.
+          </p>
+        </div>
+
+        <div class="experience__text-continer">
+          <h2>عزز خبره</h2>
+          <div class="icons-tab">
+            <div class="icon-tab">
+              <img src="../assets/overview/create_a_2d_hand_drawn_digital_illustration_icon_style (2).jpeg" alt="img">
+              <p>الادوات</p>
+            </div>
+
+            <div class="icon-tab">
+              <img src="../assets/overview/create_a_2d_hand_drawn_digital_illustration_icon_style (3).jpeg" alt="img">
+              <p>الخبره</p>
+            </div>
+
+            <div class="icon-tab">
+              <img src="../assets/overview/create_a_2d_hand_drawn_digital_illustration_icon_style (1).jpeg" alt="img">
+              <p>تخصصك</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+
+    <!--last section-->
+
+
+    <section class="imgs__box">
+      <div class="imgs__box-container">
+        <img src="../assets/overview/prompt_create_a_2d_hand_drawn_digital_illustration_icon_style.jpeg" alt="img">
+        <p>انجازات ومكافأت حقيقه</p>
+      </div>
+
+      <div class="imgs__box-container">
+        <img src="../assets/overview/prompt_create_a_2d_hand_drawn_digital_illustration_icon_style (1).jpeg" alt="img">
+        <p>تجارب تعلم فرديه وتعاونيه</p>
+      </div>
+
+      <div class="imgs__box-container">
+        <img src="../assets/overview/prompt_create_a_2d_hand_drawn_digital_illustration_3_4.jpeg" alt="img">
+        <p>بدأ مجانا وارتق بجهدك </p>
+      </div>
+
+      <div class="last-navigation">
+        <span class="nav-arrow prev-arrow3">←</span>
+        <span class="nav-arrow next-arrow3">→</span>
+        <hr class="hrlast" />
+      </div>
+
+    </section>
+
+
+    <!-- Footer Video -->
+    <section class="footer-video">
+      <video autoplay muted loop playsinline>
+        <source src="../assets/overview/footer.gif.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو.
+      </video>
+    </section>
+
+    <!-- Footer Code -->
+
+    <footer class="site-footer">
+      <div class="footer-icons">
+        <a href="#" class="social-icon youtube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-icon instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon x"><i class="fa-brands fa-x-twitter"></i></i></a>
+        <a href="#" class="social-icon facebook"> <i class="fa-brands fa-facebook"></i></a>
+      </div>
+
+      <!-- Project Name -->
+      <div class="footer-project">
+        <strong>Nawah Project</strong>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copy">
+        © 2025 Nawah Project — جميع الحقوق والعلامات الخاصة بـ نواة محفوظة.
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <a href="#">سياسة الخصوصية</a>
+        <a href="#">شروط الاستخدام</a>
+        <a href="#">تفضيلات ملفات تعريف الارتباط</a>
+      </div>
     </footer>
 
-    <script src="./overview/overview.js"></script>
+    <div id="coming-soon-alert">
+      <i onclick="toggleComingSoonAlert()" class="fa-solid fa-xmark"></i>
+      <p>This Section In Progress ( Coming Soon )</p>
+    </div>
+
+    <script src="./overview.js"></script>
 </body>
 
 </html>

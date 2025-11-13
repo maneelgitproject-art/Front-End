@@ -1,1 +1,657 @@
-/* specialties css Code */
+  :root {
+      --primary-color: #7c7c7c63;
+      --secondary-color: #21252985;
+      --background-color: #111;  
+      font-family: 'Noto Sans Arabic', sans-serif;
+    }
+
+ 
+
+ body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+   /* start footer */
+.site-footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
+
+/* Social icons */
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.footer-icons a:hover {
+  background-color: #32C7ff;
+  color: #000;
+}
+
+/* Project Name */
+.footer-project {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b9b8b8;
+  margin: 40px 0;
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #b9b8b8;
+
+}
+ 
+/* Footer Links */
+.footer-links {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin: 45px 0;
+
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  /* space between links */
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+  
+/*footer end */
+
+
+
+/* specialties-section  */
+
+  .specialties-section {
+    background-color: #ffffff;  
+    padding: 60px 20px; 
+    text-align: right;
+    direction: rtl;
+ 
+  }
+
+  .container {
+    max-width: 1270px;  
+    margin: 0 auto;
+ 
+  }
+
+  .small-title {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700; 
+    color: #141e37;
+    margin-bottom: 0px; /* space between small title and main title */
+  }
+
+  .main-title {
+  font-size: 80px;
+  color: #141e37;
+  font-style: italic;
+  font-weight: 700; 
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+  .description {
+    font-size: 18px;
+    color: #141e37;
+    width: 47vw;
+    line-height: 1.7;
+    margin: 0 4px;  
+    font-style: italic;
+    font-weight: 300; 
+    }
+
+
+
+#AllSpecialties {
+  background-color: #fff;
+  padding: 0px 45px;
+  direction: rtl;
+  text-align: center;
+  margin-top: -29px;
+}
+
+/* ------------------ LINKS ------------------ */
+.specialty-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ------------------ GRID LAYOUT ------------------ */
+.specialties-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+/* ------------------ CARD ------------------ */
+.specialty-card {
+  position: relative;
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.specialty-card:hover {
+  transform: none;
+}
+
+/* ------------------ IMAGE CONTAINER ------------------ */
+.image-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease;
+}
+ 
+
+.image-container img,
+.image-container .plus {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.specialty-card:hover .image-container img {
+  transform: scale(1.05);
+
+}
+
+/* ------------------ TITLE OVERLAY ------------------ */
+.title-overlay {
+ position: sticky;
+  bottom: 0;
+  z-index: 2;  
+  left: 0;
+  width: 100%;
+  background-color: #32C8ff;
+  color: #fff;
+  text-align: right;
+  padding: 13px 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 17px;
+  border-radius: 0px;
+
+}
+
+.specialty-card:hover .title-overlay {
+  background-color: #07072c;
+}
+
+/* ------------------ ADD SPECIALTY CARD ------------------ */
+.add-specialty .image-container {
+  background-color: #07072c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: center;
+  text-align: center;
+  aspect-ratio: 3 / 4;
+  padding: 2px;
+  position: relative;
+}
+
+.add-specialty   {
+  background-color: #07072c;
+  position: relative;
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+   cursor: pointer;
+  margin: 0 auto;
+}
+.add-specialty .plus {
+  font-size:15rem;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  margin-bottom: 15px;
+
+}
+
+.add-specialty .plus-title {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 2px;
+  margin-top: 20px;
+ 
+ }
+
+.add-specialty .plus-description {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto 40px auto; 
+  display: block;
+  max-width: 400px;
+  justify-items: center;
+}
+
+
+/* ------------------ RESPONSIVE RULES ------------------ */
+
+/*  smaller  img, 4 per row */
+@media (max-width: 1300px) and (min-width: 1025px) {
+  #AllSpecialties {
+    padding: 0px 25px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(23% - 5px);
+    max-width: calc(23% - 5px);
+  }
+
+  .image-container {
+    transform: scale(1);
+  }
+
+  .add-specialty .plus-title {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .add-specialty .plus-description {
+    font-size: 16px;
+ 
+  
+  }
+    .add-specialty .plus {
+    font-size: 180px;
+ 
+  }
+   .description {
+    width: 80vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+      /* ------------------ TITLE OVERLAY ------------------ */
+.title-overlay {
+  width: 100%;
+ 
+  font-size: clamp(8px, 3vw, 15px);  
+ 
+  margin-top: -2px;
+ 
+}
+
+ 
+}
+
+/*  2 per row (normal size) */
+@media (max-width: 1025px) and (min-width: 700px) {
+  #AllSpecialties {
+    padding: 0px 45px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .image-container {
+    transform: scale(1);
+  }
+
+    .add-specialty .plus {
+    font-size: 270px;
+ 
+   
+  }
+
+  .add-specialty .plus-title {
+    font-size: 34px;
+    white-space: nowrap;
+   }
+
+  .add-specialty .plus-description {
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 110px;
+
+
+   
+  }
+
+
+   .description {
+    width: 85vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+
+  .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+
+    .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+
+.title-overlay {
+  margin-top: -2px;
+}
+
+ 
+}
+
+
+
+/*   2 per row, bigger images */
+
+@media (max-width: 700px) and (min-width: 500px) {
+  #AllSpecialties {
+    padding: 0px 25px;
+  }
+  
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+  }
+
+  .add-specialty .plus {
+    font-size: 165px;
+    margin-top: -25px;
+    margin-bottom: 30px;
+  }
+
+  .add-specialty .plus-title {
+    font-size: 23px;
+    margin-top: -37px;
+    white-space: nowrap;
+  }
+
+  .add-specialty .plus-description {
+    font-size: 16px;
+    max-width: 220px;
+    margin-top: 8px;
+  }
+
+
+   .description {
+    width: 95vw;  
+    font-size: 17px;
+    color: #333;
+    }
+
+    .small-title {
+    font-size: 17px;
+    font-style: italic;
+    
+  }
+
+  .main-title {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 700; 
+ 
+}
+
+
+
+  /* ------------------ TITLE OVERLAY ------------------ */
+.title-overlay {
+  width: 100%;
+  position: relative;   
+  background-color: #32C8ff;
+  color: #fff;
+  text-align: right;
+  padding: 13px 8px;
+  font-weight: bold;
+   white-space: normal;
+  word-break: break-word;
+  margin-top: -2px;
+ 
+}
+
+ 
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+  #AllSpecialties {
+  padding: 0px 30px;
+  }
+
+  .specialty-card,
+  .add-specialty {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    border-radius: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center; 
+    text-align: center;
+     
+   }
+
+  .image-container {
+    transform: scale(1);
+  }
+  
+ 
+
+.add-specialty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  width: 100%;
+  height: auto;  
+  box-sizing: border-box;
+}
+
+.add-specialty .image-container {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  display: flex;              
+  flex-direction: column;      
+  align-items: center;         
+  justify-content: center;     
+  text-align: center;
+  padding: 10px;               
+  box-sizing: border-box;
+}
+   
+
+.add-specialty .plus,
+.add-specialty .plus-title,
+.add-specialty .plus-description {
+  position: static;        
+  margin: 1px 0;           
+}
+
+
+  .add-specialty .plus {
+font-size: clamp(50px, 20vw, 100px);    
+   margin-top: 50px;     }
+
+  .add-specialty .plus-title {
+ 
+    font-size: clamp(12px, 1vw, 18px);  
+    white-space: nowrap;
+    text-align: center;  
+     
+  }
+
+ .add-specialty .plus-description {
+  font-size: clamp(7px, 2vw, 11px);
+  white-space: wrap;
+  word-break: break-word;
+  margin: 0 auto 50px auto;
+  min-width:65px;
+
+ 
+  }
+
+  .description {
+    width: 75vw;  
+    font-size: 12px;
+    color: #333;
+    white-space: wrap;
+
+  }
+
+  .small-title {
+    font-size: 14px;
+    font-style: italic;
+    word-break: break-word;
+  }
+
+  .main-title {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 700;
+    word-break: break-word;
+  }
+
+  /* ------------------ TITLE OVERLAY ------------------ */
+.title-overlay {
+  width: 100%;
+  position: relative;   
+  background-color: #32C8ff;
+  color: #fff;
+  text-align: right;
+  padding: 7px 20px;
+  font-weight: bold;
+   white-space: normal;
+  word-break: break-word;
+  margin-top: -2px;
+  font-size: clamp(7px, 3vw, 14px);
+  transform: scale(1);
+}
+ 
+ 
+ .specialties-row {
+  row-gap: 15px;     
+  column-gap: 10px;
+  align-items: stretch;
+
+  }
+}
+
+
+/* Coming Soon Alert */
+
+#coming-soon-alert {
+  background-color: orange;
+  color: white;
+  display: none;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  position: absolute;
+  top: 8%;
+  left: 1%;
+  font-size: 1.1rem;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+#coming-soon-alert i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #coming-soon-alert {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #coming-soon-alert {
+    width: 60%;
+    left: 2%;
+  }
+}
