@@ -145,76 +145,97 @@ body {
 
 
   /* start footer */
+.site-footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Noto Sans Arabic', sans-serif;
+}
 
+/* Social icons */
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.footer-icons a:hover {
+  background-color: #32C7ff;
+  color: #000;
+}
+
+/* Project Name */
+.footer-project {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b9b8b8;
+  margin: 40px 0;
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #b9b8b8;
+
+}
+ 
+/* Footer Links */
+.footer-links {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin: 45px 0;
+
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  /* space between links */
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+ @media  (max-width: 500px) {
   .site-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Noto Sans Arabic', sans-serif;
+  padding: 50px 20px;
+ }
 
-
+ .footer-project {
+    font-size: 1rem;
+    margin: 20px 0;
   }
 
-  /* Social icons */
-  .footer-icons {
-    margin-bottom: 15px;
+  .footer-copy,
+  .footer-links {
+    font-size: 0.75rem;
+    margin: 10px 0;
   }
 
   .footer-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color: #333;
-    color: white;
-    border-radius: 50%;
-    margin: 0 8px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 18px;
-  }
-
-  .footer-icons a:hover {
-    background-color: #d1dbda;
-    color: #000;
-  }
-
-  /* Project Name */
-  .footer-project {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #b9b8b8;
-    margin: 40px 0;
-  }
-
-  /* Copyright */
-  .footer-copy {
-    font-size: 0.9rem;
-    margin-bottom: 12px;
-    color: #b9b8b8;
-  }
-
-  /* Footer Links */
-  .footer-links {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    margin: 45px 0;
-
-  }
-
-  .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    transition: 0.3s;
-  }
-
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  } }
+/*footer end */
 
   .form-container {
     display: flex;
@@ -721,9 +742,7 @@ body {
       margin-left: 15%;
     }
 
-    main {
-      max-height: calc(100vh - 40px);
-    }
+   
   }
 
   @media (min-width: 800px) and (max-width: 1024px) {
@@ -895,34 +914,8 @@ body {
 
   @media (max-width: 500px) {
 
-    html,
-    body {
-      font-size: 14px;
-
-    }
-
-    main {
-      max-height: calc(115vh - 5px);
-
-    }
-
-    /* Footer */
-    .site-footer {
-      margin-bottom: 0%;
-      margin-top: -30%;
-      padding: 60px 20px 90px;
-    }
-
-    .footer-links a {
-      font-size: 0.9rem;
-      margin: 25px 0;
-      display: block;
-
-      align-items: center;
-    }
-
-
-
+    
+  
     .card {
       width: 100%;
       height: 98%;
@@ -931,7 +924,7 @@ body {
       padding: 18px 13px 18px;
       overflow-y: auto;
       margin-bottom: 0px;
-      margin-top: -10%;
+      margin-top: -5%;
 
 
     }
@@ -1035,4 +1028,5 @@ body {
       font-size: 9px;
 
     }
+    
   }
