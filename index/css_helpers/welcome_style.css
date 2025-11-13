@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1%;
+    padding-bottom: 1%;
 }
 
 #welcome-header {
@@ -19,17 +19,19 @@
 }
 
 #welcome-header h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 700;
     max-width: 90%;
     overflow-wrap: wrap;
+    font-family: 'Riot Sans', sans-serif;
+    line-height: 0.5;
     /* margin-block: 1%; */
 }
 
 #welcome-header p {
-    font-size: 2rem;
-    font-family: Spiegel, sans-serif;
+    font-size: 1rem;
+    font-family: 'Spiegel', sans-serif;
     font-weight: 400;
     max-width: 100%;
     overflow-wrap: wrap;
@@ -43,12 +45,32 @@
 }
 
 #show-more {
-    display: none;
+    width: 30%;
+    display: block;
+    margin-top: 5%;
+}
+
+#show-more button {
+    width: 100%;
+    padding: 18px 32px;
+    background-color: #141e37;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: none;
+}
+
+#show-more button:hover {
+    background-color: white;
+    color: #141e37;
 }
 
 .video iframe {
     text-align: end;
-    width: 80%;
+    width: 70%;
     height: 47.5vh;
     border-radius: 10px;
     border: none;
@@ -86,6 +108,7 @@
         font-size: 1rem;
         font-weight: 500;
         border-radius: 2px;
+        font-family: 'Spiegel', sans-serif;
         cursor: pointer;
         transition: 0.5s;
         border: none;
@@ -108,7 +131,7 @@
     #welcome {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         height: 90vh;
         overflow: hidden;
         padding-block: 2%;
@@ -127,13 +150,13 @@
     #show-more {
         width: 40%;
         display: block;
-        margin-inline: auto;
-        margin-block: 1.5%;
+        /* margin-inline: auto; */
+        /* margin-block: 1.5%; */
     }
 
     #show-more button {
         width: 100%;
-        padding: 4% 2%;
+        padding: 18px 32px;
         background-color: #141e37;
         color: white;
         font-size: 1rem;
