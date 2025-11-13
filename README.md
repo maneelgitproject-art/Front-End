@@ -112,4 +112,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For any inquiries, please contact [NAWAH Team] or open an issue in the repository.
+For any inquiries, please contact :
+    NAWAH CEO : ![alt text](image.png)
