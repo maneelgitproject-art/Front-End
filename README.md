@@ -44,7 +44,7 @@ Ready to be part of something bigger? Join our community of passionate individua
 **العربية:**  
 هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
 
-[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](#)
+[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://nawah-project.com)
 
 ## 🚀 Features
 
