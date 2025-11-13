@@ -117,10 +117,10 @@ For any inquiries, please contact:
 <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
   <div>
     <h4>NAWAH CEO</h4>
-    <img src="image-2.png" alt="NAWAH CEO" width="150" style="display: block; margin: 15px auto;" />
+    <img src="image-2.png" alt="NAWAH CEO" width="150" style="margin: 15px auto;" />
   </div>
   <div>
     <h4>NAWAH Project Manager</h4>
-    <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="display: block; margin: 15px auto;" />
+    <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="margin: 15px auto;" />
   </div>
 </div>
