@@ -31,24 +31,20 @@ Empowering individuals and teams to turn their ideas into reality through collab
 **English:**  
 Explore more about Nawah Project and join our growing community of innovators and creators.
 
-[![Visit Website](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
-
 **العربية:**  
 استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
 
-[![زوروا الموقع](https://img.shields.io/badge/زوروا_الموقع-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=2ea44f)](https://nawah-project.com)
+[![Visit Website](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
 
 ## 👥 Join Us | انضموا إلينا
 
 **English:**  
 Ready to be part of something bigger? Join our community of passionate individuals and start making an impact today!
 
-[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](#)
-
 **العربية:**  
 هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
 
-[![انضم الآن](https://img.shields.io/badge/انضم_الآن-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=FF6B6B)](#)
+[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](#)
 
 ## 🚀 Features
 
