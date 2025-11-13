@@ -26,6 +26,30 @@ Empowering individuals and teams to turn their ideas into reality through collab
 **العربية:**  
 تمكين الأفراد والفرق من تحويل أفكارهم إلى حقيقة من خلال التعلم التعاوني والإرشاد والوصول إلى الموارد في بيئة مجتمعية داعمة.
 
+## 🌍 Visit Our Website | زوروا موقعنا
+
+**English:**  
+Explore more about Nawah Project and join our growing community of innovators and creators.
+
+[![Visit Website](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
+
+**العربية:**  
+استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
+
+[![زوروا الموقع](https://img.shields.io/badge/زوروا-موقعنا-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
+
+## 👥 Join Us | انضموا إلينا
+
+**English:**  
+Ready to be part of something bigger? Join our community of passionate individuals and start making an impact today!
+
+[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](#)
+
+**العربية:**  
+هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
+
+[![انضم الآن](https://img.shields.io/badge/انضم_الآن-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](#)
+
 ## 🚀 Features
 
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
