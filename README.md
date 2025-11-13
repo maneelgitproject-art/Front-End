@@ -120,6 +120,7 @@ For any inquiries, please contact:
       <h4>NAWAH CEO</h4>
       <img src="image-2.png" alt="NAWAH CEO" width="150" style="display: block; margin: 15px auto;" />
     </td>
+    <td style="width:40px;"></td>
     <td style="margin-inline:20px;">
       <h4>NAWAH Project Manager</h4>
       <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="display: block; margin: 15px auto;" />
