@@ -713,31 +713,8 @@ body {
     }
 
     /* Footer */
-    .site-footer {
-      margin-bottom: 0%;
+   
 
-      padding: 16px 12px 100px;
-    }
-
-    .footer-icons a {
-      width: 40px;
-      height: 40px;
-      font-size: 15px;
-      margin: 0 6px;
-    }
-
-    .footer-project {
-      font-size: 1rem;
-      margin: 20px 0;
-    }
-
-    .footer-links a {
-      font-size: 0.9rem;
-      margin: 25px 0;
-      display: block;
-
-      align-items: center;
-    }
 
     .form-footer {
       gap: 14px;
