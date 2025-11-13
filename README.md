@@ -112,5 +112,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-For any inquiries, please contact :
-    NAWAH CEO : ![alt text](image.png)
+For any inquiries, please contact:
+
+NAWAH CEO:  
+<img src="image.png" alt="NAWAH CEO" width="200" />
