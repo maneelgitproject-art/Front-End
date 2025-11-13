@@ -1,9 +1,12 @@
 // News js Code
+const showComingSoonAlert = document.getElementById("coming-soon-alert");
+
 function initNavbar() {
   const menuToggle = document.getElementById("menuToggle");
-   const navLinks = document.getElementById("navLinks");
+  const navLinks = document.getElementById("navLinks");
   const dropdowns = document.querySelectorAll(".dropdown");
   const globeMobile = document.getElementById("globeMobile");
+
 
   // التحقق من وجود العناصر الأساسية
   if (!menuToggle || !navLinks) {
@@ -14,7 +17,7 @@ function initNavbar() {
   // تفعيل القائمة المنسدلة للجوال
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
-     menuToggle.classList.toggle("active");
+    menuToggle.classList.toggle("active");
   });
 
   // تفعيل القوائم المنسدلة في وضع الجوال
@@ -79,5 +82,22 @@ if (document.readyState === "loading") {
   initNavbar();
 }
 
-
-
+function toggleComingSoonAlert() {
+  if (showComingSoonAlert.style.display === "flex") {
+    showComingSoonAlert.style.display = "none";
+  } else {
+    showComingSoonAlert.style.display = "flex";
+    setTimeout(() => {
+      showComingSoonAlert.style.display = "none";
+    }, 4000);
+  }
+  showComingSoonAlert.animate(
+    {
+      opacity: [0, 1],
+    },
+    {
+      duration: 500,
+      easing: "ease-in-out",
+    }
+  );
+}
