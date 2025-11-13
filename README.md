@@ -114,14 +114,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please contact:
 
-<table align="center" cellspacing="30" border="0">
+<table style="border: none; border-collapse: collapse; margin: 0 auto;">
   <tr>
-    <td style="margin-inline:20px;">
+    <td style="padding: 20px; margin: 0 15px; border: none;">
       <h4>NAWAH CEO</h4>
       <img src="image-2.png" alt="NAWAH CEO" width="150" style="display: block; margin: 15px auto;" />
     </td>
-    <td style="width:50px;"></td>
-    <td style="margin-inline:20px;">
+    <td style="width: 50px; border: none;"></td>
+    <td style="padding: 20px; margin: 0 15px; border: none;">
       <h4>NAWAH Project Manager</h4>
       <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="display: block; margin: 15px auto;" />
     </td>
