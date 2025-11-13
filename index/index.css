@@ -1,25 +1,25 @@
 /* Css Code For Home Page */
 :root {
-    --primary-color: gray;
-    --secondary-color: #21252985;
-    font-family: "Cairo", sans-serif;
-    --background-color: black;
+  --primary-color: gray;
+  --secondary-color: #21252985;
+  font-family: "Cairo", sans-serif;
+  --background-color: black;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    /* max-width: 1920px;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  /* max-width: 1920px;
     max-height: 1080px; */
-    background-color: rgb(4, 4, 90);
-    /* overflow-x: hidden;
+  background-color: rgb(4, 4, 90);
+  /* overflow-x: hidden;
     align-items: center; */
 }
 
 /* Footer Section */
 
-   /* start footer */
+/* start footer */
 .site-footer {
   background-color: #000;
   color: white;
@@ -68,7 +68,7 @@ body {
   color: #b9b8b8;
 
 }
- 
+
 /* Footer Links */
 .footer-links {
   font-size: 0.9rem;
@@ -89,12 +89,13 @@ body {
 .footer-links a:hover {
   text-decoration: underline;
 }
- @media  (max-width: 500px) {
-  .site-footer {
-  padding: 40px 20px;
- }
 
- .footer-project {
+@media (max-width: 500px) {
+  .site-footer {
+    padding: 40px 20px;
+  }
+
+  .footer-project {
     font-size: 1rem;
     margin: 20px 0;
   }
@@ -109,6 +110,45 @@ body {
     width: 30px;
     height: 30px;
     font-size: 14px;
-  } 
+  }
 }
+
 /*footer end */
+
+/* Coming Soon Alert */
+
+#coming-soon-alert {
+  background-color: orange;
+  color: white;
+  display: none;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  position: absolute;
+  top: 8%;
+  left: 1%;
+  font-size: 1.1rem;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+#coming-soon-alert i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #coming-soon-alert {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #coming-soon-alert {
+    width: 60%;
+    left: 2%;
+  }
+}
