@@ -115,7 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any inquiries, please contact:
 
 <table align="center" style="border-collapse: separate; border-spacing: 50px 0;">
-  <tr>
+  <tr style="display:flex; justify-content: space-evenly; align-items: center;" >
     <td align="center" style="padding: 30px; background-color: #f8f9fa; border-radius: 10px; margin: 0 30px;">
       <h4>NAWAH CEO</h4>
       <img src="image-2.png" alt="NAWAH CEO" width="150" style="display: block; margin: 15px 0;" />
