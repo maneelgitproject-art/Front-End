@@ -121,7 +121,7 @@ For any inquiries, please contact:
     </td>
     <td style="width: 80px; border: none;"></td>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
+      <img src="image.png" alt="NAWAH Project Manager" width="150" />
     </td>
   </tr>
 </table>
