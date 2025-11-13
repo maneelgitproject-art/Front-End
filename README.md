@@ -114,7 +114,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please contact:
 
-<table align="center">
+<table align="center" style="border-spacing: 30px;">
   <tr>
     <td style="margin-inline:20px;">
       <h4>NAWAH CEO</h4>
