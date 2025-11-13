@@ -17,16 +17,16 @@ function change_speciality_section() {
             </div>
             <div id="mobile-image">
                 <div id="right-image">
-                    <img src="../assets/index/specialist/right-image.png" alt="" />
+                    <img src="./assets/index/specialist/right-image.png" alt="" />
                 </div>
                 <div id="left-image">
-                    <img src="../assets/index/specialist/left-image.png" alt="" />
+                    <img src="./assets/index/specialist/left-image.png" alt="" />
                 </div>
             </div>`;
     } else {
         speciality.innerHTML = `
             <div id="right-image">
-                <img src="../assets/index/specialist/right-image.png" alt="" />
+                <img src="./assets/index/specialist/right-image.png" alt="" />
             </div>
             <div class="center-content">
                 <h1>اختر تخصصك</h1>
@@ -41,7 +41,7 @@ function change_speciality_section() {
                 </div>
             </div>
             <div id="left-image">
-                <img src="../assets/index/specialist/left-image.png" alt="" />
+                <img src="./assets/index/specialist/left-image.png" alt="" />
             </div>`;
     }
 }
