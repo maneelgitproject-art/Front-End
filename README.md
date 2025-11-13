@@ -116,11 +116,11 @@ For any inquiries, please contact:
 
 <table align="center" style="border-collapse: separate; border-spacing: 30px;">
   <tr>
-    <td align="center" style="padding: 30px; background-color: #f8f9fa; border-radius: 10px; margin: 0 15px; display: inline-block; vertical-align: top; width: 300px;">
+    <td style="padding: 30px; background-color: #f8f9fa; border-radius: 10px; margin: 0 15px; display: inline-block; vertical-align: top; width: 300px;">
       <h4>NAWAH CEO</h4>
       <img src="image-2.png" alt="NAWAH CEO" width="150" style="display: block; margin: 15px auto;" />
     </td>
-    <td align="center" style="padding: 30px; background-color: #f8f9fa; border-radius: 10px; margin: 0 15px; display: inline-block; vertical-align: top; width: 300px;">
+    <td style="padding: 30px; background-color: #f8f9fa; border-radius: 10px; margin: 0 15px; display: inline-block; vertical-align: top; width: 300px;">
       <h4>NAWAH Project Manager</h4>
       <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="display: block; margin: 15px auto;" />
     </td>
