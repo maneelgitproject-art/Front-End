@@ -3,6 +3,7 @@ const title = document.querySelector(".image-container h4");
 const shortDesc = document.querySelector(".image-container > p:first-of-type");
 const longDesc = document.querySelector(".image-container > p:last-of-type");
 const icons = document.querySelectorAll(".icons img");
+const showComingSoonAlert = document.getElementById("coming-soon-alert");
 
 const specialtiesData = [
   {
@@ -326,3 +327,23 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImages();
   }
 });
+
+function toggleComingSoonAlert() {
+    if (showComingSoonAlert.style.display === "flex") {
+        showComingSoonAlert.style.display = "none";
+    } else {
+        showComingSoonAlert.style.display = "flex";
+        setTimeout(() => {
+            showComingSoonAlert.style.display = "none";
+        }, 4000);
+    }
+    showComingSoonAlert.animate(
+        {
+            opacity: [0, 1]
+        },
+        {
+            duration: 500,
+            easing: "ease-in-out"
+        }
+    );
+}

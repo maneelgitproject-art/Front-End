@@ -616,3 +616,42 @@ font-size: clamp(50px, 20vw, 100px);
 
   }
 }
+
+
+/* Coming Soon Alert */
+
+#coming-soon-alert {
+  background-color: orange;
+  color: white;
+  display: none;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  position: absolute;
+  top: 8%;
+  left: 1%;
+  font-size: 1.1rem;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+#coming-soon-alert i {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #coming-soon-alert {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #coming-soon-alert {
+    width: 60%;
+    left: 2%;
+  }
+}

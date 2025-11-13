@@ -1,5 +1,7 @@
  // News js Code
-function initNavbar() {
+const showComingSoonAlert = document.getElementById("coming-soon-alert");
+
+ function initNavbar() {
   const menuToggle = document.getElementById("menuToggle");
    const navLinks = document.getElementById("navLinks");
   const dropdowns = document.querySelectorAll(".dropdown");
@@ -79,5 +81,22 @@ if (document.readyState === "loading") {
   initNavbar();
 }
 
-
-
+function toggleComingSoonAlert() {
+    if (showComingSoonAlert.style.display === "flex") {
+        showComingSoonAlert.style.display = "none";
+    } else {
+        showComingSoonAlert.style.display = "flex";
+        setTimeout(() => {
+            showComingSoonAlert.style.display = "none";
+        }, 4000);
+    }
+    showComingSoonAlert.animate(
+        {
+            opacity: [0, 1]
+        },
+        {
+            duration: 500,
+            easing: "ease-in-out"
+        }
+    );
+}
