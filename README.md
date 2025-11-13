@@ -36,7 +36,7 @@ Explore more about Nawah Project and join our growing community of innovators an
 **العربية:**  
 استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
 
-[![زوروا الموقع](https://img.shields.io/badge/زوروا-موقعنا-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
+[![زوروا الموقع](https://img.shields.io/badge/زوروا_الموقع-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=2ea44f)](https://nawah-project.com)
 
 ## 👥 Join Us | انضموا إلينا
 
@@ -48,7 +48,7 @@ Ready to be part of something bigger? Join our community of passionate individua
 **العربية:**  
 هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
 
-[![انضم الآن](https://img.shields.io/badge/انضم_الآن-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](#)
+[![انضم الآن](https://img.shields.io/badge/انضم_الآن-FF6B6B?style=for-the-badge&logo=github&logoColor=white&labelColor=FF6B6B)](#)
 
 ## 🚀 Features
 
