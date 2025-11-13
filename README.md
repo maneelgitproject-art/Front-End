@@ -116,11 +116,11 @@ For any inquiries, please contact:
 
 <table align="center" cellpadding="20" cellspacing="20" style="border-collapse: separate;">
   <tr>
-    <td align="center" style="padding: 20px;">
+    <td align="center" style="padding: 20px; margin-inline: 20px;">
       <h4>NAWAH CEO</h4>
       <img src="image-2.png" alt="NAWAH CEO" width="150" style="display: block; margin: 10px 0;" />
     </td>
-    <td align="center" style="padding: 20px;">
+    <td align="center" style="padding: 20px; margin-inline: 20px;">
       <h4>NAWAH Project Manager</h4>
       <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="display: block; margin: 10px 0;" />
     </td>
