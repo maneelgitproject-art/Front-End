@@ -124,5 +124,11 @@ For any inquiries, please contact:
       <h4>NAWAH Project Manager</h4>
       <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
     </td>
+    <td align="center">
+      <h4>NAWAH Project Manager</h4>
+      <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
+      <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
+      <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
+    </td>
   </tr>
 </table>
