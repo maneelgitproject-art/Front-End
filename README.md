@@ -114,14 +114,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please contact:
 
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin: 2rem 0;">
-  <div style="text-align: center;">
-    <h4>NAWAH CEO</h4>
-    <img src="image-2.png" alt="NAWAH CEO" width="150" style="margin: 0 auto; display: block;" />
-  </div>
-  
-  <div style="text-align: center;">
-    <h4>NAWAH Project Manager</h4>
-    <img src="image-1.png" alt="NAWAH Project Manager" width="150" style="margin: 0 auto; display: block;" />
-  </div>
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <h4>NAWAH CEO</h4>
+      <img src="image-2.png" alt="NAWAH CEO" width="150" />
+    </td>
+    <td align="center">
+      <h4>NAWAH Project Manager</h4>
+      <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
+    </td>
+  </tr>
+</table>
