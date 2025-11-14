@@ -1,50 +1,31 @@
-const progressBar = document.getElementById('progressBar');
-const progressBar2 = document.getElementById('progressBar2');
-const progressB = document.getElementById('progressB');
-const progressB2 = document.getElementById('progressB2');
- 
+const progressBar1 = document.getElementById('progressB');   // Page 1 bar
+const progressBar2 = document.getElementById('progressBar'); // Page 2 bar
+
 const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
 const pages = document.querySelectorAll('.page');
- 
 
 let currentPage = 0;
 
 nextBtn.addEventListener('click', () => {
   if (currentPage < pages.length - 1) {
     pages[currentPage].classList.remove('active');
-  
     currentPage++;
-    pages[currentPage].classList.add('active');
-  
-    moveProgress();
-  }
-});
-
-prevBtn.addEventListener('click', () => {
-  if (currentPage > 0) {
-    pages[currentPage].classList.remove('active');
-    currentPage--;
     pages[currentPage].classList.add('active');
     moveProgress();
   }
 });
 
 function moveProgress() {
-  const progressWidth = document.querySelector('.progress').offsetWidth;
-  const barWidth = progressBar.offsetWidth;
-  const moveAmount = progressWidth - barWidth;
-  const moveA = progressWidth;
+  if (currentPage === 0) {
+     progressBar1.style.width = "50%";
+  }
 
-   progressBar.style.transform = `translateX(-${moveAmount * currentPage}px)`;
-   progressBar2.style.transform = `translateX(-${ moveAmount  * currentPage}px)`;
-   
-   progressB.style.transform = `translateX(${moveAmount * currentPage}px)`;
-   progressB2.style.transform = `translateX(${moveAmount * currentPage}px)`;
-
-    
-
+  if (currentPage === 1) {
+     progressBar2.style.width = "100%";
+  }
 }
+
+
 
 
  
@@ -54,7 +35,7 @@ function moveProgress() {
   selects.forEach((box) => {
     const btn = box.querySelector('.select-btn');
     const selectedText = box.querySelector('.selectedText');
-    const dropselctdown = box.nextElementSibling; // dropdown right after select box
+    const dropselctdown = box.nextElementSibling;
 
     // Toggle dropdown
     btn.addEventListener('click', (e) => {
@@ -98,9 +79,6 @@ function moveProgress() {
     document.querySelectorAll('.dropselctdown').forEach(d => d.classList.remove('open'));
     document.querySelectorAll('.select-btn').forEach(b => b.classList.remove('open'));
   });
-
-  
-
 
   
 
