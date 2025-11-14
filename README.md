@@ -36,7 +36,7 @@ Explore more about Nawah Project and join our growing community of innovators an
 هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
 استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
 
-[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://nawah-project.com)
+[![Join Now](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
 
 ## 🚀 Features
 
