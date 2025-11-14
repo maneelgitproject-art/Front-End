@@ -26,25 +26,17 @@ Empowering individuals and teams to turn their ideas into reality through collab
 **العربية:**  
 تمكين الأفراد والفرق من تحويل أفكارهم إلى حقيقة من خلال التعلم التعاوني والإرشاد والوصول إلى الموارد في بيئة مجتمعية داعمة.
 
-## 🌍 Visit Our Website | زوروا موقعنا
-
-**English:**  
-Explore more about Nawah Project and join our growing community of innovators and creators.
-
-**العربية:**  
-استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
-
-[![Visit Website](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
-
 ## 👥 Join Us | انضموا إلينا
 
 **English:**  
 Ready to be part of something bigger? Join our community of passionate individuals and start making an impact today!
+Explore more about Nawah Project and join our growing community of innovators and creators.
 
 **العربية:**  
 هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
+استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
 
-[![Join Now](https://img.shields.io/badge/Join_Now-FF6B6B?style=for-the-badge&logo=github&logoColor=white)](https://nawah-project.com)
+[![Join Now](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
 
 ## 🚀 Features
 
@@ -117,11 +109,19 @@ For any inquiries, please contact:
 <table align="center" style="border: none; margin: 0 auto;">
   <tr>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="image-2.png" alt="NAWAH CEO" width="150" />
+      <img src="./assets/develop_team/hussein.png" alt="NAWAH CEO" width="150" />
     </td>
     <td style="width: 80px; border: none;"></td>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="image-1.png" alt="NAWAH Project Manager" width="150" />
+      <img src="./assets/develop_team/abdo.png" alt="NAWAH Project Manager" width="150" />
+    </td>
+    <td style="width: 80px; border: none;"></td>
+    <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
+      <img src="./assets/develop_team/manal.png" alt="NAWAH Project Manager" width="150" />
+    </td>
+    <td style="width: 80px; border: none;"></td>
+    <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
+      <img src="./assets/develop_team/mohamed.png" alt="NAWAH Project Manager" width="150" />
     </td>
   </tr>
 </table>
