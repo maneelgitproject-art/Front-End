@@ -20,6 +20,11 @@ body {
 /* Footer Section */
 
 /* start footer */
+#footer-gif img {
+  width: 100%;
+}
+
+
 .site-footer {
   background-color: #000;
   color: white;

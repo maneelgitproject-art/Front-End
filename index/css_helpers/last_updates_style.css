@@ -1,13 +1,12 @@
 /* Last Updates Section */
 
-@font-face {
+/* @font-face {
     font-family: "Spiegel";
-    /* Choose a descriptive name */
     src: url("../../assets/fonts/SpiegelSansCd-6SemiBoldItalic_TRIAL.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
     font-display: swap;
-}
+} */
 
 #last_updates {
     padding: 0% 4% 0% 4%;
@@ -26,7 +25,7 @@
 #section-header h2 {
     color: black;
     font-size: 2.75rem;
-    font-family: 'Spiegel', sans-serif;
+    font-family: sans-serif;
     font-weight: 600;
     font-style: italic;
     margin-block: 0;
@@ -36,7 +35,7 @@
     text-decoration: none;
     color: black;
     font-size: 1.1rem;
-    font-family: 'Spiegel', sans-serif;
+    font-family: sans-serif;
     font-weight: 400;
 }
 
