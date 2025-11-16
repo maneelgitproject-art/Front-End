@@ -1,110 +1,87 @@
-const progressBar = document.getElementById('progressBar');
-const progressBar2 = document.getElementById('progressBar2');
-const progressB = document.getElementById('progressB');
-const progressB2 = document.getElementById('progressB2');
- 
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-const pages = document.querySelectorAll('.page');
- 
+const progressBar1 = document.getElementById("progressB"); // Page 1 bar
+const progressBar2 = document.getElementById("progressBar"); // Page 2 bar
+const nextBtn = document.getElementById("nextBtn");
+const pages = document.querySelectorAll(".page");
 
 let currentPage = 0;
 
-nextBtn.addEventListener('click', () => {
+nextBtn.addEventListener("click", () => {
   if (currentPage < pages.length - 1) {
-    pages[currentPage].classList.remove('active');
-  
+    pages[currentPage].classList.remove("active");
     currentPage++;
-    pages[currentPage].classList.add('active');
-  
-    moveProgress();
-  }
-});
-
-prevBtn.addEventListener('click', () => {
-  if (currentPage > 0) {
-    pages[currentPage].classList.remove('active');
-    currentPage--;
-    pages[currentPage].classList.add('active');
+    pages[currentPage].classList.add("active");
     moveProgress();
   }
 });
 
 function moveProgress() {
-  const progressWidth = document.querySelector('.progress').offsetWidth;
-  const barWidth = progressBar.offsetWidth;
-  const moveAmount = progressWidth - barWidth;
-  const moveA = progressWidth;
+  if (currentPage === 0) {
+    progressBar1.style.width = "50%";
+  }
 
-   progressBar.style.transform = `translateX(-${moveAmount * currentPage}px)`;
-   progressBar2.style.transform = `translateX(-${ moveAmount  * currentPage}px)`;
-   
-   progressB.style.transform = `translateX(${moveAmount * currentPage}px)`;
-   progressB2.style.transform = `translateX(${moveAmount * currentPage}px)`;
-
-    
-
+  if (currentPage === 1) {
+    progressBar2.style.width = "100%";
+  }
 }
 
+// Get all select buttons and dropdowns
+const selects = document.querySelectorAll(".select-box");
 
- 
-  // Get all select buttons and dropdowns
-  const selects = document.querySelectorAll('.select-box');
+selects.forEach((box) => {
+  const btn = box.querySelector(".select-btn");
+  const selectedText = box.querySelector(".selectedText");
+  const dropselctdown = box.nextElementSibling;
 
-  selects.forEach((box) => {
-    const btn = box.querySelector('.select-btn');
-    const selectedText = box.querySelector('.selectedText');
-    const dropselctdown = box.nextElementSibling; // dropdown right after select box
+  // Toggle dropdown
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
 
-    // Toggle dropdown
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-
-      // Close other dropdowns
-      document.querySelectorAll('.dropselctdown').forEach(d => {
-        if (d !== dropselctdown) d.classList.remove('open');
-      });
-      document.querySelectorAll('.select-btn').forEach(b => {
-        if (b !== btn) b.classList.remove('open');
-      });
-
-      dropselctdown.classList.toggle('open');
-      btn.classList.toggle('open');
+    // Close other dropdowns
+    document.querySelectorAll(".dropselctdown").forEach((d) => {
+      if (d !== dropselctdown) d.classList.remove("open");
+    });
+    document.querySelectorAll(".select-btn").forEach((b) => {
+      if (b !== btn) b.classList.remove("open");
     });
 
-    // Handle option click
-    dropselctdown.querySelectorAll('li').forEach(item => {
-      item.addEventListener('click', () => {
-        if (item.classList.contains('disabled')) return;
+    dropselctdown.classList.toggle("open");
+    btn.classList.toggle("open");
+  });
 
-        // remove selected class from others
-        dropselctdown.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
+  // Handle option click
+  dropselctdown.querySelectorAll("li").forEach((item) => {
+    item.addEventListener("click", () => {
+      if (item.classList.contains("disabled")) return;
 
-        // add selected to clicked item
-        item.classList.add('selected');
+      // remove selected class from others
+      dropselctdown
+        .querySelectorAll("li")
+        .forEach((li) => li.classList.remove("selected"));
 
-        // show selected text
-        selectedText.textContent = item.textContent;
+      // add selected to clicked item
+      item.classList.add("selected");
 
-        // close dropselctdown
-        dropselctdown.classList.remove('open');
-        btn.classList.remove('open');
-      });
+      // show selected text
+      selectedText.textContent = item.textContent;
+
+      // close dropselctdown
+      dropselctdown.classList.remove("open");
+      btn.classList.remove("open");
     });
   });
+});
 
-  // Close all dropselctdowns on outside click
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.dropselctdown').forEach(d => d.classList.remove('open'));
-    document.querySelectorAll('.select-btn').forEach(b => b.classList.remove('open'));
-  });
+// Close all dropselctdowns on outside click
+document.addEventListener("click", () => {
+  document
+    .querySelectorAll(".dropselctdown")
+    .forEach((d) => d.classList.remove("open"));
+  document
+    .querySelectorAll(".select-btn")
+    .forEach((b) => b.classList.remove("open"));
+});
 
-  
-
-
-  
-
-  // News js Code
+// News js Code
 function initNavbar() {
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
@@ -120,7 +97,7 @@ function initNavbar() {
   // تفعيل القائمة المنسدلة للجوال
   menuToggle.addEventListener("click", function () {
     navLinks.classList.toggle("active");
-     menuToggle.classList.toggle("active");
+    menuToggle.classList.toggle("active");
   });
 
   // تفعيل القوائم المنسدلة في وضع الجوال
@@ -185,7 +162,21 @@ if (document.readyState === "loading") {
   initNavbar();
 }
 
+const emailError = document.querySelector(".error-wrapper");
+const email = document.getElementById("email");
+const emailUnderLine = document.querySelector(".email-underline");
+const emailBox = document.querySelector(".input-box.red");
 
-
-
- 
+email.addEventListener("input", () => {
+  if (email.validity.valid) {
+    emailError.style.display = "none";
+    emailUnderLine.style.stroke = "#707070";
+    emailUnderLine.style.strokeWidth = "17";
+    emailBox.classList.remove("red");
+  } else {
+    emailError.style.display = "block";
+    emailUnderLine.style.stroke = "#f10d0de3";
+    emailUnderLine.style.strokeWidth = "17";
+    emailBox.classList.add("red");
+  }
+});

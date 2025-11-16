@@ -38,8 +38,6 @@
         </div>
       </div>
 
-
-
       <ul class="nav-links" id="navLinks">
         <li><a href="../overview/overview.html">نظرة عامة على المكان</a></li>
         <li><a href="../news/news.html">الأخبار</a></li>
@@ -80,6 +78,14 @@
 
     </nav>
   </header>
+  <!-- logo  -->
+  <!-- <div id="logo-container2">
+    <div class="logo-text2">
+      <span>Nawah</span>
+      <span>Project</span>
+    </div>
+    <img src="../assets/index/logo.png" alt="Logo" class="logo-image2">
+  </div> -->
 
   <main>
     <div class="content">
@@ -102,10 +108,9 @@
 
           <div class="input-box red">
             <label class="form-label-error">عنوان بريد إلكتروني</label>
-            <input type="email" placeholder="إجابتك" required>
-            <svg class="underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
-              <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35"
-                style="stroke:#f10d0de3;stroke-width:17" />
+            <input id="email" type="email" placeholder="إجابتك" required>
+            <svg class="underline email-underline" viewBox="0 0 5000 50" xmlns="http://www.w3.org/2000/svg">
+              <line x1="4980" y1="20" x2="2000" y2="20" stroke-linecap="round" stroke-dasharray="1, 35" />
             </svg>
             <div class="error-wrapper">
               <span class="error-icon">
@@ -148,14 +153,13 @@
           <hr class="black-line">
 
           <!-- Form Footer  -->
+
           <div class="form-footer">
             <button class="next-btn" id="nextBtn">التالي</button>
             <div class="progress">
-              <div class="progress-b" id="progressB"></div>
-
-              <div class="progress-bar" id="progressBar"></div>
+              <div class="progress-bar" id="progressB"></div>
             </div>
-            <span class="page-number">صفحة 1 من 2</span>
+            <span class="page-number" id="pageNumber">صفحة 1 من 2</span>
           </div>
         </div>
       </div>
@@ -218,9 +222,9 @@
           <hr class="bl-line">
           <div class="form-footer">
 
-            <button class="next-btn" id="prevBtn">السابق</button>
+            <button class="next-btn">ارسال</button>
             <div class="progress">
-              <div class="progress-bar" id="progressBar2"></div>
+              <div class="progress-bar" id="progressBar"></div>
             </div>
             <span class="page-number" id="pageNumber2">صفحة 2 من 2</span>
           </div>

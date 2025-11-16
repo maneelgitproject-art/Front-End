@@ -1,69 +1,68 @@
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and ( min-width: 768px) and (max-width: 1024px) {
     .navbar {
         padding: 10px 15px;
         flex-wrap: wrap;
-        display: flex;
+         display: flex;
 
     }
+    
+       /* container for globe + menu */
+  .mobile-icons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  position: fixed;
+  top: 16px;
+  left:30px;
+  z-index: 1000;
+}
+  .globe-mobile {
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 1px;
+     
+  }
+ 
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2000;
+}
 
-    /* container for globe + menu */
-    .mobile-icons {
-        display: flex;
-        align-items: center;
-        gap: 3px;
-        position: fixed;
-        top: 16px;
-        left: 30px;
-        z-index: 1000;
-    }
+/* The three bars */
+.menu-toggle span {
+  display: block;
+  height: 10px;
+  width: 60%;
+  background-color: #fff;  
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  
+}
 
-    .globe-mobile {
-        display: flex;
-        cursor: pointer;
-        font-size: 20px;
-        padding: 1px;
+/* When active, create the X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
 
-    }
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
 
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 40px;
-        height: 26px;
-        cursor: pointer;
-        z-index: 2000;
-    }
-
-    /* The three bars */
-    .menu-toggle span {
-        display: block;
-        height: 10px;
-        width: 60%;
-        background-color: #fff;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-
-    }
-
-    /* When active, create the X */
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 
 
     .menu-toggle:hover {
         background-color: #f9f9f923;
     }
-
+    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -74,87 +73,90 @@
         background-color: #000;
         padding: 50px 0;
         gap: 2rem;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     }
-
+    
     .nav-links.active {
         display: flex;
     }
-
+    
     .nav-links a {
-        padding: 10px 100px;
+        padding: 10px  100px;
         width: 100%;
         text-align: center;
+      
+     }
+    
+     .dropdown-menu {
+    position: static;
+    display: none;
+    background-color: #111;
+    width: 100%;
+    margin: 10px auto 0;
+     
+  }
 
-    }
+   .dropdown-menu  li{
+margin-bottom: 5%;
 
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background-color: #111;
-        width: 100%;
-        margin: 10px auto 0;
+  }
 
-    }
-
-    .dropdown-menu li {
-        margin-bottom: 5%;
-
-    }
-
-    .dropdown.active .dropdown-menu {
-        display: block;
-
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #52525209;
-        width: 100%;
-    }
-
-
+  .dropdown.active .dropdown-menu {
+    display: block;
+       
+   }
+  .dropdown-menu a:hover {
+  background-color: #52525209;
+  width: 100%;
+ }
+ 
+    
     .logo img {
         width: 50px;
         height: 50px;
     }
-
+    
     .logo span {
         font-size: 18px;
     }
-
-    .nav-links .icon.globe {
+    
+     .nav-links .icon.globe {
         display: none;
     }
-
-
+    
+   
 }
 
+
+ 
+ 
+ 
 /* ========== Media Queries للـ Footer ========== */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and ( min-width: 768px) and (max-width: 1024px) {
     .site-footer {
         padding: 30px 15px;
     }
-
+    
     .footer-project {
         font-size: 1.1rem;
         margin: 30px 0;
     }
-
+    
     .footer-links {
         margin: 35px 0;
     }
-
+    
     .footer-links a {
         margin: 0 10px;
         font-size: 0.85rem;
     }
-
+    
     .footer-copy {
         font-size: 0.85rem;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and  (max-width: 768px)  {
 
     /* Header */
     .navbar {
@@ -174,60 +176,59 @@
         font-size: 16px;
     }
 
+ 
 
-
-
+  
 
     .mobile-icons {
-        display: flex;
-        align-items: center;
-        gap: 1px;
-        position: fixed;
-        top: 16px;
-        left: 15px;
-        z-index: 1000;
-    }
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  position: fixed;
+  top: 16px;
+  left:15px;
+  z-index: 1000;
+}
+  .globe-mobile {
+    display: flex;
+    cursor: pointer;
+    font-size: 20px;
+ margin-left:-20px;      
+  }
+ 
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2000;
+}
 
-    .globe-mobile {
-        display: flex;
-        cursor: pointer;
-        font-size: 20px;
-        margin-left: -20px;
-    }
+/* The three bars */
+.menu-toggle span {
+  display: block;
+  height: 10px;
+  width: 60%;
+  background-color: #fff;  
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  
+}
 
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 40px;
-        height: 26px;
-        cursor: pointer;
-        z-index: 2000;
-    }
+/* When active, create the X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
 
-    /* The three bars */
-    .menu-toggle span {
-        display: block;
-        height: 10px;
-        width: 60%;
-        background-color: #fff;
-        border-radius: 3px;
-        transition: all 0.3s ease;
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
 
-    }
-
-    /* When active, create the X */
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
 
 
     /* Intro */
@@ -577,71 +578,70 @@
 
 /*new one */
 @media screen and (max-width: 768px) {
+ 
 
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+    margin-right: 30%;
+    width: 82px;
+  }
 
-    .menu-toggle {
-        display: flex;
-        margin-left: auto;
-        margin-right: 30%;
-        width: 82px;
-    }
+  .menu-toggle:hover {
+    background-color: #f9f9f917;
+  }
 
-    .menu-toggle:hover {
-        background-color: #f9f9f917;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 20px 0;
+    gap: 1.7rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        background-color: #000;
-        padding: 20px 0;
-        gap: 1.7rem;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    }
+  .nav-links.active {
+    display: flex;
+  }
 
-    .nav-links.active {
-        display: flex;
-    }
+  .nav-links a {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+  }
 
-    .nav-links a {
-        padding: 10px 15px;
-        width: 100%;
-        text-align: center;
-    }
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background-color: #111;
+    width: 90%;
+    margin: 10px auto 0;
+  }
+    .dropdown-menu  li{
+     margin-bottom: 5%;
 
-    .dropdown-menu {
-        position: static;
-        display: none;
-        background-color: #111;
-        width: 90%;
-        margin: 10px auto 0;
-    }
+  }
 
-    .dropdown-menu li {
-        margin-bottom: 5%;
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
 
-    }
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
 
-    .dropdown:hover .dropdown-menu {
-        display: none;
-    }
+  /* hide desktop globe icon */
+  .nav-links .icon.globe {
+    display: none;
+  }
 
-    .dropdown.active .dropdown-menu {
-        display: block;
-    }
-
-    /* hide desktop globe icon */
-    .nav-links .icon.globe {
-        display: none;
-    }
-
-    /* show mobile globe icon */
-    .globe-mobile {
-        display: flex;
-        margin-right: 10%;
-    }
+  /* show mobile globe icon */
+  .globe-mobile {
+    display: flex;
+    margin-right:10%;
+  }
 }
