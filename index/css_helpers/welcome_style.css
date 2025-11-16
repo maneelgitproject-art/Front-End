@@ -31,7 +31,7 @@
 
 #welcome-header p {
     font-size: 1rem;
-    font-family: 'Spiegel', sans-serif;
+    font-family: sans-serif;
     font-weight: 400;
     max-width: 100%;
     overflow-wrap: wrap;
@@ -108,7 +108,7 @@
         font-size: 1rem;
         font-weight: 500;
         border-radius: 2px;
-        font-family: 'Spiegel', sans-serif;
+        font-family: sans-serif;
         cursor: pointer;
         transition: 0.5s;
         border: none;
