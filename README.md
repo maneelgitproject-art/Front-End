@@ -100,7 +100,6 @@ This project is licensed under the APCAHE License - see the [LICENSE](LICENSE) f
 ## 🙏 Acknowledgments
 
 - [NAWAH Team] for the amazing project
-- All contributors who have helped shape this project
 
 <table align="center" style="border: none; margin: 0 auto;">
   <tr>
