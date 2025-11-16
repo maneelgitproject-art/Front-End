@@ -164,6 +164,82 @@ if (document.readyState === "loading") {
 }
 
 
+/* INPUT CHECK ERROR */
+ const emailInput = document.getElementById("emailInput");
+const emailBox = document.getElementById("emailBox");
+const emailErrorWrap = document.getElementById("emailErrorWrap");
+const emailError = document.getElementById("emailError");
+const emailLabel = document.getElementById("emailLabel");
+
+const grayLine = document.getElementById("grayLine");
+const redLine = document.getElementById("redLine");
+
+emailInput.addEventListener("input", () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(emailInput.value)) {
+        // false
+        emailBox.classList.add("red");
+        emailErrorWrap.style.display = "flex";
+
+        grayLine.style.display = "none";
+        redLine.style.display = "block";
+        emailError.style.display = "block"; 
+            // label becomes error style
+        emailLabel.classList.remove("form-label");
+        emailLabel.classList.add("form-label-error");
+    } else {
+      //true
+         emailBox.classList.remove("red");
+        emailErrorWrap.style.display = "none";
+        emailError.style.display = "none"; 
+        grayLine.style.display = "block";
+        redLine.style.display = "none";
+          // label back to normal
+        emailLabel.classList.remove("form-label-error");
+        emailLabel.classList.add("form-label");
+    }
+});
+
+const phoneInput = document.getElementById("phoneInput");
+const phoneBox = document.getElementById("phoneBox");
+const phoneErrorWrap = document.getElementById("phoneErrorWrap");
+const phoneError = document.getElementById("phoneError");
+const phoneLabel = document.getElementById("phoneLabel");
+
+const phoneGrayLine = document.getElementById("phoneGrayLine");
+const phoneRedLine = document.getElementById("phoneRedLine");
+
+phoneInput.addEventListener("input", () => {
+     // Count digits only
+    const digitsOnly = phoneInput.value.replace(/\D/g, "");
+
+    // Validation: starts with +, total digits <=15
+    const phonePattern = /^\+\d{1,15}$/;
+
+    if (!phonePattern.test(phoneInput.value)) {
+        // false
+        phoneBox.classList.add("red");
+        phoneErrorWrap.style.display = "flex";
+
+        phoneGrayLine.style.display = "none";
+        phoneRedLine.style.display = "block";
+        phoneError.style.display = "block"; 
 
 
- 
+        phoneLabel.classList.remove("form-label");
+        phoneLabel.classList.add("form-label-error");
+    } 
+    else {
+        // true
+        phoneBox.classList.remove("red");
+        phoneErrorWrap.style.display = "none";
+
+        phoneGrayLine.style.display = "block";
+        phoneRedLine.style.display = "none";
+        phoneError.style.display = "none"; 
+
+        phoneLabel.classList.remove("form-label-error");
+        phoneLabel.classList.add("form-label");
+    }
+});

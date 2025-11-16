@@ -593,10 +593,12 @@ body {
 
   .error-message {
     color: #dc463c;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     margin-top: 2px;
     padding-right: 2px;
+    display: none;
+
   }
 
 
