@@ -1,7 +1,7 @@
 /* Choose Your Speciality Section */
 #speciality {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-image: url("../../assets/index/specialist/specialist_frame.jpg");
     background-size: cover;
     background-position: center;
@@ -19,7 +19,7 @@
 
 #right-image img {
     width: 100%;
-    height: 100%;
+    scale: 1.3;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -81,6 +81,7 @@
     transition: 0.5s;
     border: none;
 }
+
 .center-content button:hover {
     background-color: #32c7ff;
 }
@@ -92,9 +93,108 @@
 
 #left-image img {
     width: 100%;
-    height: 100%;
+    scale: 1.3;
     object-fit: cover;
     border-radius: 10px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    #speciality {
+        /* flex-direction: column; */
+        /* align-items: start; */
+        /* background-size: cover; */
+        height: 55dvh;
+        padding-block: 10%;
+        margin: 0;
+    }
+
+    .center-content h1 {
+        font-size: 5rem;
+        /* font-weight: bold;
+        font-style: italic; */
+        /* margin: 0; */
+        text-align: start;
+    }
+
+    .center-content p {
+        /* width: 100%; */
+        font-size: 1.3rem;
+        /* font-weight: 700; */
+        /* line-height: 30px; */
+        /* letter-spacing: 1px; */
+        /* text-align: start; */
+    }
+
+    #speciality-button button {
+        width: 45%;
+        font-size: 1.5rem;
+    }
+
+    #speciality-button a {
+        font-size: 1.2rem;
+    }
+
+    #right-image {
+        width: 40%;
+        scale: 0.9;
+        /* padding-right: 1%; */
+    }
+
+    #left-image {
+        width: 40%;
+        scale: 0.9;
+        /* padding-left: 1%; */
+    }
+
+
+}
+@media screen and (min-width: 850px) and (max-width: 1024px) {
+    #speciality {
+        /* flex-direction: column; */
+        /* align-items: start; */
+        /* background-size: cover; */
+        height: 45dvh;
+        padding-block: 10%;
+        margin: 0;
+    }
+
+    .center-content h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0;
+        text-align: start;
+    }
+
+    .center-content p {
+        width: 100%;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 1px;
+        text-align: start;
+    }
+
+    #speciality-button button {
+        width: 45%;
+        font-size: 1.3rem;
+    }
+
+    #speciality-button a {
+        font-size: 1.1rem;
+    }
+
+    #right-image {
+        width: 25%;
+        padding-right: 1%;
+    }
+
+    #left-image {
+        width: 25%;
+        padding-left: 1%;
+    }
+
+
 }
 
 @media screen and (min-width: 450px) and (max-width: 850px) {
@@ -102,8 +202,8 @@
         flex-direction: column;
         /* align-items: start; */
         background-size: cover;
-        height: 75vh;
-        padding-block: 18%;
+        height: 90dvh;
+        padding-block: 20%;
         margin: 0;
     }
 
@@ -140,9 +240,10 @@
     }
 
     #speciality-button button {
-        width: 30%;
+        width: 40%;
         font-size: 1.5rem;
     }
+
     #speciality-button a {
         /* width: 30%; */
         font-size: 1.2rem;
@@ -156,28 +257,30 @@
     }
 
     #right-image {
-        width: 40%;
+        width: 50%;
+        scale: 0.7;
         padding-right: 1%;
     }
 
     #left-image {
-        width: 40%;
+        width: 50%;
+        scale: 0.7;
         padding-left: 1%;
     }
 
     #mobile-image div img {
         width: 100%;
-        height: 55vh;
+        height: 65dvh;
     }
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 360px) and (max-width: 450px) {
     #speciality {
         flex-direction: column;
         background-size: cover;
-        height: 75vh;
-        padding-block: 18%;
+        height: 75dvh;
+        padding-block: 35%;
         margin: 0;
     }
 
@@ -210,7 +313,7 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        gap: 20px;
+        /* gap: 20px; */
     }
 
     #speciality-button button {
@@ -243,7 +346,84 @@
 
     #mobile-image div img {
         width: 100%;
-        height: 35vh;
+        height: 35dvh;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    #speciality {
+        flex-direction: column;
+        background-size: cover;
+        height: 65dvh;
+        padding-block: 45%;
+        margin: 0;
+    }
+
+    .center-content {
+        width: 90%;
+        padding-inline: 5%;
+        text-align: center;
+    }
+
+    .center-content h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0;
+        text-align: start;
+    }
+
+    .center-content p {
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 1px;
+        text-align: start;
+    }
+
+    #speciality-button {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        /* gap: 20px; */
+    }
+
+    #speciality-button button {
+        width: 100%;
+        padding: 18px 10px;
+        font-size: 1.2rem;
+    }
+
+    #speciality-button a {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    #mobile-image {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin: 0;
+    }
+
+    #right-image {
+        width: 40%;
+        padding-right: 1%;
+    }
+
+    #left-image {
+        width: 40%;
+        padding-left: 1%;
+    }
+
+    #mobile-image div img {
+        width: 100%;
+        scale: 1.5;
+        /* height: 35dvh; */
     }
 
 }

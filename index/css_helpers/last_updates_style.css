@@ -1,16 +1,8 @@
 /* Last Updates Section */
 
-/* @font-face {
-    font-family: "Spiegel";
-    src: url("../../assets/fonts/SpiegelSansCd-6SemiBoldItalic_TRIAL.woff2") format("woff2");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-} */
-
 #last_updates {
     padding: 0% 4% 0% 4%;
-    height: 50vh;
+    height: 50dvh;
     padding-block: 2% 3%;
     background-color: white;
 }
@@ -87,7 +79,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     padding-inline: 5px;
-    max-height: 60px;
+    max-height: 70px;
     line-clamp: 2;
     overflow: auto;
 }
@@ -97,9 +89,81 @@
     color: rgb(110, 175, 228);
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 360px) {
     #last_updates {
-        height: 45vh;
+        height: 30dvh;
+    }
+
+    #section-header {
+        padding: 1% 4% 1% 4%;
+    }
+
+    #section-header h2 {
+        max-width: 10%;
+        font-size: 1.5rem;
+    }
+
+    #section-header a {
+        max-width: 40%;
+        font-size: 1rem;
+    }
+
+    #section-header i {
+        margin-inline: 16%;
+        color: rgb(78, 164, 218);
+    }
+
+    #updates {
+        display: block;
+        padding-inline: 1%;
+    }
+
+    #update {
+        width: 100%;
+    }
+
+    #update small strong {
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-inline: 3px;
+    }
+
+    #update h3 {
+        font-size: 1.5rem;
+        margin-top: 1%;
+    }
+
+    #update p {
+        font-size: 1rem;
+        max-height: 40px;
+        line-clamp: 2;
+        margin-top: 1%;
+        margin-bottom: 4%;
+    }
+
+    #carousel-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #carousel-buttons hr {
+        width: 100%;
+        height: 2%;
+        margin-inline: 20px;
+        color: #000;
+    }
+
+    #carousel-buttons i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-inline: 1.5%;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    #last_updates {
+        height: 40dvh;
     }
 
     #section-header {
@@ -171,9 +235,9 @@
     }
 }
 
-@media screen and (min-width: 450px) and (max-width: 850px) {
+@media screen and (min-width: 600px) and (max-width: 800px) {
     #last_updates {
-        height: 55vh;
+        height: 52dvh;
     }
 
     #section-header {
@@ -202,6 +266,156 @@
 
     #update {
         width: 100%;
+    }
+
+    #update small strong {
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-inline: 3px;
+    }
+
+    #update h3 {
+        font-size: 1.5rem;
+        margin-top: 1%;
+    }
+
+    #update p {
+        font-size: 1rem;
+        height: 40px;
+        max-height: 40px;
+        line-clamp: 2;
+        margin-top: 1%;
+        margin-bottom: 4%;
+    }
+
+    #carousel-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #carousel-buttons hr {
+        width: 100%;
+        height: 1%;
+        margin-inline: 20px;
+        color: #000;
+    }
+
+    #carousel-buttons i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-inline: 1.5%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    #last_updates {
+        height: 65dvh;
+    }
+
+    #section-header {
+        padding: 1% 4% 1% 4%;
+    }
+
+    #section-header h2 {
+        max-width: 20%;
+        font-size: 1.5rem;
+    }
+
+    #section-header a {
+        max-width: 40%;
+        font-size: 1rem;
+    }
+
+    #section-header i {
+        color: rgb(78, 164, 218);
+    }
+
+    #updates {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 5%;
+        align-items: flex-start;
+        padding-inline: 1%;
+    }
+
+    #update {
+        width: 45%;
+    }
+
+    #update small strong {
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-inline: 3px;
+    }
+
+    #update h3 {
+        font-size: 1.5rem;
+        margin-top: 1%;
+    }
+
+    #update p {
+        font-size: 1rem;
+        height: 40px;
+        max-height: 40px;
+        line-clamp: 2;
+        margin-top: 1%;
+        margin-bottom: 4%;
+    }
+
+    #carousel-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #carousel-buttons hr {
+        width: 100%;
+        height: 1%;
+        margin-inline: 20px;
+        color: #000;
+    }
+
+    #carousel-buttons i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-inline: 1.5%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    #last_updates {
+        height: 70dvh;
+    }
+
+    #section-header {
+        padding: 1% 4% 1% 4%;
+    }
+
+    #section-header h2 {
+        max-width: 20%;
+        font-size: 1.5rem;
+    }
+
+    #section-header a {
+        max-width: 40%;
+        font-size: 1rem;
+    }
+
+    #section-header i {
+        color: rgb(78, 164, 218);
+    }
+
+    #updates {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 5%;
+        align-items: flex-start;
+        padding-inline: 1%;
+    }
+
+    #update {
+        width: 45%;
     }
 
     #update small strong {
