@@ -105,19 +105,15 @@ This project is licensed under the APCAHE License - see the [LICENSE](LICENSE) f
 <table align="center" style="border: none; margin: 0 auto;">
   <tr>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="./assets/develop_team/hussein.png" alt="NAWAH CEO" width="150" />
-    </td>
-    <td style="width: 80px; border: none;"></td>
-    <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
       <img src="./assets/develop_team/abdo.png" alt="NAWAH Project Manager" width="150" />
     </td>
     <td style="width: 80px; border: none;"></td>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="./assets/develop_team/manal.png" alt="NAWAH Project Manager" width="150" />
+      <img src="./assets/develop_team/manal.png" alt="NAWAH Team" width="150" />
     </td>
     <td style="width: 80px; border: none;"></td>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="./assets/develop_team/mohamed.png" alt="NAWAH Project Manager" width="150" />
+      <img src="./assets/develop_team/mohamed.png" alt="NAWAH Team" width="150" />
     </td>
   </tr>
 </table>
@@ -129,19 +125,8 @@ For any inquiries, please contact:
 <table align="center" style="border: none; margin: 0 auto;">
   <tr>
     <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
+      <h2>NAWAH CEO</h2>
       <img src="./assets/develop_team/hussein.png" alt="NAWAH CEO" width="150" />
-    </td>
-    <td style="width: 80px; border: none;"></td>
-    <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="./assets/develop_team/abdo.png" alt="NAWAH Project Manager" width="150" />
-    </td>
-    <td style="width: 80px; border: none;"></td>
-    <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="./assets/develop_team/manal.png" alt="NAWAH Project Manager" width="150" />
-    </td>
-    <td style="width: 80px; border: none;"></td>
-    <td style="padding: 20px; margin: 0 15px; border: none; text-align: center;">
-      <img src="./assets/develop_team/mohamed.png" alt="NAWAH Project Manager" width="150" />
     </td>
   </tr>
 </table>
