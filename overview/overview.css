@@ -5,6 +5,9 @@ body {
   margin: 0;
   font-family: "Cairo", sans-serif;
    scrollbar-width: none;
+  
+
+
 
 }
 
@@ -101,3 +104,4 @@ main {
 .footer-links a:hover {
   text-decoration: underline;
 }
+

@@ -507,3 +507,220 @@ function updateArrows() {
     nextArrow.classList.add("active");
   }
 }
+// دالة عامة لتحديث حالة العناصر بناءً على حجم الشاشة
+function updateLayoutOnResize() {
+    updateGoalsLayout();
+    updateSpecialtiesLayout();
+    updateCapabilitiesLayout();
+    updateImgsBoxLayout();
+}
+
+// ========== Goals Section ==========
+function updateGoalsLayout() {
+    const goalsContainer = document.querySelector('.goals');
+    const goalItems = document.querySelectorAll('.goals > div');
+    
+    if (!goalsContainer || !goalItems.length) return;
+    
+    if (window.innerWidth <= 768) {
+        // الجوال: إظهار عنصر واحد فقط
+        let foundActive = false;
+        goalItems.forEach((item, index) => {
+            if (item.classList.contains('active') && !foundActive) {
+                item.style.display = 'flex';
+                foundActive = true;
+            } else {
+                item.style.display = 'none';
+                if (index === 0 && !foundActive) {
+                    item.style.display = 'flex';
+                    item.classList.add('active');
+                    foundActive = true;
+                }
+            }
+        });
+    } else {
+        // الشاشات الكبيرة: إظهار جميع العناصر
+        goalItems.forEach(item => {
+            item.style.display = 'flex';
+            item.classList.remove('active');
+        });
+    }
+}
+
+function initGoalsNavigation() {
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+    const goalItems = document.querySelectorAll('.goals > div');
+    
+    if (!prevArrow || !nextArrow || !goalItems.length) return;
+    
+    prevArrow.addEventListener('click', function() {
+        const activeIndex = Array.from(goalItems).findIndex(item => item.classList.contains('active'));
+        if (activeIndex > 0) {
+            goalItems[activeIndex].classList.remove('active');
+            goalItems[activeIndex].style.display = 'none';
+            
+            goalItems[activeIndex - 1].classList.add('active');
+            goalItems[activeIndex - 1].style.display = 'flex';
+            
+            updateGoalsArrows();
+        }
+    });
+    
+    nextArrow.addEventListener('click', function() {
+        const activeIndex = Array.from(goalItems).findIndex(item => item.classList.contains('active'));
+        if (activeIndex < goalItems.length - 1) {
+            goalItems[activeIndex].classList.remove('active');
+            goalItems[activeIndex].style.display = 'none';
+            
+            goalItems[activeIndex + 1].classList.add('active');
+            goalItems[activeIndex + 1].style.display = 'flex';
+            
+            updateGoalsArrows();
+        }
+    });
+}
+
+function updateGoalsArrows() {
+    if (window.innerWidth > 768) return;
+    
+    const goalItems = document.querySelectorAll('.goals > div');
+    const activeIndex = Array.from(goalItems).findIndex(item => item.classList.contains('active'));
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+    
+    if (!prevArrow || !nextArrow) return;
+    
+    prevArrow.disabled = activeIndex === 0;
+    nextArrow.disabled = activeIndex === goalItems.length - 1;
+    
+    prevArrow.classList.toggle('disabled', activeIndex === 0);
+    nextArrow.classList.toggle('disabled', activeIndex === goalItems.length - 1);
+}
+
+// ========== Specialties Section ==========
+function updateSpecialtiesLayout() {
+    const iconsContainer = document.querySelector('.icons');
+    if (!iconsContainer) return;
+    
+    if (window.innerWidth <= 768) {
+        iconsContainer.style.overflowX = 'auto';
+        iconsContainer.style.justifyContent = 'flex-start';
+    } else {
+        iconsContainer.style.overflowX = 'visible';
+        iconsContainer.style.justifyContent = 'center';
+    }
+}
+
+// ========== Capabilities Section ==========
+function updateCapabilitiesLayout() {
+    const capIconsContainer = document.querySelector('.cap-icons');
+    if (!capIconsContainer) return;
+    
+    if (window.innerWidth <= 768) {
+        capIconsContainer.style.overflowX = 'auto';
+        capIconsContainer.style.justifyContent = 'flex-start';
+    } else {
+        capIconsContainer.style.overflowX = 'visible';
+        capIconsContainer.style.justifyContent = 'center';
+    }
+}
+
+// ========== Imgs Box Section ==========
+function updateImgsBoxLayout() {
+    const imgsBoxContainers = document.querySelectorAll('.imgs__box-container');
+    
+    if (!imgsBoxContainers.length) return;
+    
+    if (window.innerWidth <= 768) {
+        // الجوال: إظهار عنصر واحد فقط
+        let foundActive = false;
+        imgsBoxContainers.forEach((container, index) => {
+            if (container.classList.contains('active') && !foundActive) {
+                container.style.display = 'block';
+                foundActive = true;
+            } else {
+                container.style.display = 'none';
+                if (index === 0 && !foundActive) {
+                    container.style.display = 'block';
+                    container.classList.add('active');
+                    foundActive = true;
+                }
+            }
+        });
+    } else {
+        // الشاشات الكبيرة: إظهار جميع العناصر
+        imgsBoxContainers.forEach(container => {
+            container.style.display = 'block';
+            container.classList.remove('active');
+        });
+    }
+}
+
+function initImgsBoxNavigation() {
+    const prevArrow3 = document.querySelector('.prev-arrow3');
+    const nextArrow3 = document.querySelector('.next-arrow3');
+    const imgsBoxContainers = document.querySelectorAll('.imgs__box-container');
+    
+    if (!prevArrow3 || !nextArrow3 || !imgsBoxContainers.length) return;
+    
+    prevArrow3.addEventListener('click', function() {
+        const activeIndex = Array.from(imgsBoxContainers).findIndex(container => container.classList.contains('active'));
+        if (activeIndex > 0) {
+            imgsBoxContainers[activeIndex].classList.remove('active');
+            imgsBoxContainers[activeIndex].style.display = 'none';
+            
+            imgsBoxContainers[activeIndex - 1].classList.add('active');
+            imgsBoxContainers[activeIndex - 1].style.display = 'block';
+            
+            updateImgsBoxArrows();
+        }
+    });
+    
+    nextArrow3.addEventListener('click', function() {
+        const activeIndex = Array.from(imgsBoxContainers).findIndex(container => container.classList.contains('active'));
+        if (activeIndex < imgsBoxContainers.length - 1) {
+            imgsBoxContainers[activeIndex].classList.remove('active');
+            imgsBoxContainers[activeIndex].style.display = 'none';
+            
+            imgsBoxContainers[activeIndex + 1].classList.add('active');
+            imgsBoxContainers[activeIndex + 1].style.display = 'block';
+            
+            updateImgsBoxArrows();
+        }
+    });
+}
+
+function updateImgsBoxArrows() {
+    if (window.innerWidth > 768) return;
+    
+    const imgsBoxContainers = document.querySelectorAll('.imgs__box-container');
+    const activeIndex = Array.from(imgsBoxContainers).findIndex(container => container.classList.contains('active'));
+    const prevArrow3 = document.querySelector('.prev-arrow3');
+    const nextArrow3 = document.querySelector('.next-arrow3');
+    
+    if (!prevArrow3 || !nextArrow3) return;
+    
+    prevArrow3.disabled = activeIndex === 0;
+    nextArrow3.disabled = activeIndex === imgsBoxContainers.length - 1;
+    
+    prevArrow3.classList.toggle('disabled', activeIndex === 0);
+    nextArrow3.classList.toggle('disabled', activeIndex === imgsBoxContainers.length - 1);
+}
+
+// ========== Initialize Everything ==========
+function initAllSections() {
+    updateLayoutOnResize();
+    
+    // تهيئة التنقل لكل قسم
+    initGoalsNavigation();
+    initImgsBoxNavigation();
+    
+    // تحديث حالة الأسهم
+    updateGoalsArrows();
+    updateImgsBoxArrows();
+}
+
+// الأحداث
+document.addEventListener('DOMContentLoaded', initAllSections);
+window.addEventListener('resize', updateLayoutOnResize);
